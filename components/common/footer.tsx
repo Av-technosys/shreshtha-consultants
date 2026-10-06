@@ -2,7 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/common/container";
 
-const services = ["Electrical", "Plumbing", "Fire Fighting", "Safety & Security", "HVAC"];
+const services = [
+  { label: "Electrical", href: "/services/electrical" },
+  { label: "Plumbing", href: "/services/plumbing" },
+  { label: "Fire Fighting", href: "/services/fire-fighting" },
+  { label: "Safety & Security", href: "/services/safety-and-security" },
+  { label: "HVAC", href: "/services/hvac" },
+];
 
 const companyLinks = [
   { label: "About us", href: "/about" },
@@ -47,9 +53,9 @@ export function Footer() {
 
           <FooterGroup title="Services">
             {services.map((service) => (
-              <li key={service}>
-                <Link className="transition-colors hover:text-white" href="/services">
-                  {service}
+              <li key={service.label}>
+                <Link className="transition-colors hover:text-white" href={service.href}>
+                  {service.label}
                 </Link>
               </li>
             ))}
