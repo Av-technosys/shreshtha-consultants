@@ -12,6 +12,8 @@ import { cn } from "@/lib/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
+
+
 export const metadata: Metadata = {
   title: "Shreshtha Consultants",
   description: "Shreshtha Consultants",
@@ -19,10 +21,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en">
-      <body className={`flex min-h-screen flex-col ${archivo.variable} ${inter.variable} ${lora.variable}`}>
     <html lang="en" className={cn("font-sans", geist.variable)}>
-      <body className="flex min-h-screen flex-col">
+      <body className={`flex min-h-screen flex-col ${archivo.variable} ${inter.variable} ${lora.variable}`}>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

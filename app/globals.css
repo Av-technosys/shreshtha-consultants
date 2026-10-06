@@ -10,6 +10,12 @@
   --font-lora: var(--font-lora), serif;
 }
 
+@theme {
+  --font-archivo: var(--font-archivo), sans-serif;
+  --font-inter: var(--font-inter), sans-serif;
+  --font-lora: var(--font-lora), serif;
+}
+
 @layer base {
   html,
   body {
