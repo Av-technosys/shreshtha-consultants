@@ -62,7 +62,7 @@ const TypesOfBimSection = () => {
         </h2>
 
         {/* Service Item 01 */}
-        <div className="border-t border-[#e5e5e5]">
+        <div>
           <div className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
             
             {/* Left Column */}
@@ -96,7 +96,7 @@ const TypesOfBimSection = () => {
 
         {/* Service Item 02 */}
         {/* Service Item 02 */}
-        <div className="border-t border-[#e5e5e5]">
+        <div>
           <div className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
             
             {/* Left Column (Image on Desktop, Bottom on Mobile) */}
@@ -129,7 +129,7 @@ const TypesOfBimSection = () => {
         </div>
 
         {/* Service Item 03 */}
-        <div className="border-t border-[#e5e5e5]">
+        <div>
           <div className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
             
             {/* Left Column */}
@@ -162,7 +162,7 @@ const TypesOfBimSection = () => {
         </div>
 
         {/* Service Item 04 */}
-        <div className="border-t border-[#e5e5e5]">
+        <div>
           <div className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
             
             {/* Left Column (Image on Desktop, Bottom on Mobile) */}
@@ -195,7 +195,7 @@ const TypesOfBimSection = () => {
         </div>
 
         {/* Service Item 05 */}
-        <div className="border-t border-[#e5e5e5]">
+        <div>
           <div className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
             
             {/* Left Column */}
@@ -228,7 +228,7 @@ const TypesOfBimSection = () => {
         </div>
        
       {/* Service Item 06 */}
-        <div className="border-t border-[#e5e5e5]">
+        <div>
           <div className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
 
             {/* Left Column */}
@@ -266,7 +266,7 @@ const TypesOfBimSection = () => {
 
 const GetStartedSection = () => {
   return (
-    <section className="w-full bg-[#F7F6F2] pt-[100px] pb-[80px] md:pb-[120px] border-t border-[#e5e5e5]">
+    <section className="w-full bg-[#F7F6F2] pt-[100px] pb-[80px] md:pb-[120px]">
       <div className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] w-full max-w-[1400px] mx-auto px-[6%] lg:px-[8%] flex flex-col items-center text-center">
         
         {/* Label */}

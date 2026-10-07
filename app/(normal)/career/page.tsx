@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import React from 'react';
 import Image from 'next/image';
 
@@ -26,7 +29,10 @@ const HeroBanner = () => (
   <section className="px-[4%] pb-[80px]">
     <div className="max-w-[1200px] mx-auto">
       <div className="w-full rounded-[24px] overflow-hidden">
-        <img
+        <motion.img
+          initial={{ scale: 1.05 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           src="/career/careers-hero.png"
           alt="Engineers at work on MEP design"
           className="w-full h-[320px] md:h-auto object-cover block"
@@ -63,11 +69,18 @@ const tiles = [
 const TilesSection = () => (
   <section className="px-[4%] pb-[100px]">
     <div className="max-w-[1200px] mx-auto">
-      <div className="flex flex-col gap-px rounded-[24px] overflow-hidden border border-[#e8e5de] bg-[#e8e5de]">
+      <div className="flex flex-col rounded-[24px] overflow-hidden">
         {tiles.map((t, i) => {
           const reversed = i % 2 === 1;
           return (
-            <div key={t.n} className="grid grid-cols-1 lg:grid-cols-2 gap-px">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              key={t.n}
+              className="grid grid-cols-1 lg:grid-cols-2"
+            >
               {/* Text tile */}
               <div
                 className={`bg-[#f9f7f3] flex flex-col justify-center px-[32px] lg:px-[64px] py-[32px] ${
@@ -86,18 +99,18 @@ const TilesSection = () => (
               </div>
 
               {/* Image tile */}
-              <div
-                className={`relative h-[320px] lg:h-[380px] overflow-hidden rounded-tl-[28px] ${
-                  reversed ? 'lg:order-1' : 'lg:order-2'
-                }`}
-              >
-                <img src={t.img} alt={t.label} className="absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent" />
-                <div className={`font-inter absolute bottom-[32px] left-[38px] text-white text-[15px] font-bold tracking-[0.1em] uppercase`}>
-                  {t.label}
+              <div className={`bg-[#F7F6F2] w-full h-full ${reversed ? 'lg:order-1' : 'lg:order-2'}`}>
+                <div
+                  className={`relative h-[320px] lg:h-[380px] w-full overflow-hidden rounded-[28px]`}
+                >
+                  <img src={t.img} alt={t.label} className="absolute inset-0 w-full h-full object-cover" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent" />
+                  <div className={`font-inter absolute bottom-[32px] left-[38px] text-white text-[15px] font-bold tracking-[0.1em] uppercase`}>
+                    {t.label}
+                  </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>
@@ -127,7 +140,11 @@ const RolesSection = () => (
 
       <div className="border-t border-[#222]">
         {roles.map((r) => (
-          <div
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
             key={r.n}
             className="flex flex-col lg:flex-row lg:items-center py-[32px] border-b border-[#222] gap-[8px] lg:gap-0"
           >
@@ -145,7 +162,7 @@ const RolesSection = () => (
                 {r.open ? 'Open' : 'Closed'}
               </span>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
@@ -156,7 +173,13 @@ const ApplySection = () => (
   <section className="px-[4%] py-[60px] lg:py-[120px]">
     <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-[48px] lg:gap-[80px] items-start">
 
-      <div className="flex flex-col">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className="flex flex-col"
+      >
         <div className="flex items-center gap-[12px] mb-[24px]">
           <span className="block w-[24px] h-[1.5px] bg-[#ee2559] shrink-0" />
           <span className={`font-archivo text-[15px] font-semibold leading-[26.25px] tracking-[3.3px] uppercase text-[#5C6570]`}>
@@ -173,7 +196,7 @@ const ApplySection = () => (
           want to build something real.
         </p>
         
-        <div className="mb-[24px] lg:mb-[64px]">
+        <div className="mb-[24px] lg:mb-[48px]">
           <a
             href="mailto:contact@shreshthaconsultants.com"
             className={`font-archivo text-[16px] font-bold leading-[25.6px] tracking-normal text-[#101418] border-b-[2px] border-[#ee2559] pb-[4px] hover:text-[#ee2559] transition-colors w-fit`}
@@ -182,16 +205,26 @@ const ApplySection = () => (
           </a>
         </div>
 
-        <div className="hidden lg:block rounded-[16px] overflow-hidden bg-[#e9e6dd] w-full h-[240px] relative mt-[48px]">
-           <img 
-             src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 150'%3E%3Crect width='400' height='150' fill='%23e9e6dd'/%3E%3Cg stroke='%23d8d4c8' stroke-width='1'%3E%3Cline x1='0' y1='50' x2='400' y2='50'/%3E%3Cline x1='0' y1='100' x2='400' y2='100'/%3E%3Cline x1='100' y1='0' x2='100' y2='150'/%3E%3Cline x1='200' y1='0' x2='200' y2='150'/%3E%3Cline x1='300' y1='0' x2='300' y2='150'/%3E%3C/g%3E%3Crect x='120' y='30' width='170' height='90' rx='8' fill='%23101418'/%3E%3Cpath d='M145 55h120M145 75h90M145 95h105' stroke='%23C4D600' stroke-width='3'/%3E%3C/svg%3E" 
-             alt="Office illustration" 
+        <div className="hidden lg:block rounded-[16px] overflow-hidden bg-[#e9e6dd] w-full h-[240px] relative">
+           <motion.img
+             initial={{ opacity: 0, scale: 1.05 }}
+             whileInView={{ opacity: 1, scale: 1 }}
+             viewport={{ once: true, margin: "-50px" }}
+             transition={{ duration: 0.6, ease: "easeOut" }}
+             src="/career/contact-img.png"
+             alt="Contact image"
              className="absolute inset-0 w-full h-full object-cover mix-blend-multiply" 
            />
         </div>
-      </div>
+      </motion.div>
 
-      <div className={`font-lora text-[16px] font-normal leading-[25.6px] tracking-normal text-[#101418] bg-white p-[48px] rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100`}>
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+        className={`font-lora text-[16px] font-normal leading-[25.6px] tracking-normal text-[#101418] bg-white p-[48px] rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100`}
+      >
         <form className="flex flex-col gap-[24px]">
 
           <div className="flex flex-col gap-[10px]">
@@ -245,7 +278,7 @@ const ApplySection = () => (
           </button>
 
         </form>
-      </div>
+      </motion.div>
 
     </div>
   </section>
