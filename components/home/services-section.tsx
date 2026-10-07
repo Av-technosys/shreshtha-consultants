@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Archivo } from "next/font/google";
 import { Container } from "@/components/common/container";
 import {
   Box,
@@ -10,7 +9,6 @@ import {
   Zap,
 } from "lucide-react";
 
-const displayFont = Archivo({ subsets: ["latin"] });
 
 const serviceCards = [
   {
@@ -101,7 +99,7 @@ export function ServicesSection() {
       <Container>
         <div className="mb-16 max-w-[760px] max-[760px]:mb-10">
           <Kicker>Our Services</Kicker>
-          <h2 className={`${displayFont.className} my-[18px] mt-[22px] text-[clamp(32px,3.4vw,50px)] font-bold leading-[1.04] tracking-[-0.03em]`}>
+          <h2 className="font-archivo my-[18px] mt-[22px] text-[clamp(32px,3.4vw,50px)] font-bold leading-[1.04] tracking-[-0.03em]">
             Shreshtha Consultants — Your Complete Suite of Building Services
           </h2>
           <p className="text-[17px] leading-7 text-[#5c6570]">
@@ -119,7 +117,7 @@ export function ServicesSection() {
               <div className="mb-[22px] grid size-[52px] place-items-center rounded-xl border border-[#e3e0d8] bg-[#f7f6f2]">
                 <Icon className="size-6 stroke-[#101418] stroke-[1.6]" />
               </div>
-              <h3 className={`${displayFont.className} mb-4 text-[22px] font-bold leading-[1.1] tracking-[-0.03em]`}>
+              <h3 className="font-archivo mb-4 text-[22px] font-bold leading-[1.1] tracking-[-0.03em]">
                 {title}
               </h3>
               <ul className="mb-[26px] flex-1 list-none">
@@ -132,7 +130,7 @@ export function ServicesSection() {
                   </li>
                 ))}
               </ul>
-              <Link href={href} className={`${displayFont.className} inline-flex items-center gap-2 text-sm font-bold`}>
+              <Link href={href} className="font-archivo inline-flex items-center gap-2 text-sm font-bold">
                 Read More <span>→</span>
               </Link>
             </article>
@@ -145,7 +143,7 @@ export function ServicesSection() {
 
 function Kicker({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`${displayFont.className} flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] text-[#5c6570] before:h-0.5 before:w-[26px] before:bg-[#ed2967]`}>
+    <div className="font-archivo flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] text-[#5c6570] before:h-0.5 before:w-[26px] before:bg-[#ed2967]">
       {children}
     </div>
   );

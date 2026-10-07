@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { Container } from "@/components/common/container";
 
 const services = [
@@ -14,18 +17,24 @@ const companyLinks = [
   { label: "About us", href: "/about" },
   { label: "Career", href: "/career" },
   { label: "Projects", href: "/projects" },
-  { label: "Blogs", href: "/blogs" },
+  { label: "Blogs", href: "/blog" },
   { label: "Contact Us", href: "/contact" },
   { label: "BIM", href: "/bim" },
 ];
 
 const socialLinks = [
-  { label: "Facebook", href: "#", glyph: "f" },
-  { label: "Instagram", href: "#", glyph: "◎" },
-  { label: "LinkedIn", href: "#", glyph: "in" },
+  { label: "Facebook", href: "https://www.facebook.com/shreshthaconsultants", glyph: "f" },
+  { label: "Instagram", href: "https://www.instagram.com/shreshtha_consultants/", glyph: "◎" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/shreshtha-consultants/", glyph: "in" },
 ];
 
 export function Footer() {
+  const pathname = usePathname();
+
+  if (pathname.startsWith("/admin")) {
+    return null;
+  }
+
   return (
     <footer className="bg-[#111419] py-20 text-neutral-300 sm:py-20 lg:py-24">
       <Container>

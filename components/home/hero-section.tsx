@@ -3,7 +3,6 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Archivo } from "next/font/google";
 import { Container } from "@/components/common/container";
 import {
   Carousel,
@@ -12,7 +11,6 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-const displayFont = Archivo({ subsets: ["latin"] });
 
 const heroImages = [
   { src: "/Home/grid01.png", alt: "Hotel Rambagh Palace" },
@@ -40,7 +38,7 @@ export function HeroSection() {
     <section className="pb-[90px] pt-32 max-[760px]:pb-[60px] max-[760px]:pt-[82px]">
       <Container className="grid grid-cols-[1.15fr_0.85fr] items-center gap-[70px] max-[760px]:grid-cols-1 max-[760px]:gap-[38px]">
         <div>
-          <h1 className={`${displayFont.className} mb-6 text-[clamp(40px,4.6vw,68px)] font-bold leading-[1.04] tracking-[-0.04em] max-[760px]:text-[clamp(38px,12vw,52px)]`}>
+          <h1 className="font-archivo mb-6 text-[clamp(40px,4.6vw,68px)] font-bold leading-[1.04] tracking-[-0.04em] max-[760px]:text-[clamp(38px,12vw,52px)]">
             AI-powered Engineering Design that enable{" "}
             <Emphasis>faster execution</Emphasis> and{" "}
             <Emphasis>lower project costs.</Emphasis>
@@ -50,7 +48,7 @@ export function HeroSection() {
           </p>
           <Link
             href="#contact"
-            className={`${displayFont.className} group inline-flex items-center justify-center gap-2.5 rounded-full border border-[#101418] bg-[#101418] px-5 py-3 text-[13px] font-bold text-white transition duration-300 hover:border-[#16163f] hover:bg-[#16163f] hover:text-[#e2e2e2]`}
+            className="font-archivo group inline-flex items-center justify-center gap-2.5 rounded-full border border-[#101418] bg-[#101418] px-5 py-3 text-[13px] font-bold text-white transition duration-300 hover:border-[#16163f] hover:bg-[#16163f] hover:text-[#e2e2e2]"
           >
             Request Proposal <span>→</span>
           </Link>

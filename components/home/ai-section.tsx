@@ -2,10 +2,8 @@
 
 import { useRef } from "react";
 import { Maximize2, Sparkles } from "lucide-react";
-import { Archivo } from "next/font/google";
 import { Container } from "@/components/common/container";
 
-const displayFont = Archivo({ subsets: ["latin"] });
 
 export function AiSection() {
   const videoWrapRef = useRef<HTMLDivElement>(null);
@@ -18,10 +16,10 @@ export function AiSection() {
     <section className="relative overflow-hidden bg-[#101418] py-[110px] text-white after:absolute after:right-[-180px] after:top-[-180px] after:size-[520px] after:rounded-full after:bg-[radial-gradient(circle,rgb(237_41_103_/_0.16),transparent_70%)] max-[760px]:py-20">
       <Container className="relative z-[1] grid grid-cols-[1.05fr_0.95fr] items-center gap-[70px] max-[760px]:grid-cols-1 max-[760px]:gap-[38px]">
         <div>
-          <div className={`${displayFont.className} flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] text-white/55 before:h-0.5 before:w-[26px] before:bg-[#ed2967]`}>
+          <div className="font-archivo flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] text-white/55 before:h-0.5 before:w-[26px] before:bg-[#ed2967]">
             In-house Technology
           </div>
-          <h2 className={`${displayFont.className} my-[22px] mb-[34px] text-[clamp(30px,3.2vw,46px)] font-bold leading-[1.06] tracking-[-0.03em]`}>
+          <h2 className="font-archivo my-[22px] mb-[34px] text-[clamp(30px,3.2vw,46px)] font-bold leading-[1.06] tracking-[-0.03em]">
             AI software built to{" "}
             <em className="not-italic text-[#ed2967]">reduce errors, cut costs,</em>{" "}
             and maximize design efficiency.
@@ -31,7 +29,7 @@ export function AiSection() {
               <div className="mb-[18px] grid size-[34px] place-items-center rounded-full bg-[#ed2967]">
                 <Sparkles className="size-4 stroke-2" />
               </div>
-              <b className={`${displayFont.className} mb-2 block text-lg`}>AI Design</b>
+              <b className="font-archivo mb-2 block text-lg">AI Design</b>
               <span className="text-[13.5px] leading-6 text-white/60">
                 Optimised MEP drawings generated with our in-house AI engine.
               </span>

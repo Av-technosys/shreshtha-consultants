@@ -1,7 +1,5 @@
-import { Archivo } from "next/font/google";
 import { Container } from "@/components/common/container";
 
-const displayFont = Archivo({ subsets: ["latin"] });
 
 const stats = [
   ["1050+", "Projects completed"],
@@ -20,7 +18,7 @@ export function StatsSection() {
             className="border-l border-[#e3e0d8] px-[26px] py-12 first:border-l-0 max-[1080px]:border-t max-[760px]:odd:border-l-0 max-[760px]:last:col-span-2 max-[760px]:last:text-center"
             key={label}
           >
-            <strong className={`${displayFont.className} block text-[clamp(34px,3.4vw,52px)] font-bold leading-none tracking-[-0.03em]`}>
+            <strong className="font-archivo block text-[clamp(34px,3.4vw,52px)] font-bold leading-none tracking-[-0.03em]">
               {value}
             </strong>
             <span className="mt-2.5 block text-[13px] uppercase tracking-[0.04em] text-[#5c6570]">

@@ -6,13 +6,11 @@ import { ServicesSection } from "@/components/home/services-section";
 import { StatsSection } from "@/components/home/stats-section";
 import { TestimonialsSection } from "@/components/home/testimonials-section";
 import { TrustSection } from "@/components/home/trust-section";
-import { Inter } from "next/font/google";
 
-const bodyFont = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className={`${bodyFont.className} overflow-hidden bg-[#f7f6f2] text-[#101418]`}>
+    <main className="font-inter overflow-hidden bg-[#f7f6f2] text-[#101418]">
       <HeroSection />
       <TrustSection />
       <StatsSection />

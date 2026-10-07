@@ -1,10 +1,8 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Archivo } from "next/font/google";
 import { Container } from "@/components/common/container";
 
-const displayFont = Archivo({ subsets: ["latin"] });
 
 export interface ServiceHeroProps {
   kicker: string;
@@ -41,10 +39,10 @@ export function ServiceHero({
 
       <Container className="relative z-10 w-full">
         <div className="max-w-[600px]">
-          <div className={`${displayFont.className} mb-6 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-neutral-300 before:h-[1px] before:w-[26px] before:bg-[#ed2967]`}>
+          <div className="font-archivo mb-6 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-neutral-300 before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
             {kicker}
           </div>
-          <h1 className={`${displayFont.className} mb-8 text-[clamp(32px,4vw,46px)] font-bold leading-[1.15] tracking-[-0.02em] text-white max-[760px]:text-[clamp(30px,8vw,40px)]`}>
+          <h1 className="font-archivo mb-8 text-[clamp(32px,4vw,46px)] font-bold leading-[1.15] tracking-[-0.02em] text-white max-[760px]:text-[clamp(30px,8vw,40px)]">
             {title}
           </h1>
           <div className="mb-10 flex flex-col gap-4 text-[16px] leading-[1.8] text-neutral-400">
@@ -52,7 +50,7 @@ export function ServiceHero({
           </div>
           <Link
             href={ctaLink}
-            className={`${displayFont.className} group inline-flex items-center justify-center gap-2.5 rounded-full border border-white/10 bg-[#161a20]/80 px-6 py-3.5 text-[13px] font-bold text-white backdrop-blur-sm transition duration-300 hover:bg-white hover:text-[#101418]`}
+            className="font-archivo group inline-flex items-center justify-center gap-2.5 rounded-full border border-white/10 bg-[#161a20]/80 px-6 py-3.5 text-[13px] font-bold text-white backdrop-blur-sm transition duration-300 hover:bg-white hover:text-[#101418]"
           >
             {ctaText} <span className="transition-transform group-hover:translate-x-1">→</span>
           </Link>
