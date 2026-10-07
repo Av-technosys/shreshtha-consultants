@@ -56,8 +56,9 @@ export function Header() {
     return pathname === href;
   }
 
+
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-200/70 bg-[#F7F7F3]/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-neutral-200/70 bg-[#FCFCFC]/95 backdrop-blur">
       <Container className="flex min-h-16 items-center justify-between gap-8 py-3 md:min-h-18">
         <Link
           href="/"
@@ -167,7 +168,7 @@ export function Header() {
       </Container>
 
       {isOpen ? (
-        <div className="fixed inset-x-0 top-16 max-h-[calc(100dvh-4rem)] min-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-neutral-200 bg-[#F7F7F3] lg:hidden">
+        <div className="fixed inset-x-0 top-16 max-h-[calc(100dvh-4rem)] min-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-neutral-200 bg-[#FCFCFC] lg:hidden">
           <Container className="py-12 sm:py-14">
             <nav className="grid gap-6">
             {navItems.map((item) => {
