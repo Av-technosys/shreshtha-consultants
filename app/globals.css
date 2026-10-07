@@ -5,15 +5,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  --font-archivo: var(--font-archivo), sans-serif;
-  --font-inter: var(--font-inter), sans-serif;
-  --font-lora: var(--font-lora), serif;
-}
-
-@theme {
-  --font-archivo: var(--font-archivo), sans-serif;
-  --font-inter: var(--font-inter), sans-serif;
-  --font-lora: var(--font-lora), serif;
+  --font-archivo: var(--font-archivo-family), sans-serif;
+  --font-inter: var(--font-inter-family), sans-serif;
+  --font-lora: var(--font-lora-family), serif;
 }
 
 @layer base {
@@ -26,16 +20,29 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background font-lora text-foreground antialiased;
   }
-  html {
-    @apply font-sans;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-archivo;
+  }
+  button,
+  input,
+  select,
+  textarea,
+  label,
+  nav {
+    @apply font-inter;
   }
 }
 
 @theme inline {
-  --font-heading: var(--font-sans);
-  --font-sans: var(--font-sans);
+  --font-heading: var(--font-archivo);
+  --font-sans: var(--font-inter);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -144,3 +151,4 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
 }
+

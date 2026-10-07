@@ -1,9 +1,7 @@
 "use client";
 
-import { Archivo } from "next/font/google";
 import { Container } from "@/components/common/container";
 
-const displayFont = Archivo({ subsets: ["latin"] });
 
 const testimonials = [
   {
@@ -58,7 +56,7 @@ export function TestimonialsSection() {
         <div className="mb-10 flex items-end justify-between gap-10 max-[760px]:block">
           <div>
             <Kicker>Testimonials</Kicker>
-            <h2 className={`${displayFont.className} mt-5 text-[clamp(30px,3vw,44px)] font-bold leading-[1.04] tracking-[-0.03em]`}>
+            <h2 className="font-archivo mt-5 text-[clamp(30px,3vw,44px)] font-bold leading-[1.04] tracking-[-0.03em]">
               Real stories, real results
             </h2>
             <p className="mt-2.5 text-[#5c6570]">
@@ -75,18 +73,18 @@ export function TestimonialsSection() {
               className="flex w-[420px] flex-none flex-col rounded-[18px] border border-[#e3e0d8] bg-white px-[34px] py-[38px] max-[760px]:w-[min(82vw,360px)] max-[760px]:px-6 max-[760px]:py-[30px]"
               key={`${testimonial.name}-${index}`}
             >
-              <div className={`${displayFont.className} mb-[22px] text-[46px] font-bold leading-[0.6] text-[#ed2967]`}>
+              <div className="font-archivo mb-[22px] text-[46px] font-bold leading-[0.6] text-[#ed2967]">
                 “
               </div>
               <p className="mb-[26px] flex-1 text-[15.5px] leading-7 text-[#333a41]">
                 {testimonial.quote}
               </p>
               <div className="flex items-center gap-3.5">
-                <div className={`${displayFont.className} grid size-[46px] flex-none place-items-center rounded-full bg-[#101418] font-bold text-[#ed2967]`}>
+                <div className="font-archivo grid size-[46px] flex-none place-items-center rounded-full bg-[#101418] font-bold text-[#ed2967]">
                   {testimonial.initials}
                 </div>
                 <div>
-                  <b className={`${displayFont.className} block text-[15px]`}>{testimonial.name}</b>
+                  <b className="font-archivo block text-[15px]">{testimonial.name}</b>
                   <span className="text-[12.5px] text-[#5c6570]">{testimonial.role}</span>
                 </div>
               </div>
@@ -100,7 +98,7 @@ export function TestimonialsSection() {
 
 function Kicker({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`${displayFont.className} flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] text-[#5c6570] before:h-0.5 before:w-[26px] before:bg-[#ed2967]`}>
+    <div className="font-archivo flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] text-[#5c6570] before:h-0.5 before:w-[26px] before:bg-[#ed2967]">
       {children}
     </div>
   );

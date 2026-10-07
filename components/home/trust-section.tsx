@@ -1,10 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Archivo } from "next/font/google";
 import { Container } from "@/components/common/container";
 
-const displayFont = Archivo({ subsets: ["latin"] });
 
 const clients = [
   { name: "Client 20", src: "/Home/clients/logo-20.png" },
@@ -47,7 +45,7 @@ export function TrustSection() {
       <Container className="mb-11 flex items-end justify-between gap-10 max-[760px]:block">
         <div>
           <Kicker>Industry Trusted</Kicker>
-          <h2 className={`${displayFont.className} mt-[18px] text-[clamp(26px,2.6vw,38px)] font-bold leading-[1.05] tracking-[-0.03em]`}>
+          <h2 className="font-archivo mt-[18px] text-[clamp(26px,2.6vw,38px)] font-bold leading-[1.05] tracking-[-0.03em]">
             Industry Trusted
           </h2>
         </div>
@@ -95,7 +93,7 @@ function LogoMarquee({ items, reverse = false }: { items: ClientLogo[]; reverse?
 
 function Kicker({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`${displayFont.className} flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] text-[#5c6570] before:h-0.5 before:w-[26px] before:bg-[#ed2967]`}>
+    <div className="font-archivo flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] text-[#5c6570] before:h-0.5 before:w-[26px] before:bg-[#ed2967]">
       {children}
     </div>
   );

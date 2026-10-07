@@ -1,12 +1,9 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
-import { Archivo, Inter } from "next/font/google";
 import { Container } from "@/components/common/container";
 import { TimelineMarker } from "@/components/about/timeline-marker";
 import { TimelineProgress } from "@/components/about/timeline-progress";
 
-const displayFont = Archivo({ subsets: ["latin"] });
-const bodyFont = Inter({ subsets: ["latin"] });
 
 type Panel = {
   number: string;
@@ -91,12 +88,12 @@ const associations = [
 
 export default function AboutPage() {
   return (
-    <main className={`${bodyFont.className} overflow-hidden bg-[#f7f6f2] text-[#101418]`}>
+    <main className="font-inter overflow-hidden bg-[#f7f6f2] text-[#101418]">
       <section className="relative py-16 max-[900px]:py-12">
         <Container className="grid grid-cols-[1.05fr_0.95fr] items-center gap-[70px] px-10 max-[1180px]:gap-12 max-[900px]:grid-cols-1 max-[900px]:px-6 max-[520px]:px-[22px]">
           <div>
             <Kicker>Who We Are</Kicker>
-            <h1 className={`${displayFont.className} mt-[22px] text-[clamp(38px,4.4vw,62px)] font-bold leading-[1.02] tracking-[-0.04em] max-[520px]:text-[38px]`}>
+            <h1 className="font-archivo mt-[22px] text-[clamp(38px,4.4vw,62px)] font-bold leading-[1.02] tracking-[-0.04em] max-[520px]:text-[38px]">
               About{" "}
               <em className="relative inline-block not-italic text-[#ed2967] after:absolute after:bottom-[3px] after:left-0 after:h-2 after:w-full after:bg-[#ed2967]/20 after:content-['']">
                 Us
@@ -149,7 +146,7 @@ export default function AboutPage() {
         <Container className="px-10 max-[900px]:px-6 max-[520px]:px-[22px]">
           <div className="mx-auto flex w-fit flex-col items-center">
             <Kicker>Partnerships</Kicker>
-            <h2 className={`${displayFont.className} mt-[18px] text-[clamp(28px,3vw,40px)] font-bold leading-[1.08] tracking-[-0.035em]`}>
+            <h2 className="font-archivo mt-[18px] text-[clamp(28px,3vw,40px)] font-bold leading-[1.08] tracking-[-0.035em]">
               Our Associations
             </h2>
           </div>
@@ -184,11 +181,11 @@ function PanelBlock({ panel, dark = false, lastRow = false }: { panel: Panel; da
         dark ? "border-l-[3px] border-l-[#ed2967] bg-[#111419] text-white max-[900px]:border-l-0 max-[900px]:border-t-[3px] max-[900px]:border-t-[#ed2967]" : "bg-[#f7f6f2]",
       ].join(" ")}
     >
-      <span className={`${displayFont.className} absolute right-[34px] top-[22px] text-[74px] font-extrabold leading-none tracking-[-0.03em] ${dark ? "text-white/[0.07]" : "text-[#101418]/[0.07]"}`}>
+      <span className={`font-archivo absolute right-[34px] top-[22px] text-[74px] font-extrabold leading-none tracking-[-0.03em] ${dark ? "text-white/[0.07]" : "text-[#101418]/[0.07]"}`}>
         {panel.number}
       </span>
       <Kicker dark={dark}>{panel.eyebrow}</Kicker>
-      <h3 className={`${displayFont.className} my-4 text-[30px] font-bold leading-[1.1] tracking-[-0.03em] max-[520px]:text-[26px]`}>{panel.title}</h3>
+      <h3 className="font-archivo my-4 text-[30px] font-bold leading-[1.1] tracking-[-0.03em] max-[520px]:text-[26px]">{panel.title}</h3>
       <p className={`mb-2.5 max-w-[440px] text-[15.5px] leading-[1.8] ${dark ? "text-white/65" : "text-[#5c6570]"}`}>{panel.text}</p>
       {panel.text2 ? <p className={`mb-2.5 max-w-[440px] text-[15.5px] leading-[1.8] ${dark ? "text-white/65" : "text-[#5c6570]"}`}>{panel.text2}</p> : null}
     </article>
@@ -203,7 +200,7 @@ function MilestonesSection() {
           <div className="mx-auto flex w-fit flex-col items-center">
             <Kicker>Our Journey</Kicker>
           </div>
-          <h2 className={`${displayFont.className} mb-3 mt-[22px] text-[clamp(30px,3.2vw,46px)] font-semibold leading-[1.1] tracking-[-0.035em]`}>
+          <h2 className="font-archivo mb-3 mt-[22px] text-[clamp(30px,3.2vw,46px)] font-semibold leading-[1.1] tracking-[-0.035em]">
             Milestones
           </h2>
           <p className="mx-auto mb-[50px] max-w-[520px] text-center text-base leading-[1.75] text-[#5c6570]">
@@ -243,7 +240,7 @@ function PeopleSection({ eyebrow, title, text, people, compact = false }: { eyeb
       <Container className="px-10 max-[900px]:px-6 max-[520px]:px-[22px]">
         <div className="mb-14 max-w-[720px] max-[520px]:mb-9">
           <Kicker>{eyebrow}</Kicker>
-          <h2 className={`${displayFont.className} mb-3.5 mt-5 text-[clamp(30px,3.2vw,46px)] font-bold leading-[1.08] tracking-[-0.035em]`}>{title}</h2>
+          <h2 className="font-archivo mb-3.5 mt-5 text-[clamp(30px,3.2vw,46px)] font-bold leading-[1.08] tracking-[-0.035em]">{title}</h2>
           <p className="text-base leading-[1.75] text-[#5c6570]">{text}</p>
         </div>
         <div className="grid grid-cols-4 gap-[18px] max-[1080px]:grid-cols-2 max-[520px]:grid-cols-1">
@@ -251,7 +248,7 @@ function PeopleSection({ eyebrow, title, text, people, compact = false }: { eyeb
             <article key={name} className="group relative aspect-[3/4] overflow-hidden rounded-2xl bg-[#101418]">
               <Image src={image} alt={name} fill className="object-cover opacity-90 transition duration-500 ease-out group-hover:scale-[1.06]" sizes="(max-width: 1080px) 50vw, 25vw" />
               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgb(10_12_14_/_0.88)] to-transparent p-[18px] text-white">
-                <b className={`${displayFont.className} block text-[15px] font-bold leading-snug`}>{name}</b>
+                <b className="font-archivo block text-[15px] font-bold leading-snug">{name}</b>
                 <span className="text-xs leading-snug text-white/70">{role}</span>
               </div>
             </article>
@@ -266,7 +263,7 @@ function Kicker({ children, className = "", dark = false }: { children: ReactNod
   return (
     <div
       className={[
-        `${displayFont.className} flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em]`,
+        `font-archivo flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em]`,
         dark ? "text-white/55" : "text-[#5c6570]",
         "before:h-0.5 before:w-[26px] before:bg-[#ed2967]",
         className,
