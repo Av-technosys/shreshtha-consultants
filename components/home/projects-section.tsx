@@ -1,10 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Maximize2 } from "lucide-react";
-import { Archivo } from "next/font/google";
 import { Container } from "@/components/common/container";
 
-const displayFont = Archivo({ subsets: ["latin"] });
 
 const projects = [
   {
@@ -52,7 +50,7 @@ export function ProjectsSection() {
         <div className="mb-14 flex items-end justify-between gap-10 max-[760px]:block">
           <div>
             <Kicker>Portfolio</Kicker>
-            <h2 className={`${displayFont.className} mt-[22px] text-[clamp(32px,3.4vw,50px)] font-bold leading-[1.04] tracking-[-0.03em]`}>
+            <h2 className="font-archivo mt-[22px] text-[clamp(32px,3.4vw,50px)] font-bold leading-[1.04] tracking-[-0.03em]">
               Some of our projects
             </h2>
           </div>
@@ -102,7 +100,7 @@ function ProjectCard({
       <div className="absolute inset-0 bg-[linear-gradient(to_top,rgb(10_12_14_/_0.82),rgb(10_12_14_/_0.06)_55%)]" />
       <div className="absolute inset-x-[26px] bottom-[22px] flex items-end justify-between gap-3.5 text-white">
         <div>
-          <h3 className={`${displayFont.className} mb-1 text-[22px] font-bold leading-[1.08] tracking-[-0.03em]`}>
+          <h3 className="font-archivo mb-1 text-[22px] font-bold leading-[1.08] tracking-[-0.03em]">
             {title}
           </h3>
           <span className="text-[12.5px] uppercase tracking-[0.06em] text-white/70">
@@ -119,7 +117,7 @@ function ProjectCard({
 
 function Kicker({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`${displayFont.className} flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] text-[#5c6570] before:h-0.5 before:w-[26px] before:bg-[#ed2967]`}>
+    <div className="font-archivo flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] text-[#5c6570] before:h-0.5 before:w-[26px] before:bg-[#ed2967]">
       {children}
     </div>
   );

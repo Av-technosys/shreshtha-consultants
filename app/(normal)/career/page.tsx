@@ -115,7 +115,7 @@ const TilesSection = () => (
                 className={`bg-[#F7F6F2] w-full h-full ${reversed ? "lg:order-1" : "lg:order-2"}`}
               >
                 <div
-                  className={`relative h-[320px] lg:h-[380px] w-full overflow-hidden rounded-[28px]`}
+                  className="relative h-[320px] lg:h-[380px] w-full overflow-hidden rounded-[28px]"
                 >
                   <img
                     src={t.img}
@@ -255,7 +255,7 @@ const ApplySection = () => (
         <div className="mb-[24px] lg:mb-[48px]">
           <a
             href="mailto:contact@shreshthaconsultants.com"
-            className={`font-archivo text-[16px] font-bold leading-[25.6px] tracking-normal text-[#101418] border-b-[2px] border-[#ee2559] pb-[4px] hover:text-[#ee2559] transition-colors w-fit`}
+            className="font-archivo text-[16px] font-bold leading-[25.6px] tracking-normal text-[#101418] border-b-[2px] border-[#ee2559] pb-[4px] hover:text-[#ee2559] transition-colors w-fit"
           >
             contact@shreshthaconsultants.com
           </a>
@@ -279,7 +279,7 @@ const ApplySection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-        className={`font-lora text-[16px] font-normal leading-[25.6px] tracking-normal text-[#101418] bg-white p-[48px] rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100`}
+        className="font-lora text-[16px] font-normal leading-[25.6px] tracking-normal text-[#101418] bg-white p-[48px] rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100"
       >
         <form className="flex flex-col gap-[24px]">
           <div className="flex flex-col gap-[10px]">
@@ -356,7 +356,7 @@ const ApplySection = () => (
 
           <button
             type="submit"
-            className={`font-archivo mt-[16px] bg-[#111] text-white text-[14px] font-semibold leading-[21px] tracking-normal py-[20px] w-full rounded-full hover:bg-[#172554] transition-colors flex items-center justify-center gap-[8px]`}
+            className="font-archivo mt-[16px] bg-[#111] text-white text-[14px] font-semibold leading-[21px] tracking-normal py-[20px] w-full rounded-full hover:bg-[#172554] transition-colors flex items-center justify-center gap-[8px]"
           >
             Submit Application
             <span>→</span>
