@@ -14,15 +14,15 @@ export default function BstPage() {
     <main className="min-h-screen bg-[#F7F6F2]">
       <ProjectHero 
         title="BST Hospital"
-        image="/projects/bst/bst_hero.png"
+        image="/Projects/bst/bst_hero.png"
       />
       <ProjectDetails 
         info={projectInfo}
         description="BST Hospital is a growing healthcare facility in Jaipur, committed to affordable and reliable patient care. Shreshtha Consultants executed full MEP consultancy, delivering modern HVAC solutions, optimized electrification, and safety systems tailored for hospitals, ensuring uninterrupted services and patient comfort."
         images={[
-          "/projects/bst/bst_img1.png",
-          "/projects/bst/bst_img2.png",
-          "/projects/bst/bst_img3.png"
+          "/Projects/bst/bst_img1.png",
+          "/Projects/bst/bst_img2.png",
+          "/Projects/bst/bst_img3.png"
         ]}
       />
     </main>

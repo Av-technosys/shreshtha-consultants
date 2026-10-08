@@ -59,7 +59,7 @@ export default function SafetyAndSecurityPage() {
         imageSrc="/Services/Safety-and-Security/herobg.png"
         imageAlt="Safety and Security design services — Shreshtha Consultants"
         ctaText="Request Proposal"
-        ctaLink="/contact#form"
+        ctaLink="/contact-us#form"
       />
 
       <ServiceDeliverables

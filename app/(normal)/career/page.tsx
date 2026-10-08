@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import React from "react";
-import Image from "next/image";
 import { Container } from "@/components/common/container";
 
 const HeroSection = () => (
@@ -242,13 +241,13 @@ const ApplySection = () => (
         <h2
           className={`font-archivo text-[32px] lg:text-[42px] font-bold leading-[1.2] lg:leading-[43.68px] tracking-[-1px] lg:tracking-[-1.26px] text-[#101418] mb-[24px] lg:mb-[32px]`}
         >
-          Send us your resume, we'll take it from there.
+          Send us your resume, we&apos;ll take it from there.
         </h2>
 
         <p
           className={`font-lora text-[15px] font-normal leading-[26.25px] tracking-normal text-[#5C6570] mb-[48px] lg:mb-[40px] max-w-[480px]`}
         >
-          Whether or not a role is open today, we're always glad to hear from
+          Whether or not a role is open today, we&apos;re always glad to hear from
           engineers who want to build something real.
         </p>
 
@@ -314,7 +313,7 @@ const ApplySection = () => (
             <label
               className={`font-archivo text-[11.5px] font-semibold leading-[11.5px] tracking-[1.15px] uppercase text-[#5C6570]`}
             >
-              Role You're Applying For
+              Role You&apos;re Applying For
             </label>
             <input
               type="text"

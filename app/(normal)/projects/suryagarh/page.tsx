@@ -14,15 +14,15 @@ export default function SuryagarhPage() {
     <main className="min-h-screen bg-[#F7F6F2]">
       <ProjectHero 
         title="Hotel Suryagarh Palace"
-        image="/projects/hotel suryagarh palace/Suryagargh_hero.png"
+        image="/Projects/hotel suryagarh palace/Suryagargh_hero.png"
       />
       <ProjectDetails 
         info={projectInfo}
         description="Suryagarh Palace, known as the &quot;Gateway to the Thar Desert,&quot; is a heritage luxury hotel that blends Rajput architecture with modern hospitality. Shreshtha Consultants provided complete MEP consultancy, designing and implementing systems that complemented the property's historic aesthetic while ensuring seamless comfort, safety, and efficiency for guests."
         images={[
-          "/projects/hotel suryagarh palace/Suryagarh_img1.png",
-          "/projects/hotel suryagarh palace/Suryagarh_img2.png",
-          "/projects/hotel suryagarh palace/Suryagarh_img3.png"
+          "/Projects/hotel suryagarh palace/Suryagarh_img1.png",
+          "/Projects/hotel suryagarh palace/Suryagarh_img2.png",
+          "/Projects/hotel suryagarh palace/Suryagarh_img3.png"
         ]}
       />
     </main>

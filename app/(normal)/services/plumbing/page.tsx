@@ -71,7 +71,7 @@ export default function PlumbingPage() {
         imageSrc="/Services/Plumbing/herobg.png"
         imageAlt="Plumbing design services — Shreshtha Consultants"
         ctaText="Request Proposal"
-        ctaLink="/contact#form"
+        ctaLink="/contact-us#form"
       />
       <ServiceDeliverables
         kicker="What We Deliver"

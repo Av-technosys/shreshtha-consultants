@@ -65,7 +65,7 @@ export default function HVACPage() {
         imageSrc="/Services/HVAC/herobg.png"
         imageAlt="HVAC design services — Shreshtha Consultants"
         ctaText="Request Proposal"
-        ctaLink="/contact#form"
+        ctaLink="/contact-us#form"
       />
 
       <ServiceDeliverables

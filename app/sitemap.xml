@@ -1,80 +1,296 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://shreshthaconsultants.com</loc>
-    <lastmod>2026-10-07</lastmod>
+    <loc>https://shreshthaconsultants.com/</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://shreshthaconsultants.com/about</loc>
-    <lastmod>2026-10-07</lastmod>
+    <loc>https://shreshthaconsultants.com/about/</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://shreshthaconsultants.com/bim</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://shreshthaconsultants.com/blog</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://shreshthaconsultants.com/blog/fire-safety-compliance-for-high-rise-buildings-in-india-2025-update</loc>
-    <lastmod>2026-09-22</lastmod>
+    <loc>https://shreshthaconsultants.com/electrical/</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://shreshthaconsultants.com/career</loc>
-    <lastmod>2026-10-07</lastmod>
+    <loc>https://shreshthaconsultants.com/plumbing/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/fire-fighting-2/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/hvacr/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/safety-and-security/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/bim/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/careers/</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://shreshthaconsultants.com/contact</loc>
-    <lastmod>2026-10-07</lastmod>
+    <loc>https://shreshthaconsultants.com/contact-us/</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://shreshthaconsultants.com/projects</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://shreshthaconsultants.com/blog/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://shreshthaconsultants.com/services/electrical</loc>
-    <lastmod>2026-10-07</lastmod>
+    <loc>https://shreshthaconsultants.com/privacy-policy/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/one8-commune/</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://shreshthaconsultants.com/services/fire-fighting</loc>
-    <lastmod>2026-10-07</lastmod>
+    <loc>https://shreshthaconsultants.com/projects/gt-central/</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://shreshthaconsultants.com/services/hvac</loc>
-    <lastmod>2026-10-07</lastmod>
+    <loc>https://shreshthaconsultants.com/projects/dot-square/</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://shreshthaconsultants.com/services/plumbing</loc>
-    <lastmod>2026-10-07</lastmod>
+    <loc>https://shreshthaconsultants.com/projects/urban-square/</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://shreshthaconsultants.com/services/safety-and-security</loc>
-    <lastmod>2026-10-07</lastmod>
+    <loc>https://shreshthaconsultants.com/projects/gt-landmark/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/rajasthan-hospital/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/sum-hospital/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/jims-hospital/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/bst-hospital/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/hotel-suryagarh-palace/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/hotel-rambagh-palace/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/umaid-bhawan-palace/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/jewel-bagh/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/savio-factory/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/gurukripa-factory/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/salasar-balaji-creation/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/jaswant-gargh-school/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/gsis-school/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/delhi-world-public-school/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/nokha-library/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/narsi-villa/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/kgk-amulya/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/acl-greens/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/goyal-house/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/the-sky-bunglows/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/itc-jawai/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/city-park/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/nims/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/projects/world-trade-park/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/blog/renewable-energy-with-the-best-mep-consultants-in-india/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/blog/top-hvac-mep-consultants-in-delhi/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/blog/mep-and-hvac-consultants-hyderabad/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/blog/best-electrical-consultants-and-mep-consultants-in-mumbai/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/blog/top-mep-consultants-chennai-mep-design-companies-smart-building/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/blog/mep-services-and-consultants-in-bangalore/</loc>
+    <lastmod>2026-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://shreshthaconsultants.com/blog/top-mep-consultants-in-india/</loc>
+    <lastmod>2026-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
