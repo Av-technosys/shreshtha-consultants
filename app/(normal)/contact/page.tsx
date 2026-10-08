@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { IconMapPin, IconPhone, IconMail } from "@tabler/icons-react";
 import { Container } from "@/components/common/container";
+import { ResendForm } from "@/components/forms/resend-form";
 
 const HeroSection = () => (
   <section className="pt-[60px] md:pt-[140px] pb-[80px]">
@@ -135,7 +136,7 @@ const ConnectSection = () => {
             </div>
 
             <div className="w-full max-w-[800px] bg-white rounded-[24px] p-[40px] md:p-[48px] lg:p-[56px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] border border-[#eee]">
-              <form className="flex flex-col gap-[32px]">
+                <ResendForm formType="Contact - General Inquiry" className="flex flex-col gap-[32px]">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
                   <div className="flex flex-col gap-[12px]">
                     <label
@@ -145,6 +146,7 @@ const ConnectSection = () => {
                     </label>
                     <input
                       type="text"
+                      name="name"
                       placeholder="Your name"
                       required
                       className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
@@ -159,6 +161,7 @@ const ConnectSection = () => {
                     </label>
                     <input
                       type="email"
+                      name="email"
                       placeholder="you@email.com"
                       required
                       className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
@@ -173,6 +176,7 @@ const ConnectSection = () => {
                     Message
                   </label>
                   <textarea
+                    name="message"
                     rows={4}
                     placeholder="Tell us about your project"
                     required
@@ -189,6 +193,7 @@ const ConnectSection = () => {
                     </label>
                     <input
                       type="text"
+                      name="projectSize"
                       placeholder="e.g. 20,000"
                       className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
                     />
@@ -202,6 +207,7 @@ const ConnectSection = () => {
                     </label>
                     <input
                       type="text"
+                      name="projectLocation"
                       placeholder="City, State"
                       className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
                     />
@@ -216,6 +222,7 @@ const ConnectSection = () => {
                   </label>
                   <div className="relative">
                     <select
+                      name="projectType"
                       className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] appearance-none focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all cursor-pointer`}
                       defaultValue=""
                     >
@@ -253,7 +260,7 @@ const ConnectSection = () => {
                   Send Message
                   <span>→</span>
                 </button>
-              </form>
+              </ResendForm>
             </div>
           </>
         ) : (
@@ -273,7 +280,7 @@ const ConnectSection = () => {
             </div>
 
             <div className="w-full max-w-[800px] bg-white rounded-[24px] p-[40px] md:p-[48px] lg:p-[56px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] border border-[#eee]">
-              <form className="flex flex-col gap-[32px]">
+              <ResendForm formType="Contact - Partner With Us" className="flex flex-col gap-[32px]">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
                   <div className="flex flex-col gap-[12px]">
                     <label
@@ -283,6 +290,7 @@ const ConnectSection = () => {
                     </label>
                     <input
                       type="text"
+                      name="companyName"
                       placeholder="Company name"
                       required
                       className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
@@ -296,6 +304,7 @@ const ConnectSection = () => {
                     </label>
                     <input
                       type="text"
+                      name="contactPerson"
                       placeholder="Your name"
                       required
                       className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
@@ -312,6 +321,7 @@ const ConnectSection = () => {
                     </label>
                     <input
                       type="tel"
+                      name="phone"
                       placeholder="+91"
                       required
                       className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
@@ -325,6 +335,7 @@ const ConnectSection = () => {
                     </label>
                     <input
                       type="text"
+                      name="productOrService"
                       placeholder="What do you offer?"
                       required
                       className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
@@ -339,6 +350,7 @@ const ConnectSection = () => {
                     Description
                   </label>
                   <textarea
+                    name="description"
                     rows={4}
                     placeholder="Tell us more"
                     required
@@ -357,6 +369,7 @@ const ConnectSection = () => {
                   >
                     <input
                       type="file"
+                      name="attachment"
                       accept=".pdf,.doc,.docx"
                       className="w-full text-[#5C6570] file:mr-[16px] file:py-[8px] file:px-[16px] file:rounded-[6px] file:border file:border-gray-200 file:text-[13px] file:font-semibold file:bg-white file:text-black hover:file:bg-gray-50 cursor-pointer"
                     />
@@ -370,7 +383,7 @@ const ConnectSection = () => {
                   Submit
                   <span>→</span>
                 </button>
-              </form>
+              </ResendForm>
             </div>
           </>
         )}

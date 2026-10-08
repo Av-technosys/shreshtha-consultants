@@ -1,5 +1,5 @@
 import { Container } from "@/components/common/container";
-
+import { ResendForm } from "@/components/forms/resend-form";
 
 export function ProposalSection() {
   return (
@@ -21,7 +21,7 @@ export function ProposalSection() {
       <section className="pb-[120px]" id="contact">
         <Container>
           <div className="mx-auto max-w-[880px] rounded-3xl border border-[#e3e0d8] bg-white p-14 shadow-[0_40px_80px_rgb(16_20_24_/_0.06)] max-[760px]:px-[22px] max-[760px]:py-[34px]">
-            <form action="https://formspree.io/f/mvkggkev" method="POST">
+            <ResendForm formType="Proposal Request">
               <div className="grid grid-cols-2 gap-[22px] max-[760px]:grid-cols-1">
                 <Field label="Name*" name="Name" required placeholder="Your full name" />
                 <Field label="Email*" name="Email" type="email" required placeholder="you@company.com" />
@@ -51,7 +51,7 @@ export function ProposalSection() {
               >
                 Request a Proposal <span>→</span>
               </button>
-            </form>
+            </ResendForm>
           </div>
         </Container>
       </section>

@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Container } from "@/components/common/container";
+import { ResendForm } from "@/components/forms/resend-form";
 
 const HeroSection = () => {
   return (
@@ -318,29 +319,34 @@ const GetStartedSection = () => {
           project costs.
         </h2>
 
-        <form className="flex flex-col md:flex-row items-center gap-[16px] w-full max-w-[900px] mx-auto justify-center">
+        <ResendForm formType="BIM Inquiry" className="flex flex-col md:flex-row items-center gap-[16px] w-full max-w-[900px] mx-auto justify-center">
           <input
             type="text"
+            name="name"
+            required
             placeholder="Name"
             className="w-full md:w-auto flex-1 font-inter text-[14px] font-normal leading-[21px] text-[#000000] placeholder-[#888] bg-white rounded-[12px] px-[20px] py-[16px] border border-transparent shadow-[0_2px_10px_rgba(0,0,0,0.03)] focus:outline-none focus:border-[#e5e5e5] transition-colors"
           />
           <input
             type="email"
+            name="email"
+            required
             placeholder="Email"
             className="w-full md:w-auto flex-1 font-inter text-[14px] font-normal leading-[21px] text-[#000000] placeholder-[#888] bg-white rounded-[12px] px-[20px] py-[16px] border border-transparent shadow-[0_2px_10px_rgba(0,0,0,0.03)] focus:outline-none focus:border-[#e5e5e5] transition-colors"
           />
           <input
             type="tel"
+            name="phone"
             placeholder="Phone"
             className="w-full md:w-auto flex-1 font-inter text-[14px] font-normal leading-[21px] text-[#000000] placeholder-[#888] bg-white rounded-[12px] px-[20px] py-[16px] border border-transparent shadow-[0_2px_10px_rgba(0,0,0,0.03)] focus:outline-none focus:border-[#e5e5e5] transition-colors"
           />
           <button
-            type="button"
+            type="submit"
             className="w-full md:w-auto bg-[#101418] text-white font-archivo text-[14px] font-semibold leading-[21px] rounded-[999px] px-[32px] py-[16px] hover:bg-[#2a3036] transition-colors whitespace-nowrap flex items-center justify-center gap-2"
           >
             Get Profile <span>&rarr;</span>
           </button>
-        </form>
+        </ResendForm>
       </Container>
     </section>
   );
