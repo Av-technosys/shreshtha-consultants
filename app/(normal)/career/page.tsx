@@ -293,7 +293,7 @@ const ApplySection = () => (
               name="name"
               placeholder="Your name"
               required
-              className={`font-inter text-[14.5px] font-normal leading-[21.75px] tracking-normal text-black placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-[#ee2559] focus:ring-1 focus:ring-[#ee2559] transition-all`}
+              className={`font-inter text-[14.5px] font-normal leading-[21.75px] tracking-normal text-black placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
             />
           </div>
 
@@ -308,7 +308,22 @@ const ApplySection = () => (
               name="email"
               placeholder="you@email.com"
               required
-              className={`font-inter text-[14.5px] font-normal leading-[21.75px] tracking-normal text-black placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-[#ee2559] focus:ring-1 focus:ring-[#ee2559] transition-all`}
+              className={`font-inter text-[14.5px] font-normal leading-[21.75px] tracking-normal text-black placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
+            />
+          </div>
+
+          <div className="flex flex-col gap-[10px]">
+            <label
+              className={`font-archivo text-[11.5px] font-semibold leading-[11.5px] tracking-[1.15px] uppercase text-[#5C6570]`}
+            >
+              Phone Number
+            </label>
+            <input
+              type="number"
+              name="phone"
+              placeholder="+91 9876543210"
+              required
+              className={`font-inter text-[14.5px] font-normal leading-[21.75px] tracking-normal text-black placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
             />
           </div>
 
@@ -321,8 +336,9 @@ const ApplySection = () => (
             <input
               type="text"
               name="role"
+              required
               placeholder="e.g. HVAC Designer"
-              className={`font-inter text-[14.5px] font-normal leading-[21.75px] tracking-normal text-black placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-[#ee2559] focus:ring-1 focus:ring-[#ee2559] transition-all`}
+              className={`font-inter text-[14.5px] font-normal leading-[21.75px] tracking-normal text-black placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
             />
           </div>
 
@@ -355,7 +371,7 @@ const ApplySection = () => (
               name="message"
               rows={4}
               placeholder="A few lines about you"
-              className={`font-inter text-[14.5px] font-normal leading-[21.75px] tracking-normal text-black placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-[#ee2559] focus:ring-1 focus:ring-[#ee2559] transition-all resize-none`}
+              className={`font-inter text-[14.5px] font-normal leading-[21.75px] tracking-normal text-black placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all resize-none`}
             />
           </div>
 

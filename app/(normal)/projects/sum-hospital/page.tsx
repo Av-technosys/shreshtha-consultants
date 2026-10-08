@@ -21,7 +21,7 @@ export default function SumHospitalPage() {
         description="SUM Hospital, part of SOA University, is one of Odisha's leading multispeciality institutions, combining advanced healthcare with education and research. Shreshtha Consultants delivered full MEP consultancy for the project, ensuring efficient air conditioning, reliable electrification, and robust utility systems that support both critical patient care and academic facilities."
         images={[
           "/Projects/sum hospital/sum hospital_img1.png",
-          "/Projects/sum hospital/sum hospital_img2.png",
+          "/Projects/sum hospital/sum hospital_img2.jpeg",
           "/Projects/sum hospital/sum hospital_img3.png"
         ]}
       />

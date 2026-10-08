@@ -337,6 +337,7 @@ const GetStartedSection = () => {
           <input
             type="tel"
             name="phone"
+            required
             placeholder="Phone"
             className="w-full md:w-auto flex-1 font-inter text-[14px] font-normal leading-[21px] text-[#000000] placeholder-[#888] bg-white rounded-[12px] px-[20px] py-[16px] border border-transparent shadow-[0_2px_10px_rgba(0,0,0,0.03)] focus:outline-none focus:border-[#e5e5e5] transition-colors"
           />
@@ -361,3 +362,4 @@ export default function BimPage() {
     </div>
   );
 }
+ 

@@ -16,7 +16,6 @@ export default function One8CommunePage() {
 
   const projectImages = [
     '/Projects/one8 Commune/one8 Commune_img1.png',
-    '/Projects/one8 Commune/one8 Commune_img2.png',
     '/Projects/one8 Commune/one8 Commune_img3.png'
   ];
 
