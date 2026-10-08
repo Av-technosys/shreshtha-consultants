@@ -8,6 +8,7 @@
   --font-archivo: var(--font-archivo-family), sans-serif;
   --font-inter: var(--font-inter-family), sans-serif;
   --font-lora: var(--font-lora-family), serif;
+  --font-poppins: var(--font-poppins-family), sans-serif;
 }
 
 @layer base {
