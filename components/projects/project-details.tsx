@@ -115,6 +115,7 @@ export function ProjectDetails({
             <input
               type="tel"
               name="phone"
+              required
               placeholder="Phone"
               className="w-full md:flex-1 bg-[#1C1F26] border border-[#505050] rounded-[8px] px-[20px] py-[14px] font-sans text-[16px] font-normal leading-[1.5] text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-colors"
             />

@@ -130,13 +130,16 @@ const ConnectSection = () => {
               <p
                 className={`font-lora text-[14.5px] font-normal leading-[23.2px] text-[#5C6570] max-w-[420px] mx-auto m-0`}
               >
-                We&apos;d love to hear from you. Tell us about your project and the
-                Shreshtha team will get in touch.
+                We&apos;d love to hear from you. Tell us about your project and
+                the Shreshtha team will get in touch.
               </p>
             </div>
 
             <div className="w-full max-w-[800px] bg-white rounded-[24px] p-[40px] md:p-[48px] lg:p-[56px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] border border-[#eee]">
-                <ResendForm formType="Contact - General Inquiry" className="flex flex-col gap-[32px]">
+              <ResendForm
+                formType="Contact - General Inquiry"
+                className="flex flex-col gap-[32px]"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
                   <div className="flex flex-col gap-[12px]">
                     <label
@@ -164,6 +167,37 @@ const ConnectSection = () => {
                       name="email"
                       placeholder="you@email.com"
                       required
+                      className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
+                    />
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
+                  <div className="flex flex-col gap-[12px]">
+                    <label
+                      className={`font-archivo text-[11px] font-semibold leading-[11px] tracking-[1.1px] uppercase text-[#5C6570]`}
+                    >
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="+91"
+                      required
+                      className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
+                    />
+                  </div>
+
+                  <div className="flex flex-col gap-[12px]">
+                    <label
+                      className={`font-archivo text-[11px] font-semibold leading-[11px] tracking-[1.1px] uppercase text-[#5C6570]`}
+                    >
+                      Project Location
+                    </label>
+                    <input
+                      type="text"
+                      name="projectLocation"
+                      placeholder="City, State"
                       className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
                     />
                   </div>
@@ -203,52 +237,38 @@ const ConnectSection = () => {
                     <label
                       className={`font-archivo text-[11px] font-semibold leading-[11px] tracking-[1.1px] uppercase text-[#5C6570]`}
                     >
-                      Project Location
+                      Type of Project
                     </label>
-                    <input
-                      type="text"
-                      name="projectLocation"
-                      placeholder="City, State"
-                      className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all`}
-                    />
-                  </div>
-                </div>
-
-                <div className="flex flex-col gap-[12px]">
-                  <label
-                    className={`font-archivo text-[11px] font-semibold leading-[11px] tracking-[1.1px] uppercase text-[#5C6570]`}
-                  >
-                    Type of Project
-                  </label>
-                  <div className="relative">
-                    <select
-                      name="projectType"
-                      className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] appearance-none focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all cursor-pointer`}
-                      defaultValue=""
-                    >
-                      <option value="">Select project type</option>
-                      <option value="hospital">Hospital</option>
-                      <option value="residential">Residential</option>
-                      <option value="industrial">Industrial</option>
-                      <option value="hotel">Hotel</option>
-                      <option value="restaurant">Restaurant</option>
-                      <option value="office">Office</option>
-                      <option value="institutional">Institutional</option>
-                      <option value="infrastructure">Infrastructure</option>
-                    </select>
-                    <div className="absolute inset-y-0 right-[20px] flex items-center pointer-events-none">
-                      <svg
-                        width="12"
-                        height="8"
-                        viewBox="0 0 12 8"
-                        fill="none"
-                        stroke="#101418"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                    <div className="relative">
+                      <select
+                        name="projectType"
+                        className={`font-inter text-[14.5px] font-normal leading-[21.75px] text-[#101418] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] appearance-none focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-all cursor-pointer`}
+                        defaultValue=""
                       >
-                        <path d="M1 1.5L6 6.5L11 1.5" />
-                      </svg>
+                        <option value="">Select project type</option>
+                        <option value="hospital">Hospital</option>
+                        <option value="residential">Residential</option>
+                        <option value="industrial">Industrial</option>
+                        <option value="hotel">Hotel</option>
+                        <option value="restaurant">Restaurant</option>
+                        <option value="office">Office</option>
+                        <option value="institutional">Institutional</option>
+                        <option value="infrastructure">Infrastructure</option>
+                      </select>
+                      <div className="absolute inset-y-0 right-[20px] flex items-center pointer-events-none">
+                        <svg
+                          width="12"
+                          height="8"
+                          viewBox="0 0 12 8"
+                          fill="none"
+                          stroke="#101418"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M1 1.5L6 6.5L11 1.5" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -275,12 +295,16 @@ const ConnectSection = () => {
                 className={`font-lora text-[14.5px] font-normal leading-[23.2px] text-[#5C6570] max-w-[540px] mx-auto m-0`}
               >
                 Share your details and tell us about your products or services.
-                Our team will get in touch if there&apos;s a suitable opportunity.
+                Our team will get in touch if there&apos;s a suitable
+                opportunity.
               </p>
             </div>
 
             <div className="w-full max-w-[800px] bg-white rounded-[24px] p-[40px] md:p-[48px] lg:p-[56px] shadow-[0_4px_24px_rgba(0,0,0,0.02)] border border-[#eee]">
-              <ResendForm formType="Contact - Partner With Us" className="flex flex-col gap-[32px]">
+              <ResendForm
+                formType="Contact - Partner With Us"
+                className="flex flex-col gap-[32px]"
+              >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[24px]">
                   <div className="flex flex-col gap-[12px]">
                     <label

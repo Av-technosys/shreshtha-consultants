@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/common/container";
+import { ResendForm } from "@/components/forms/resend-form";
 
 interface LocationCommitmentProps {
   imageSrc: string;
@@ -38,13 +39,18 @@ export function LocationCommitment({
             Book a Consultation | Contact Shreshtha Consultants Today
           </h3>
 
-          <form className="flex flex-col gap-[20px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
+          <ResendForm
+            formType="Location Commitment Inquiry"
+            className="flex flex-col gap-[20px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]"
+          >
             <div className="flex flex-col gap-[6px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
               <label className="font-poppins text-[14px] font-medium leading-[20px] text-[#5A5A66]">
                 Name*
               </label>
               <input
                 type="text"
+                name="name"
+                required
                 className="w-full bg-[#F4F4F6] border-none rounded-[8px] px-[16px] py-[12px] font-poppins text-[15px] font-normal leading-[23px] text-[#142436] focus:outline-none focus:ring-2 focus:ring-[#000000] transition-all"
               />
             </div>
@@ -55,6 +61,8 @@ export function LocationCommitment({
               </label>
               <input
                 type="email"
+                name="email"
+                required
                 className="w-full bg-[#F4F4F6] border-none rounded-[8px] px-[16px] py-[12px] font-poppins text-[15px] font-normal leading-[23px] text-[#142436] focus:outline-none focus:ring-2 focus:ring-[#000000] transition-all"
               />
             </div>
@@ -65,6 +73,8 @@ export function LocationCommitment({
               </label>
               <input
                 type="tel"
+                name="phone"
+                required
                 className="w-full bg-[#F4F4F6] border-none rounded-[8px] px-[16px] py-[12px] font-poppins text-[15px] font-normal leading-[23px] text-[#142436] focus:outline-none focus:ring-2 focus:ring-[#000000] transition-all"
               />
             </div>
@@ -75,6 +85,8 @@ export function LocationCommitment({
               </label>
               <input
                 type="text"
+                name="projectSize"
+                required
                 placeholder="Message"
                 className="w-full bg-[#F4F4F6] border-none rounded-[8px] px-[16px] py-[12px] font-poppins text-[15px] font-normal leading-[23px] text-[#142436] placeholder:text-[#999999] focus:outline-none focus:ring-2 focus:ring-[#000000] transition-all"
               />
@@ -86,6 +98,8 @@ export function LocationCommitment({
               </label>
               <input
                 type="text"
+                name="projectLocation"
+                required
                 className="w-full bg-[#F4F4F6] border-none rounded-[8px] px-[16px] py-[12px] font-poppins text-[15px] font-normal leading-[23px] text-[#142436] focus:outline-none focus:ring-2 focus:ring-[#000000] transition-all"
               />
             </div>
@@ -95,14 +109,21 @@ export function LocationCommitment({
                 Type of Project
               </label>
               <div className="relative">
-                <select className="w-full bg-[#F4F4F6] border-none rounded-[8px] px-[16px] py-[12px] font-poppins text-[15px] font-normal leading-[23px] text-[#142436] appearance-none focus:outline-none focus:ring-2 focus:ring-[#000000] transition-all">
-                  <option>Commercial</option>
-                  <option>Healthcare</option>
-                  <option>Hospital</option>
-                  <option>Infrastructure/Industrial</option>
-                  <option>Institutional</option>
-                  <option>Landscape</option>
-                  <option>Residential</option>
+                <select
+                  name="projectType"
+                  required
+                  className="w-full bg-[#F4F4F6] border-none rounded-[8px] px-[16px] py-[12px] font-poppins text-[15px] font-normal leading-[23px] text-[#142436] appearance-none focus:outline-none focus:ring-2 focus:ring-[#000000] transition-all"
+                >
+                  <option value="">Select Project Type</option>
+                  <option value="Commercial">Commercial</option>
+                  <option value="Healthcare">Healthcare</option>
+                  <option value="Hospital">Hospital</option>
+                  <option value="Infrastructure/Industrial">
+                    Infrastructure/Industrial
+                  </option>
+                  <option value="Institutional">Institutional</option>
+                  <option value="Landscape">Landscape</option>
+                  <option value="Residential">Residential</option>
                 </select>
                 <div className="absolute inset-y-0 right-[16px] flex items-center pointer-events-none">
                   <svg
@@ -125,14 +146,14 @@ export function LocationCommitment({
             </div>
 
             <button
-              type="button"
+              type="submit"
               className="w-full mt-[10px] bg-[#ED2967] hover:bg-[#172554] shadow-md hover:shadow-lg transform hover:-translate-y-[2px] transition-all duration-300 py-[14px] rounded-full font-lora text-[16px] font-normal leading-[24px] flex items-center justify-center"
             >
               <span className="font-poppins text-[16px] font-medium leading-[16px] text-[#FFFFFF]">
                 Request a Proposal
               </span>
             </button>
-          </form>
+          </ResendForm>
         </div>
       </Container>
     </section>
