@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { Container } from "@/components/common/container";
+import { ResendForm } from "@/components/forms/resend-form";
 
 const HeroSection = () => (
   <section className="pt-[60px] md:pt-[120px] pb-[60px]">
@@ -280,7 +281,7 @@ const ApplySection = () => (
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
         className="font-lora text-[16px] font-normal leading-[25.6px] tracking-normal text-[#101418] bg-white p-[48px] rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100"
       >
-        <form className="flex flex-col gap-[24px]">
+        <ResendForm formType="Career Application" className="flex flex-col gap-[24px]">
           <div className="flex flex-col gap-[10px]">
             <label
               className={`font-archivo text-[11.5px] font-semibold leading-[11.5px] tracking-[1.15px] uppercase text-[#5C6570]`}
@@ -289,6 +290,7 @@ const ApplySection = () => (
             </label>
             <input
               type="text"
+              name="name"
               placeholder="Your name"
               required
               className={`font-inter text-[14.5px] font-normal leading-[21.75px] tracking-normal text-black placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-[#ee2559] focus:ring-1 focus:ring-[#ee2559] transition-all`}
@@ -303,6 +305,7 @@ const ApplySection = () => (
             </label>
             <input
               type="email"
+              name="email"
               placeholder="you@email.com"
               required
               className={`font-inter text-[14.5px] font-normal leading-[21.75px] tracking-normal text-black placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-[#ee2559] focus:ring-1 focus:ring-[#ee2559] transition-all`}
@@ -317,6 +320,7 @@ const ApplySection = () => (
             </label>
             <input
               type="text"
+              name="role"
               placeholder="e.g. HVAC Designer"
               className={`font-inter text-[14.5px] font-normal leading-[21.75px] tracking-normal text-black placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-[#ee2559] focus:ring-1 focus:ring-[#ee2559] transition-all`}
             />
@@ -333,6 +337,7 @@ const ApplySection = () => (
             >
               <input
                 type="file"
+                name="resume"
                 accept=".pdf,.doc,.docx"
                 required
                 className="w-full text-[#5C6570] file:mr-[16px] file:py-[8px] file:px-[16px] file:rounded-[6px] file:border file:border-gray-200 file:text-[13px] file:font-semibold file:bg-white file:text-black hover:file:bg-gray-50 cursor-pointer"
@@ -347,6 +352,7 @@ const ApplySection = () => (
               Message
             </label>
             <textarea
+              name="message"
               rows={4}
               placeholder="A few lines about you"
               className={`font-inter text-[14.5px] font-normal leading-[21.75px] tracking-normal text-black placeholder:text-[#999] w-full bg-[#F7F6F2] border border-transparent rounded-[8px] px-[20px] py-[16px] focus:outline-none focus:border-[#ee2559] focus:ring-1 focus:ring-[#ee2559] transition-all resize-none`}
@@ -360,7 +366,7 @@ const ApplySection = () => (
             Submit Application
             <span>→</span>
           </button>
-        </form>
+        </ResendForm>
       </motion.div>
     </Container>
   </section>

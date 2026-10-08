@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { Container } from "@/components/common/container";
+import { ResendForm } from "@/components/forms/resend-form";
 
 interface ProjectInfoItem {
   label: string;
@@ -96,19 +97,24 @@ export function ProjectDetails({
             <br className="hidden md:block" /> project costs.
           </h2>
 
-          <form className="flex flex-col md:flex-row items-center gap-[16px] w-full max-w-[850px]">
+          <ResendForm formType="Project Inquiry" className="flex flex-col md:flex-row items-center gap-[16px] w-full max-w-[850px]">
             <input
               type="text"
+              name="name"
+              required
               placeholder="Name"
               className="w-full md:flex-1 bg-[#1C1F26] border border-[#505050] rounded-[8px] px-[20px] py-[14px] font-sans text-[16px] font-normal leading-[1.5] text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-colors"
             />
             <input
               type="email"
+              name="email"
+              required
               placeholder="Email"
               className="w-full md:flex-1 bg-[#1C1F26] border border-[#505050] rounded-[8px] px-[20px] py-[14px] font-sans text-[16px] font-normal leading-[1.5] text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-colors"
             />
             <input
               type="tel"
+              name="phone"
               placeholder="Phone"
               className="w-full md:flex-1 bg-[#1C1F26] border border-[#505050] rounded-[8px] px-[20px] py-[14px] font-sans text-[16px] font-normal leading-[1.5] text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-colors"
             />
@@ -120,7 +126,7 @@ export function ProjectDetails({
                 Get Profile &rarr;
               </span>
             </button>
-          </form>
+          </ResendForm>
         </Container>
       </section>
     </>

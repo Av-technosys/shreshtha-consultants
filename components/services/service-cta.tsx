@@ -1,5 +1,6 @@
 import * as React from "react";
 import { Container } from "@/components/common/container";
+import { ResendForm } from "@/components/forms/resend-form";
 
 
 export interface ServiceCTAProps {
@@ -27,7 +28,7 @@ export function ServiceCTA({ kicker, title, buttonText = "Request Proposal" }: S
           <div className="absolute inset-[16px] sm:inset-[32px] lg:inset-[48px] rounded-[32px] sm:rounded-[60px] bg-[#ECEDE9]"></div>
           
           <div className="relative rounded-[24px] sm:rounded-[40px] bg-white p-6 sm:p-10 lg:p-12 shadow-[0_8px_30px_rgba(0,0,0,0.04)] text-left">
-            <form action="https://formspree.io/f/mvkggkev" method="POST">
+            <ResendForm formType="Service Inquiry">
               <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6">
                 <Field label="Name*" name="name" required placeholder="Your full name" />
                 <Field label="Email*" name="email" type="email" required placeholder="you@company.com" />
@@ -41,7 +42,7 @@ export function ServiceCTA({ kicker, title, buttonText = "Request Proposal" }: S
                   {buttonText} <span className="transition-transform group-hover:translate-x-1">→</span>
                 </button>
               </div>
-            </form>
+            </ResendForm>
           </div>
         </div>
       </Container>
