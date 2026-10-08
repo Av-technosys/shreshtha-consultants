@@ -50,7 +50,7 @@ export default function ElectricalPage() {
         kicker="Our Services · Electrical"
         title={
           <>
-            Electrical drawings are the blueprint of a building's{" "}
+            Electrical drawings are the blueprint of a building&apos;s{" "}
             <span className="text-[#ed2967]">nervous system</span>
           </>
         }
@@ -65,7 +65,7 @@ export default function ElectricalPage() {
         imageSrc="/Services/Electrical/herobg.png"
         imageAlt="Electrical design services — Shreshtha Consultants"
         ctaText="Request Proposal"
-        ctaLink="/contact#form"
+        ctaLink="/contact-us#form"
       />
 
       <ServiceDeliverables
@@ -74,10 +74,11 @@ export default function ElectricalPage() {
         introText={
           <>
             <p>
-              Electrical drawings are the blueprint of a building's nervous system, detailing the intricacies of lighting, power, and communication networks.
+              Electrical drawings are the blueprint of a building&apos;s nervous system, detailing the intricacies of lighting, power, and communication networks.
             </p>
             <p>
-              We combine cutting-edge technology with deep expertise to deliver optimized, future-ready electrical designs tailored to each project's unique needs.            </p>
+              We combine cutting-edge technology with deep expertise to deliver optimized, future-ready electrical designs tailored to each project&apos;s unique needs.
+            </p>
           </>
         }
         deliverables={ELECTRICAL_DELIVERABLES}

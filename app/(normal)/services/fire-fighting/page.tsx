@@ -53,7 +53,7 @@ export default function FireFightingPage() {
         imageSrc="/Services/Fire-Fighting/herobg.png"
         imageAlt="Fire Fighting design services — Shreshtha Consultants"
         ctaText="Request Proposal"
-        ctaLink="/contact#form"
+        ctaLink="/contact-us#form"
       />
 
       <ServiceDeliverables

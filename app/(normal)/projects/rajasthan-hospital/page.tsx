@@ -14,15 +14,15 @@ export default function RajasthanHospitalPage() {
     <main className="min-h-screen bg-[#F7F6F2]">
       <ProjectHero 
         title="Rajasthan Hospital"
-        image="/projects/rajasthan hospital/rajasthan hospital_hero.png"
+        image="/Projects/rajasthan hospital/rajasthan hospital_hero.png"
       />
       <ProjectDetails 
         info={projectInfo}
         description="Rajasthan Hospital is one of Jaipur's leading multispeciality hospitals, recognized for its advanced infrastructure and patient-focused care across critical departments. Shreshtha Consultants provided complete MEP consultancy for the project, executed in a phase-wise manner to align with construction and operational requirements. Our scope included designing floor-wise VRV/VRF systems for efficient air conditioning along with water-cooled chillers to ensure reliability, energy efficiency, and comfort across critical healthcare spaces."
         images={[
-          "/projects/rajasthan hospital/rajasthan hospital_img1.png",
-          "/projects/rajasthan hospital/rajasthan hospital_img2.png",
-          "/projects/rajasthan hospital/rajasthan hospital_img3.png"
+          "/Projects/rajasthan hospital/rajasthan hospital_img1.png",
+          "/Projects/rajasthan hospital/rajasthan hospital_img2.png",
+          "/Projects/rajasthan hospital/rajasthan hospital_img3.png"
         ]}
       />
     </main>

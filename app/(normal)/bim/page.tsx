@@ -75,7 +75,7 @@ const TypesOfBimSection = () => {
                 3D BIM Modeling
               </h3>
               <p className="font-lora text-[14px] font-normal leading-[23.1px] text-[#5C6570] m-0 max-w-[420px]">
-                Detailed, coordinated 3D models that let you preview a project's
+                Detailed, coordinated 3D models that let you preview a project&apos;s
                 performance and aesthetics before a single beam goes up.
               </p>
             </motion.div>
@@ -234,7 +234,7 @@ const TypesOfBimSection = () => {
               </h3>
               <p className="font-lora text-[14px] font-normal leading-[23.1px] text-[#5C6570] m-0 max-w-[420px]">
                 Support with NOCs, fire safety approvals, and environmental
-                clearances, backed by the model's precision.
+                clearances, backed by the model&apos;s precision.
               </p>
             </motion.div>
 

@@ -12,7 +12,7 @@ const projects = [
     category: "HOSPITALITY",
     title: "One8 Commune",
     details: "Jaipur · 13,000 sq.ft",
-    image: "/projects/one8 Commune/one8 Commune.png",
+    image: "/Projects/one8 Commune/one8 Commune.png",
     link: "/projects/one8-commune",
   },
   {
@@ -20,7 +20,7 @@ const projects = [
     category: "COMMERCIAL",
     title: "GT Central",
     details: "Jaipur",
-    image: "/projects/gt Central/gt Central.png",
+    image: "/Projects/gt Central/gt Central.png",
     link: "/projects/gt-central",
   },
   {
@@ -28,7 +28,7 @@ const projects = [
     category: "COMMERCIAL",
     title: "Dot Square",
     details: "Jaipur",
-    image: "/projects/dot square/dot square.png",
+    image: "/Projects/dot square/dot square.png",
     link: "/projects/dot-square",
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     category: "COMMERCIAL",
     title: "Urban Square Mall",
     details: "Jaipur",
-    image: "/projects/urban square/urban square.png",
+    image: "/Projects/urban square/urban square.png",
     link: "/projects/urban-square",
   },
   {
@@ -44,7 +44,7 @@ const projects = [
     category: "COMMERCIAL",
     title: "GT Landmark",
     details: "Jaipur",
-    image: "/projects/gt Landmark/gt Landmark.png",
+    image: "/Projects/gt Landmark/gt Landmark.png",
     link: "/projects/gt-landmark",
   },
   {
@@ -52,7 +52,7 @@ const projects = [
     category: "HEALTHCARE",
     title: "Rajasthan Hospital",
     details: "Jaipur",
-    image: "/projects/rajasthan hospital/rajasthan hospital.png",
+    image: "/Projects/rajasthan hospital/rajasthan hospital.png",
     link: "/projects/rajasthan-hospital",
   },
   {
@@ -60,7 +60,7 @@ const projects = [
     category: "HEALTHCARE",
     title: "SUM Hospital",
     details: "Bhubaneswar",
-    image: "/projects/sum hospital/sum hospital.png",
+    image: "/Projects/sum hospital/sum hospital.png",
     link: "/projects/sum-hospital",
   },
   {
@@ -68,64 +68,64 @@ const projects = [
     category: "HEALTHCARE",
     title: "JIMS",
     details: "Greater Noida",
-    image: "/projects/jims/jims.png",
-    link: "/projects/jims",
+    image: "/Projects/jims/jims.png",
+    link: "/projects/jims-hospital",
   },
   {
     id: "bst",
     category: "HEALTHCARE",
     title: "BST",
     details: "Jaipur",
-    image: "/projects/bst/bst.png",
-    link: "/projects/bst",
+    image: "/Projects/bst/bst.png",
+    link: "/projects/bst-hospital",
   },
   {
     id: "suryagarh",
     category: "HOSPITALITY",
     title: "Hotel Suryagarh Palace",
     details: "Jaisalmer",
-    image: "/projects/hotel suryagarh palace/suryagarh.png",
-    link: "/projects/suryagarh",
+    image: "/Projects/hotel suryagarh palace/suryagarh.png",
+    link: "/projects/hotel-suryagarh-palace",
   },
   {
     id: "rambagh",
     category: "HOSPITALITY",
     title: "Hotel Rambagh Palace",
     details: "Jaipur",
-    image: "/projects/hotel rambagh palace/rambagh.png",
-    link: "/projects/rambagh",
+    image: "/Projects/hotel rambagh palace/rambagh.png",
+    link: "/projects/hotel-rambagh-palace",
   },
   {
     id: "umaid-bhawan",
     category: "HOSPITALITY",
     title: "Umaid Bhawan Palace",
     details: "Jodhpur",
-    image: "/projects/umaid bhawan palace/umaid bhawan.png",
-    link: "/projects/umaid-bhawan",
+    image: "/Projects/umaid bhawan palace/umaid bhawan.png",
+    link: "/projects/umaid-bhawan-palace",
   },
   {
     id: "anantara",
     category: "HOSPITALITY",
     title: "Anantara Jewel Bagh",
     details: "Jaipur",
-    image: "/projects/anantara jewel bagh/anantara jewels.png",
-    link: "/projects/anantara",
+    image: "/Projects/anantara jewel bagh/anantara jewels.png",
+    link: "/projects/jewel-bagh",
   },
   {
     id: "savio",
     category: "INDUSTRIAL",
     title: "Savio Factory",
     details: "Jaipur · 30,000 sq.ft",
-    image: "/projects/savio factory/Savio factory.png",
-    link: "/projects/savio",
+    image: "/Projects/savio factory/Savio factory.png",
+    link: "/projects/savio-factory",
   },
   {
     id: "gurukripa",
     category: "INDUSTRIAL",
     title: "Gurukripa Factory",
     details: "Jaipur",
-    image: "/projects/gurukripa factory/gurukripa.png",
-    link: "/projects/gurukripa",
+    image: "/Projects/gurukripa factory/gurukripa.png",
+    link: "/projects/gurukripa-factory",
   },
   {
     id: "salasar",
@@ -133,7 +133,7 @@ const projects = [
     title: "Salasar Balaji Creation",
     details: "Jaipur",
     image: "/Projects/salasar balaji creation/salasar balaji creation.png",
-    link: "/projects/salasar",
+    link: "/projects/salasar-balaji-creation",
   },
   {
     id: "jaswant",
@@ -141,7 +141,7 @@ const projects = [
     title: "Jaswant Gargh School",
     details: "Rajasthan",
     image: "/Projects/jaswant gargh school/jaswant gargh school.png",
-    link: "/projects/jaswant",
+    link: "/projects/jaswant-gargh-school",
   },
   {
     id: "gsis",
@@ -149,7 +149,7 @@ const projects = [
     title: "GSIS School",
     details: "Jaipur",
     image: "/Projects/gsis school/gsis school.png",
-    link: "/projects/gsis",
+    link: "/projects/gsis-school",
   },
   {
     id: "dwps",
@@ -157,7 +157,7 @@ const projects = [
     title: "DWPS",
     details: "Delhi",
     image: "/Projects/dwps/dwps.png",
-    link: "/projects/dwps",
+    link: "/projects/delhi-world-public-school",
   },
   {
     id: "nokha",
@@ -165,7 +165,7 @@ const projects = [
     title: "Nokha Library",
     details: "Jaipur · 25,000 sq.ft",
     image: "/Projects/nokha library/nokha library.png",
-    link: "/projects/nokha",
+    link: "/projects/nokha-library",
   },
   {
     id: "narsi-villa",
@@ -189,7 +189,7 @@ const projects = [
     title: "ACL Green",
     details: "Jaipur",
     image: "/Projects/ACL green/ACL green.png",
-    link: "/projects/acl-green",
+    link: "/projects/acl-greens",
   },
   {
     id: "goyal-house",
@@ -208,27 +208,22 @@ function ProjectsGridContent() {
   const activeCategory = searchParams.get("category") || "All Projects";
 
   const [visibleCount, setVisibleCount] = useState(cachedVisibleCount);
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   const prevCategoryRef = React.useRef(activeCategory);
 
   useEffect(() => {
-    if (isMounted && prevCategoryRef.current !== activeCategory) {
-      setVisibleCount(9);
-      cachedVisibleCount = 9;
+    if (prevCategoryRef.current !== activeCategory) {
+      const timeoutId = window.setTimeout(() => {
+        setVisibleCount(9);
+        cachedVisibleCount = 9;
+      }, 0);
       prevCategoryRef.current = activeCategory;
+      return () => window.clearTimeout(timeoutId);
     }
-  }, [activeCategory, isMounted]);
+  }, [activeCategory]);
 
   useEffect(() => {
-    if (isMounted) {
-      cachedVisibleCount = visibleCount;
-    }
-  }, [visibleCount, isMounted]);
+    cachedVisibleCount = visibleCount;
+  }, [visibleCount]);
 
   const filteredProjects =
     activeCategory === "All Projects"

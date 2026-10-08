@@ -58,7 +58,7 @@ export function Header() {
 
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-200/70 bg-[#FCFCFC]/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-neutral-200/70 bg-[#F7F7F3]/95 backdrop-blur">
       <Container className="flex min-h-16 items-center justify-between gap-8 py-3 md:min-h-18">
         <Link
           href="/"

@@ -124,12 +124,12 @@ const ConnectSection = () => {
               <h2
                 className={`font-archivo text-[32px] font-bold leading-[33.28px] tracking-[-0.96px] text-[#101418] mb-[16px]`}
               >
-                Let's Connect
+                Let&apos;s Connect
               </h2>
               <p
                 className={`font-lora text-[14.5px] font-normal leading-[23.2px] text-[#5C6570] max-w-[420px] mx-auto m-0`}
               >
-                We'd love to hear from you. Tell us about your project and the
+                We&apos;d love to hear from you. Tell us about your project and the
                 Shreshtha team will get in touch.
               </p>
             </div>
@@ -268,7 +268,7 @@ const ConnectSection = () => {
                 className={`font-lora text-[14.5px] font-normal leading-[23.2px] text-[#5C6570] max-w-[540px] mx-auto m-0`}
               >
                 Share your details and tell us about your products or services.
-                Our team will get in touch if there's a suitable opportunity.
+                Our team will get in touch if there&apos;s a suitable opportunity.
               </p>
             </div>
 

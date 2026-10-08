@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 type Faq = {
   question: string;
@@ -48,4 +48,3 @@ export function BlogFaq({ faqs }: { faqs: Faq[] }) {
     </div>
   );
 }
-

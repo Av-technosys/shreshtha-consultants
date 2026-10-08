@@ -14,15 +14,15 @@ export default function JimsPage() {
     <main className="min-h-screen bg-[#F7F6F2]">
       <ProjectHero 
         title="JIMS Hospital"
-        image="/projects/jims/jims_hero.png"
+        image="/Projects/jims/jims_hero.png"
       />
       <ProjectDetails 
         info={projectInfo}
         description="JIMS is an emerging hub for healthcare and medical education, offering multispeciality treatment along with training for future doctors. Shreshtha Consultants provided complete MEP solutions, designing integrated systems for HVAC, electrical distribution, and safety services to meet the dual demands of a hospital and teaching institute."
         images={[
-          "/projects/jims/jims_img1.png",
-          "/projects/jims/jims_img2.png",
-          "/projects/jims/jims_img3.png"
+          "/Projects/jims/jims_img1.png",
+          "/Projects/jims/jims_img2.png",
+          "/Projects/jims/jims_img3.png"
         ]}
       />
     </main>
