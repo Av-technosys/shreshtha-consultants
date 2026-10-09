@@ -104,6 +104,14 @@ const projects = [
     link: "/projects/umaid-bhawan-palace",
   },
   {
+    id: "itc-jawai",
+    category: "HOSPITALITY",
+    title: "ITC Jawai",
+    details: "Jawai, Rajasthan",
+    image: "/Projects/itc jawai/itc-jawai.png",
+    link: "/projects/itc-jawai",
+  },
+  {
     id: "anantara",
     category: "HOSPITALITY",
     title: "Anantara Jewel Bagh",

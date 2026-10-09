@@ -15,7 +15,7 @@ const projects = [
     title: "ITC Jawai",
     meta: "Jaipur · 125,000 sq.ft",
     src: "/Projects/ITC jawai.png",
-    href: "/projects",
+    href: "/projects/itc-jawai",
   },
   {
     title: "Nokha Library",
