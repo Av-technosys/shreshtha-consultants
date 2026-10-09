@@ -9,7 +9,7 @@ const projects = [
     title: "Hotel Rambagh Palace",
     meta: "Jaipur · 100 Rooms · Taj Group",
     src: "/Projects/rambagh.png",
-    href: "/projects",
+    href: "/projects/hotel-rambagh-palace",
   },
   {
     title: "ITC Jawai",
@@ -21,19 +21,19 @@ const projects = [
     title: "Nokha Library",
     meta: "Rajasthan · 25,000 sq.ft",
     src: "/Projects/Nokha.png",
-    href: "/projects",
+    href: "/projects/nokha-library",
   },
   {
     title: "Goyal Residence",
     meta: "Jaipur · 20,000 sq.ft",
     src: "/Projects/GoyalResidence.png",
-    href: "/projects",
+    href: "/projects/goyal-house",
   },
   {
     title: "Savio Factory",
     meta: "Jaipur · 30,000 sq.ft",
     src: "/Projects/SavioFactory.png",
-    href: "/projects",
+    href: "/projects/savio-factory",
   },
   {
     title: "World Trade Park",
