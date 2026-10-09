@@ -13,7 +13,7 @@ import {
 const serviceCards = [
   {
     title: "Plumbing",
-    href: "/services",
+    href: "/plumbing",
     icon: Droplet,
     items: [
       "Water supply (internal and external)",
@@ -25,7 +25,7 @@ const serviceCards = [
   },
   {
     title: "Fire-Fighting",
-    href: "/services",
+    href: "/fire-fighting",
     icon: Flame,
     items: [
       "Fire sprinklers layouts",
@@ -37,7 +37,7 @@ const serviceCards = [
   },
   {
     title: "HVAC",
-    href: "/services",
+    href: "/hvac",
     icon: Snowflake,
     items: [
       "Air conditioning",
@@ -53,7 +53,7 @@ const serviceCards = [
   },
   {
     title: "Electrical",
-    href: "/services",
+    href: "/electrical",
     icon: Zap,
     items: [
       "Wiring/Controlling plans",
@@ -68,7 +68,7 @@ const serviceCards = [
   },
   {
     title: "Safety and Security",
-    href: "/services",
+    href: "/safety-and-security",
     icon: ShieldCheck,
     items: [
       "CCTV Wiring",
