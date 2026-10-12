@@ -81,7 +81,7 @@ export default async function BlogSlugPage({ params }: BlogSlugPageProps) {
           {/* Sidebar */}
           {headings.length > 0 && (
             <aside className="hidden w-full shrink-0 lg:block lg:w-[280px] lg:sticky lg:top-[120px]">
-              <h3 className="mb-6 text-xs font-bold uppercase tracking-[0.1em] text-[#777067] max-[700px]:mb-4">
+              <h3 className="font-archivo mb-6 text-xs font-bold uppercase tracking-[0.1em] text-[#777067] max-[700px]:mb-4">
                 On this page
               </h3>
               <nav className="relative flex flex-col text-[15px]">
@@ -106,7 +106,7 @@ export default async function BlogSlugPage({ params }: BlogSlugPageProps) {
           <div className="flex-1 w-full max-w-[760px] text-[17px] leading-[1.75] text-black max-[700px]:text-[16px]">
             <style dangerouslySetInnerHTML={{ __html: `
               .blog-content { 
-                font-family: var(--font-lora-family), serif; 
+                font-family: var(--font-inter-family), sans-serif; 
                 font-size: 17px;
                 line-height: 1.75;
                 color: #000 !important;
@@ -134,7 +134,11 @@ export default async function BlogSlugPage({ params }: BlogSlugPageProps) {
                 .blog-content h1 { font-size: 28px; }
                 .blog-content h2 { font-size: 22px; }
               }
-              .blog-content p { margin-bottom: 1em; color: #000 !important; }
+              .blog-content p { 
+                font-family: var(--font-inter-family), sans-serif;
+                margin-bottom: 1em; 
+                color: #000 !important; 
+              }
               .blog-content ul { list-style-type: disc; padding-left: 40px; margin-bottom: 1em; }
               .blog-content ol { list-style-type: decimal; padding-left: 40px; margin-bottom: 1em; }
               @media (max-width: 700px) {

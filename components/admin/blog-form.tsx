@@ -102,7 +102,7 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
     <form action={action} className="grid gap-5 p-5">
       <style dangerouslySetInnerHTML={{ __html: `
         .jodit-container .jodit-wysiwyg { 
-          font-family: var(--font-lora-family), serif; 
+          font-family: var(--font-inter-family), sans-serif; 
           font-size: 17px;
           color: #000;
           line-height: 1.75;
@@ -111,7 +111,10 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
         .jodit-container .jodit-wysiwyg li,
         .jodit-container .jodit-wysiwyg div,
         .jodit-container .jodit-wysiwyg span,
-        .jodit-container .jodit-wysiwyg td { color: inherit; }
+        .jodit-container .jodit-wysiwyg td { 
+          font-family: var(--font-inter-family), sans-serif;
+          color: inherit; 
+        }
         .jodit-container .jodit-wysiwyg h1, .jodit-container .jodit-wysiwyg h2, .jodit-container .jodit-wysiwyg h3, .jodit-container .jodit-wysiwyg h4, .jodit-container .jodit-wysiwyg h5, .jodit-container .jodit-wysiwyg h6 { 
           font-family: var(--font-archivo-family), sans-serif; 
           font-weight: 600;

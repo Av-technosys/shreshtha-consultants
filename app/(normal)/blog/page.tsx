@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { getPublishedBlogs, type AdminBlog } from "@/helpers/admin/blogs";
@@ -55,7 +56,7 @@ function BlogCard({ post, priority }: { post: AdminBlog; priority: boolean }) {
       </Link>
 
       <div className="flex flex-1 flex-col px-3 pb-3 pt-5 max-[520px]:px-2.5 max-[520px]:pt-4">
-        <h2 className="text-[clamp(18px,1.45vw,20px)] font-bold leading-[1.3] text-[#111]">
+        <h2 className="font-archivo text-[clamp(18px,1.45vw,20px)] font-bold leading-[1.3] text-[#111]">
           <Link href={href} className="line-clamp-2 transition-colors hover:text-[#ed2967]">
             {post.title}
           </Link>
