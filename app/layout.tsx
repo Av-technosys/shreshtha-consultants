@@ -31,7 +31,9 @@ export const metadata: Metadata = {
   title: "Shreshtha Consultants",
   description: "Shreshtha Consultants",
   icons: {
-    icon: "/favicon.png",
+    icon: "/Common/logo.png",
+    shortcut: "/Common/logo.png",
+    apple: "/Common/logo.png",
   },
 };
 
