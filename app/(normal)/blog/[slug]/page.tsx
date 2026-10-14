@@ -106,7 +106,7 @@ export default async function BlogSlugPage({ params }: BlogSlugPageProps) {
           <div className="flex-1 w-full max-w-[760px] text-[17px] leading-[1.75] text-black max-[700px]:text-[16px]">
             <style dangerouslySetInnerHTML={{ __html: `
               .blog-content { 
-                font-family: var(--font-inter-family), sans-serif; 
+                font-family: var(--font-inter-family), sans-serif !important; 
                 font-size: 17px;
                 line-height: 1.75;
                 color: #000 !important;
@@ -116,11 +116,25 @@ export default async function BlogSlugPage({ params }: BlogSlugPageProps) {
               .blog-content :where(p, div, span, li, ul, ol, table, thead, tbody, tr, th, td, strong, b, i, em, u, s, strike, blockquote) {
                 color: #000 !important;
               }
+              .blog-content,
+              .blog-content p,
+              .blog-content p *,
+              .blog-content li,
+              .blog-content li *,
+              .blog-content ul,
+              .blog-content ol,
+              .blog-content div,
+              .blog-content span,
+              .blog-content table,
+              .blog-content blockquote {
+                font-family: var(--font-inter-family), sans-serif !important;
+              }
               @media (max-width: 700px) {
                 .blog-content { font-size: 16px; }
               }
-              .blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4, .blog-content h5, .blog-content h6 {
-                font-family: var(--font-archivo-family), sans-serif;
+              .blog-content :is(h1, h2, h3, h4, h5, h6),
+              .blog-content :is(h1, h2, h3, h4, h5, h6) * {
+                font-family: var(--font-archivo-family), sans-serif !important;
                 font-weight: 600;
                 color: #000 !important;
               }
@@ -135,7 +149,7 @@ export default async function BlogSlugPage({ params }: BlogSlugPageProps) {
                 .blog-content h2 { font-size: 22px; }
               }
               .blog-content p { 
-                font-family: var(--font-inter-family), sans-serif;
+                font-family: var(--font-inter-family), sans-serif !important;
                 margin-bottom: 1em; 
                 color: #000 !important; 
               }
@@ -144,7 +158,7 @@ export default async function BlogSlugPage({ params }: BlogSlugPageProps) {
               @media (max-width: 700px) {
                 .blog-content ul, .blog-content ol { padding-left: 20px; }
               }
-              .blog-content li { display: list-item; margin-bottom: 0.25em; color: #000 !important; }
+              .blog-content li { display: list-item; margin-bottom: 0.25em; color: #000 !important; font-family: var(--font-inter-family), sans-serif !important; }
               .blog-content a, .blog-content a * { color: #ed2967 !important; text-decoration: underline; cursor: pointer; }
               .blog-content strong, .blog-content b { font-weight: 700; }
               .blog-content i, .blog-content em { font-style: italic; }
@@ -180,10 +194,13 @@ export default async function BlogSlugPage({ params }: BlogSlugPageProps) {
 }
 
 function parseAndInjectHeadingIds(content: string) {
+  // Strip any inline font-family styles so pasted inline styles (Elementor, Word, etc.) can never override site typography
+  const sanitized = content.replace(/font-family\s*:\s*[^;"]+;?/gi, "");
+
   const headings: { id: string; text: string }[] = [];
   let index = 0;
 
-  const newContent = content.replace(/<h2([^>]*)>(.*?)<\/h2>/gi, (match, attrs, innerText) => {
+  const newContent = sanitized.replace(/<h2([^>]*)>(.*?)<\/h2>/gi, (match, attrs, innerText) => {
     const text = innerText.replace(/<[^>]+>/g, "").trim();
     let id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
     if (!id) id = `heading-${index}`;

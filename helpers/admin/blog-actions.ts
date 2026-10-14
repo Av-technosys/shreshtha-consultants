@@ -34,10 +34,14 @@ export async function createBlogAction(formData: FormData) {
     console.error("Failed to parse faqs:", e);
   }
 
+  function cleanBlogHtml(rawContent: string) {
+    return rawContent.replace(/font-family\s*:\s*[^;"]+;?/gi, "");
+  }
+
   await createAdminBlog({
     title,
     slug,
-    content: getValue(formData, "content"),
+    content: cleanBlogHtml(getValue(formData, "content")),
     category: getCategory(formData),
     authorName: getValue(formData, "authorName"),
     date: getValue(formData, "date"),
@@ -67,10 +71,14 @@ export async function updateBlogAction(id: string, formData: FormData) {
     console.error("Failed to parse faqs:", e);
   }
 
+  function cleanBlogHtml(rawContent: string) {
+    return rawContent.replace(/font-family\s*:\s*[^;"]+;?/gi, "");
+  }
+
   await updateAdminBlog(id, {
     title,
     slug,
-    content: getValue(formData, "content"),
+    content: cleanBlogHtml(getValue(formData, "content")),
     category: getCategory(formData),
     authorName: getValue(formData, "authorName"),
     date: getValue(formData, "date"),
