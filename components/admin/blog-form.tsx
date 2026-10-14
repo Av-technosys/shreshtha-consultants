@@ -36,6 +36,20 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
     return "";
   });
 
+  const [slug, setSlug] = useState(blog?.slug || "");
+  const [isSlugCustom, setIsSlugCustom] = useState(Boolean(blog?.slug));
+
+  const handleTitleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!isSlugCustom && !blog) {
+      const generated = e.target.value
+        .toLowerCase()
+        .trim()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+      setSlug(generated);
+    }
+  };
+
   const handleAddCategory = () => {
     const trimmed = newCategory.trim();
     if (!trimmed) return;
@@ -143,7 +157,27 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
       <input name="faqs" type="hidden" value={JSON.stringify(faqs)} />
 
       <Field label="Blog Title">
-        <input name="title" defaultValue={blog?.title} required className={inputClassName} />
+        <input
+          name="title"
+          defaultValue={blog?.title}
+          onChange={handleTitleChange}
+          required
+          className={inputClassName}
+        />
+      </Field>
+
+      <Field label="Slug">
+        <input
+          name="slug"
+          value={slug}
+          onChange={(e) => {
+            setSlug(e.target.value);
+            setIsSlugCustom(true);
+          }}
+          required
+          placeholder="e.g. factors-to-consider-in-selecting-mep"
+          className={inputClassName}
+        />
       </Field>
 
       <div className="grid grid-cols-2 items-start gap-4 max-[680px]:grid-cols-1">

@@ -238,6 +238,27 @@ export function slugify(value: string) {
     .replace(/^-+|-+$/g, "");
 }
 
+export async function getUniqueSlug(candidate: string, excludeId?: string): Promise<string> {
+  let baseSlug = slugify(candidate);
+  if (!baseSlug) baseSlug = "blog-post";
+  let slug = baseSlug;
+  let counter = 1;
+
+  while (true) {
+    const existing = await db
+      .select({ id: blogs.id })
+      .from(blogs)
+      .where(eq(blogs.slug, slug))
+      .limit(1);
+
+    if (existing.length === 0 || (excludeId && existing[0].id === excludeId)) {
+      return slug;
+    }
+    counter++;
+    slug = `${baseSlug}-${counter}`;
+  }
+}
+
 async function getOrCreateCategory(name: string) {
   const cleanName = normalizeCategoryName(name);
   const slug = slugify(cleanName);

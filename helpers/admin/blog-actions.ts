@@ -9,6 +9,7 @@ import {
   createAdminBlog,
   deleteAdminBlog,
   deleteAdminCategory,
+  getUniqueSlug,
   slugify,
   updateAdminBlog,
   updateAdminCategory,
@@ -22,7 +23,8 @@ export type CategoryActionState = {
 
 export async function createBlogAction(formData: FormData) {
   const title = getValue(formData, "title");
-  const slug = slugify(title);
+  const rawSlug = getValue(formData, "slug");
+  const slug = await getUniqueSlug(rawSlug || title);
 
   let faqs = [];
   try {
@@ -49,13 +51,16 @@ export async function createBlogAction(formData: FormData) {
 
   revalidatePath("/admin/blogs");
   revalidatePath("/blog");
+  revalidatePath(`/blog/${slug}`);
+  revalidatePath("/blog/[slug]", "page");
   await refreshSitemapFile();
   redirect("/admin/blogs");
 }
 
 export async function updateBlogAction(id: string, formData: FormData) {
   const title = getValue(formData, "title");
-  const slug = slugify(title);
+  const rawSlug = getValue(formData, "slug");
+  const slug = await getUniqueSlug(rawSlug || title, id);
 
   let faqs = [];
   try {
@@ -82,6 +87,8 @@ export async function updateBlogAction(id: string, formData: FormData) {
 
   revalidatePath("/admin/blogs");
   revalidatePath("/blog");
+  revalidatePath(`/blog/${slug}`);
+  revalidatePath("/blog/[slug]", "page");
   await refreshSitemapFile();
   redirect("/admin/blogs");
 }

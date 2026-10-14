@@ -30,6 +30,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Shreshtha Consultants",
   description: "Shreshtha Consultants",
+  icons: {
+    icon: "/Common/logo.png",
+    shortcut: "/Common/logo.png",
+    apple: "/Common/logo.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
