@@ -1,9 +1,16 @@
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, LockKeyhole, Mail } from "lucide-react";
+import { redirect } from "next/navigation";
+import { getAdminSession } from "@/helpers/admin/auth";
+import { AdminLoginForm } from "@/components/admin/login-form";
 
+export const dynamic = "force-dynamic";
 
-export default function AdminLoginPage() {
+export default async function AdminLoginPage() {
+  const session = await getAdminSession();
+  if (session) {
+    redirect("/admin");
+  }
+
   return (
     <main className="font-inter min-h-screen bg-[#f7f6f2] text-[#111419]">
       <section className="grid min-h-screen grid-cols-[0.95fr_1.05fr] max-[980px]:grid-cols-1">
@@ -43,53 +50,11 @@ export default function AdminLoginPage() {
                 Welcome back.
               </h2>
               <p className="mt-3 text-sm leading-6 text-[#716b63]">
-                Sign in to access the admin panel. This screen is UI only for now.
+                Sign in to access the admin panel.
               </p>
             </div>
 
-            <form className="grid gap-5">
-              <label className="grid gap-2 text-sm font-semibold text-[#48423c]">
-                Email Address
-                <span className="relative">
-                  <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-[#928b82]" size={17} />
-                  <input
-                    type="email"
-                    placeholder="admin@shreshtha.com"
-                    className="h-12 w-full rounded-md border border-[#e1ddd5] bg-[#f7f6f2] pl-10 pr-3 text-sm font-medium outline-none transition focus:border-[#ed2967]"
-                  />
-                </span>
-              </label>
-
-              <label className="grid gap-2 text-sm font-semibold text-[#48423c]">
-                Password
-                <span className="relative">
-                  <LockKeyhole className="absolute left-3 top-1/2 -translate-y-1/2 text-[#928b82]" size={17} />
-                  <input
-                    type="password"
-                    placeholder="Enter password"
-                    className="h-12 w-full rounded-md border border-[#e1ddd5] bg-[#f7f6f2] pl-10 pr-3 text-sm font-medium outline-none transition focus:border-[#ed2967]"
-                  />
-                </span>
-              </label>
-
-              <div className="flex items-center justify-between gap-4 text-sm max-[420px]:block">
-                <label className="inline-flex items-center gap-2 font-medium text-[#625c55]">
-                  <input type="checkbox" className="size-4 accent-[#ed2967]" />
-                  Remember me
-                </label>
-                <Link href="#" className="font-semibold text-[#ed2967] max-[420px]:mt-3 max-[420px]:inline-block">
-                  Forgot password?
-                </Link>
-              </div>
-
-              <Link
-                href="/admin"
-                className="mt-1 inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#111419] px-6 text-sm font-semibold text-white transition hover:bg-[#ed2967]"
-              >
-                Login to Admin
-                <ArrowRight size={16} strokeWidth={2} />
-              </Link>
-            </form>
+            <AdminLoginForm />
           </div>
         </div>
       </section>

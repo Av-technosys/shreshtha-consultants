@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { AdminShell } from "@/components/admin/admin-shell";
 import { createBlogAction } from "@/helpers/admin/blog-actions";
+import { requireAdmin } from "@/helpers/admin/auth";
 import { getAdminCategories } from "@/helpers/admin/blogs";
 import { BlogForm } from "@/components/admin/blog-form";
 
@@ -10,6 +11,7 @@ export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
 export default async function NewAdminBlogPage() {
+  await requireAdmin();
   const categories = await getAdminCategories();
 
   return (

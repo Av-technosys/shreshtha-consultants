@@ -34,8 +34,7 @@ export function AdminLoginForm() {
         return;
       }
 
-      router.replace("/admin");
-      router.refresh();
+      window.location.href = "/admin";
     } catch {
       setError("Something went wrong. Please try again.");
     } finally {
@@ -76,16 +75,6 @@ export function AdminLoginForm() {
           />
         </span>
       </label>
-
-      <div className="flex items-center justify-between gap-4 text-sm max-[420px]:block">
-        <label className="inline-flex items-center gap-2 font-medium text-[#625c55]">
-          <input type="checkbox" className="size-4 accent-[#ed2967]" disabled />
-          Remember me
-        </label>
-        <span className="font-semibold text-[#ed2967] max-[420px]:mt-3 max-[420px]:inline-block">
-          Secure access only
-        </span>
-      </div>
 
       {error ? (
         <p className="rounded-md bg-[#fff1f0] px-4 py-3 text-sm font-semibold text-[#b42318]" role="alert">

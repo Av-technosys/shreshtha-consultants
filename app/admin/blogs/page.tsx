@@ -3,6 +3,7 @@ import { CalendarDays, Edit3, Plus, Trash2 } from "lucide-react";
 import { AdminShell } from "@/components/admin/admin-shell";
 import { CategoryManagerDialog } from "@/components/admin/category-manager-dialog";
 import { deleteBlogAction } from "@/helpers/admin/blog-actions";
+import { requireAdmin } from "@/helpers/admin/auth";
 import { getAdminBlogs, getAdminCategoryList, type AdminBlogStatus } from "@/helpers/admin/blogs";
 
 
@@ -10,6 +11,7 @@ export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
 export default async function AdminBlogsPage() {
+  await requireAdmin();
   const blogs = await getAdminBlogs();
   const categories = await getAdminCategoryList();
 

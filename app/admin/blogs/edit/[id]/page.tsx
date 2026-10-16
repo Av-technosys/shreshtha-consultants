@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { AdminShell } from "@/components/admin/admin-shell";
 import { updateBlogAction } from "@/helpers/admin/blog-actions";
+import { requireAdmin } from "@/helpers/admin/auth";
 import { getAdminBlog, getAdminCategories } from "@/helpers/admin/blogs";
 import { BlogForm } from "@/components/admin/blog-form";
 
@@ -11,6 +12,7 @@ export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
 
 export default async function EditAdminBlogPage({ params }: PageProps<"/admin/blogs/edit/[id]">) {
+  await requireAdmin();
   const { id } = await params;
   const blog = await getAdminBlog(id);
   const categories = await getAdminCategories();
