@@ -21,6 +21,12 @@ export type CategoryActionState = {
   message: string;
 };
 
+export async function logoutAdminAction() {
+  const { destroyAdminSession } = await import("./auth");
+  await destroyAdminSession();
+  redirect("/admin/login");
+}
+
 export async function createBlogAction(formData: FormData) {
   const title = getValue(formData, "title");
   const rawSlug = getValue(formData, "slug");

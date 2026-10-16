@@ -1,15 +1,7 @@
 import Image from "next/image";
-import { redirect } from "next/navigation";
-import { getAdminSession } from "@/helpers/admin/auth";
 import { AdminLoginForm } from "@/components/admin/login-form";
 
-export const dynamic = "force-dynamic";
-
-export default async function AdminLoginPage() {
-  const session = await getAdminSession();
-  if (session) {
-    redirect("/admin");
-  }
+export default function AdminLoginPage() {
 
   return (
     <main className="font-inter min-h-screen bg-[#f7f6f2] text-[#111419]">

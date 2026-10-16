@@ -5,7 +5,6 @@ import { getPublishedBlogs, type AdminBlog } from "@/helpers/admin/blogs";
 import { Container } from "@/components/common/container";
 
 
-export const revalidate = 60;
 export const runtime = "nodejs";
 
 export default async function BlogPage() {
