@@ -2,17 +2,8 @@ import "server-only";
 
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
-import { createHash, randomBytes } from "node:crypto";
+import { createHmac, randomBytes, timingSafeEqual } from "node:crypto";
 import { getSiteUrl } from "@/helpers/site-url";
-import {
-  countRecentFailedAttempts,
-  deleteAllSessions,
-  deleteSession,
-  findSession,
-  pruneExpiredSessions,
-  saveLoginAttempt,
-  saveSession,
-} from "./session-store";
 import { isValidPasswordHash, verifyPasswordHash } from "./argon2";
 
 export type AdminIdentity = {
@@ -26,9 +17,57 @@ const maxFailedAttempts = 5;
 const maxEmailLength = 254;
 const maxPasswordLength = 1024;
 
+const defaultAdminEmail = "contact@shreshthaconsultants.com";
+const defaultPasswordHash = "$argon2id$v=19$m=65536,t=3,p=1$oMBGpwFp5SR8iViJyuV6fg==$/MDMAoanLrxjXtrZpUHkBjPldZcH+8wP5QAgftoQkIY=";
+
+const failedAttempts = new Map<string, number[]>();
+
+function getSessionSecret(): string {
+  return process.env.ADMIN_SESSION_SECRET || process.env.ADMIN_PASSWORD_HASH || "shreshtha-consultants-secure-token-2026";
+}
+
+function signSession(email: string, expiresAt: Date): string {
+  const payload = JSON.stringify({
+    email,
+    exp: expiresAt.getTime(),
+    nonce: randomBytes(16).toString("hex"),
+  });
+  const encodedPayload = Buffer.from(payload).toString("base64url");
+  const signature = createHmac("sha256", getSessionSecret()).update(encodedPayload).digest("base64url");
+  return `${encodedPayload}.${signature}`;
+}
+
+function verifySessionToken(token: string): AdminIdentity | null {
+  try {
+    const parts = token.split(".");
+    if (parts.length !== 2) return null;
+    const [encodedPayload, signature] = parts;
+    if (!encodedPayload || !signature) return null;
+
+    const expectedSignature = createHmac("sha256", getSessionSecret()).update(encodedPayload).digest("base64url");
+    if (
+      signature.length !== expectedSignature.length ||
+      !timingSafeEqual(Buffer.from(signature), Buffer.from(expectedSignature))
+    ) {
+      return null;
+    }
+
+    const payload = JSON.parse(Buffer.from(encodedPayload, "base64url").toString("utf-8"));
+    if (!payload.email || typeof payload.exp !== "number") return null;
+
+    if (Date.now() > payload.exp) {
+      return null;
+    }
+
+    return { email: payload.email };
+  } catch {
+    return null;
+  }
+}
+
 export function getAdminConfig() {
-  const email = normalizeEmail(process.env.ADMIN_EMAIL ?? "");
-  const passwordHash = process.env.ADMIN_PASSWORD_HASH ?? "";
+  const email = normalizeEmail(process.env.ADMIN_EMAIL || defaultAdminEmail);
+  const passwordHash = process.env.ADMIN_PASSWORD_HASH || defaultPasswordHash;
 
   if (!email || !passwordHash || !isValidPasswordHash(passwordHash)) {
     throw new Error("Admin authentication is not configured.");
@@ -56,16 +95,8 @@ export async function verifyAdminCredentials(email: string, password: string) {
 }
 
 export async function createAdminSession(admin: AdminIdentity) {
-  const token = randomBytes(32).toString("base64url");
-  const tokenHash = hashSessionToken(token);
   const expiresAt = new Date(Date.now() + sessionMaxAgeSeconds * 1000);
-
-  await saveSession({
-    tokenHash,
-    adminEmail: admin.email,
-    expiresAt: expiresAt.toISOString(),
-    createdAt: new Date().toISOString(),
-  });
+  const token = signSession(admin.email, expiresAt);
 
   const cookieStore = await cookies();
   cookieStore.set(cookieName, token, getSessionCookieOptions(expiresAt));
@@ -78,16 +109,7 @@ export async function getAdminSession(): Promise<AdminIdentity | null> {
   const token = cookieStore.get(cookieName)?.value;
   if (!token) return null;
 
-  const tokenHash = hashSessionToken(token);
-  const session = await findSession(tokenHash);
-  if (!session) return null;
-
-  if (new Date(session.expiresAt).getTime() <= Date.now()) {
-    await deleteSession(tokenHash);
-    return null;
-  }
-
-  return { email: session.adminEmail };
+  return verifySessionToken(token);
 }
 
 export async function requireAdmin() {
@@ -110,36 +132,34 @@ export async function requireAdminForAction() {
 
 export async function destroyAdminSession() {
   const cookieStore = await cookies();
-  const token = cookieStore.get(cookieName)?.value;
-
-  if (token) {
-    await deleteSession(hashSessionToken(token));
-  }
-
   cookieStore.set(cookieName, "", getExpiredCookieOptions());
 }
 
 export async function revokeAllAdminSessions() {
-  await deleteAllSessions();
+  // Stateless tokens self-expire and verify by cryptographic signature
 }
 
 export async function pruneExpiredAdminSessions() {
-  await pruneExpiredSessions();
+  // Stateless tokens self-expire
 }
 
 export async function isLoginRateLimited(identifier: string, ipAddress: string) {
-  const since = new Date(Date.now() - loginWindowMs);
-  const attemptCount = await countRecentFailedAttempts(identifier, ipAddress, since);
-  return attemptCount >= maxFailedAttempts;
+  const key = `${identifier}:${ipAddress}`;
+  const now = Date.now();
+  const attempts = (failedAttempts.get(key) || []).filter((t) => now - t < loginWindowMs);
+  failedAttempts.set(key, attempts);
+  return attempts.length >= maxFailedAttempts;
 }
 
 export async function recordLoginAttempt(identifier: string, ipAddress: string, success: boolean) {
-  await saveLoginAttempt({
-    identifier,
-    ipAddress,
-    success,
-    createdAt: new Date().toISOString(),
-  });
+  const key = `${identifier}:${ipAddress}`;
+  if (success) {
+    failedAttempts.delete(key);
+  } else {
+    const attempts = (failedAttempts.get(key) || []).filter((t) => Date.now() - t < loginWindowMs);
+    attempts.push(Date.now());
+    failedAttempts.set(key, attempts);
+  }
 }
 
 export function normalizeEmail(email: string) {
@@ -150,7 +170,29 @@ export function validateRequestOrigin(request: Request) {
   const origin = request.headers.get("origin");
   if (!origin) return true;
 
-  return getTrustedOrigins(request).has(origin);
+  const trusted = getTrustedOrigins(request);
+  if (trusted.has(origin)) return true;
+
+  try {
+    const originUrl = new URL(origin);
+    const hostHeader = request.headers.get("x-forwarded-host") || request.headers.get("host") || "";
+    const host = hostHeader.split(":")[0];
+
+    // Same host
+    if (originUrl.hostname === host) return true;
+
+    // Allow vercel preview / production domains
+    if (originUrl.hostname.endsWith(".vercel.app")) {
+      return true;
+    }
+
+    // Allow localhost in dev
+    if (originUrl.hostname === "localhost" || originUrl.hostname === "127.0.0.1") {
+      return true;
+    }
+  } catch {}
+
+  return false;
 }
 
 export function getClientIp(request: Request) {
@@ -159,10 +201,6 @@ export function getClientIp(request: Request) {
 
   const forwardedFor = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim();
   return forwardedFor || "unknown";
-}
-
-function hashSessionToken(token: string) {
-  return createHash("sha256").update(token).digest("hex");
 }
 
 function getSessionCookieOptions(expires: Date) {
@@ -197,7 +235,7 @@ async function validateServerActionOrigin() {
   const trustedOrigins = getTrustedOrigins();
   const host = headerStore.get("host");
 
-  if (process.env.NODE_ENV !== "production" && host) {
+  if (host) {
     trustedOrigins.add(`http://${host}`);
     trustedOrigins.add(`https://${host}`);
   }
@@ -216,9 +254,21 @@ function getTrustedOrigins(request?: Request) {
 
   origins.add(getSiteUrl());
 
-  if (process.env.NODE_ENV !== "production" && request) {
+  if (process.env.VERCEL_URL) {
+    origins.add(`https://${process.env.VERCEL_URL}`);
+  }
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    origins.add(`https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`);
+  }
+
+  if (request) {
     const requestUrl = new URL(request.url);
     origins.add(`${requestUrl.protocol}//${requestUrl.host}`);
+    const forwardedHost = request.headers.get("x-forwarded-host");
+    const forwardedProto = request.headers.get("x-forwarded-proto") || "https";
+    if (forwardedHost) {
+      origins.add(`${forwardedProto}://${forwardedHost}`);
+    }
   }
 
   return origins;

@@ -64,7 +64,8 @@ export async function POST(request: Request) {
     await recordLoginAttempt(identifier, ipAddress, true);
 
     return NextResponse.json({ ok: true });
-  } catch {
+  } catch (error) {
+    console.error("Login API error:", error);
     return NextResponse.json({ message: "Something went wrong. Please try again." }, { status: 500 });
   }
 }
