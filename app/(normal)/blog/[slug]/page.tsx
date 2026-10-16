@@ -10,8 +10,14 @@ type BlogSlugPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export const dynamic = "force-dynamic";
+export const revalidate = 60;
 export const runtime = "nodejs";
+
+export async function generateStaticParams() {
+  const { getPublishedBlogs } = await import("@/helpers/admin/blogs");
+  const blogs = await getPublishedBlogs();
+  return blogs.map((b) => ({ slug: b.slug }));
+}
 
 export async function generateMetadata({ params }: BlogSlugPageProps): Promise<Metadata> {
   const { slug } = await params;
