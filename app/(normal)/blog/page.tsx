@@ -9,7 +9,14 @@ export const revalidate = 60;
 export const runtime = "nodejs";
 
 export default async function BlogPage() {
-  const blogPosts = await getPublishedBlogs();
+  let blogPosts: AdminBlog[] = [];
+  try {
+    if (process.env.DATABASE_URL) {
+      blogPosts = await getPublishedBlogs();
+    }
+  } catch (error) {
+    console.warn("Could not fetch blogs during build:", error);
+  }
 
   return (
     <main className="font-inter overflow-hidden bg-[#f7f6f2] text-[#1a1a1a]">

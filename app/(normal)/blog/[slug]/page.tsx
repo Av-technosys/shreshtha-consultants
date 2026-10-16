@@ -14,9 +14,15 @@ export const revalidate = 60;
 export const runtime = "nodejs";
 
 export async function generateStaticParams() {
-  const { getPublishedBlogs } = await import("@/helpers/admin/blogs");
-  const blogs = await getPublishedBlogs();
-  return blogs.map((b) => ({ slug: b.slug }));
+  try {
+    if (!process.env.DATABASE_URL) return [];
+    const { getPublishedBlogs } = await import("@/helpers/admin/blogs");
+    const blogs = await getPublishedBlogs();
+    return blogs.map((b) => ({ slug: b.slug }));
+  } catch (error) {
+    console.warn("Could not generate static params for blogs during build:", error);
+    return [];
+  }
 }
 
 export async function generateMetadata({ params }: BlogSlugPageProps): Promise<Metadata> {
