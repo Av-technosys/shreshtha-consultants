@@ -12,6 +12,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/admin", "/admin/", "/admin/*"],
       },
     ],
-    sitemap: `${siteUrl}/sitemap.xml`,
+    sitemap: "https://www.shreshthaconsultants.com/sitemap.xml",
   };
 }

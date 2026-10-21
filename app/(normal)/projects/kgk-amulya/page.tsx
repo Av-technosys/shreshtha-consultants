@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/kgk-amulya",
+  },
+  title: "KGK Amulya MEP Project | Shreshtha Consultants",
+  description:
+    "MEP consultancy for KGK Amulya, Jaipur, Rajasthan. Luxury residential MEP design for the globally renowned KGK Group by Shreshtha Consultants.",
+};
 
 export default function KgkAmulyaPage() {
   const projectInfo = [

@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/acl-greens",
+  },
+  title: "ACL Greens MEP Project | Shreshtha Consultants",
+  description:
+    "MEP consultancy for ACL Greens, Jaipur. Electrical & plumbing solutions for modern, sustainable residential utility infrastructure by Shreshtha Consultants.",
+};
 
 export default function AclGreenPage() {
   const projectInfo = [

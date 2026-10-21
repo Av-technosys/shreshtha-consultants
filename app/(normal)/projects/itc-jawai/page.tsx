@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/itc-jawai",
+  },
+  title: "ITC Jawai MEP Engineering Project | Shreshtha Consultants",
+  description:
+    "Shreshtha Consultants delivered MEP engineering for ITC Jawai, Rajasthan, a luxury sustainable retreat blending nature with premium hospitality. Know more.",
+};
 
 export default function SuryagarhPage() {
   const projectInfo = [

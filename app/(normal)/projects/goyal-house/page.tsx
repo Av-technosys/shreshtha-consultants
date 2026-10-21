@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/goyal-house",
+  },
+  title: "Goyal House MEP Project | Shreshtha Consultants",
+  description:
+    "MEP consultancy for Goyal House, Jaipur, Rajasthan. A landmark heritage-style residence with reliable electrical, HVAC & plumbing by Shreshtha Consultants.",
+};
 
 export default function GoyalHousePage() {
   const projectInfo = [

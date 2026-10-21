@@ -1,8 +1,16 @@
-"use client";
-
+import type { Metadata } from 'next';
 import React from 'react';
 import { ProjectHero } from '@/components/projects/project-hero';
 import { ProjectDetails } from '@/components/projects/project-details';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/one8-commune",
+  },
+  title: "One8 Commune MEP Project | Shreshtha Consultants",
+  description:
+    "Shreshtha Consultants delivered complete MEP consultancy for One8 Commune, Jaipur, ensuring seamless integration of electrical, HVAC, and firefighting systems.",
+};
 
 export default function One8CommunePage() {
   const projectInfo = [

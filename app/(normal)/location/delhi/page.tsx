@@ -12,6 +12,9 @@ export const metadata = {
   title: "Best MEP Consulting Services in Delhi | Shreshtha Consultants",
   description:
     "Top-tier MEP consulting services in Delhi. Shreshtha Consultants provides expert solutions for mechanical, electrical, and plumbing engineering projects.",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/location/delhi",
+  },
 };
 
 export default function DelhiLocationPage() {

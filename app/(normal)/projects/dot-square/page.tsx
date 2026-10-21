@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/dot-square",
+  },
+  title: "Dot Square Office MEP Project | Shreshtha Consultants",
+  description:
+    "Shreshtha Consultants delivered MEP design for Dot Square's new Jaipur office, electrical, HVAC & plumbing systems for a modern, energy-efficient IT workspace.",
+};
 
 export default function DotSquarePage() {
   const projectInfo = [

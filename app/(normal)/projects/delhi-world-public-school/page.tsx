@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/delhi-world-public-school",
+  },
+  title: "Delhi World Public School MEP Project | Shreshtha Consultants",
+  description:
+    "Shreshtha Consultants delivered MEP engineering for Delhi World Public School's new academic blocks in Ajmer, with a safe, sustainable & future-ready design.",
+};
 
 export default function DwpsPage() {
   const projectInfo = [

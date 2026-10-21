@@ -7,6 +7,9 @@ export const metadata = {
   title: "Shreshtha Consultants – Expert Plumbing Consultants India",
   description:
     "Top plumbing design & drainage services by Shreshtha Consultants — efficient water supply, compliant systems & cost-effective solutions across India.",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/plumbing",
+  },
 };
 
 const PLUMBING_DELIVERABLES = [
@@ -35,10 +38,10 @@ const PLUMBING_DELIVERABLES = [
 ];
 
 const CROSS_LINKS = [
-  { title: "HVAC", href: "/services/hvac" },
-  { title: "Fire Fighting", href: "/services/fire-fighting" },
-  { title: "Safety and Security", href: "/services/safety-and-security" },
-  { title: "Electrical", href: "/services/electrical" },
+  { title: "HVAC", href: "/hvac" },
+  { title: "Fire Fighting", href: "/fire-fighting" },
+  { title: "Safety and Security", href: "/safety-and-security" },
+  { title: "Electrical", href: "/electrical" },
   { title: "BOQ", href: "/boq" },
   { title: "BIM", href: "/bim" },
 ];

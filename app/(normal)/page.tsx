@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { AiSection } from "@/components/home/ai-section";
 import { HeroSection } from "@/components/home/hero-section";
 import { ProjectsSection } from "@/components/home/projects-section";
@@ -7,6 +8,14 @@ import { StatsSection } from "@/components/home/stats-section";
 import { TestimonialsSection } from "@/components/home/testimonials-section";
 import { TrustSection } from "@/components/home/trust-section";
 
+export const metadata: Metadata = {
+  title: "Shreshtha Consultants – AI-Driven MEP Design Consultants in India",
+  description:
+    "We are trusted MEP consultants in India offering HVAC, electrical, plumbing & firefighting design with AI-powered drawings and BIM coordination. Request a proposal.",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/",
+  },
+};
 
 export default function Home() {
   return (

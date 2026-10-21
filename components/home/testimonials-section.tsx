@@ -35,7 +35,7 @@ const testimonials = [
   {
     initials: "AB",
     name: "Anoop Bartaria",
-    role: "Principle Architect, Sincere Architects",
+    role: "Principal Architect, Sincere Architects",
     quote:
       "We partnered with Shreshtha for our commercial kitchen project & retail stores. They are the best in their work and always focus on optimising the designs to reduce project costs.",
   },

@@ -16,7 +16,7 @@ export function LocationHero({
   imageSrc,
   imageAlt = "Location background",
   ctaText = "Request Proposal",
-  ctaLink = "/contact",
+  ctaLink = "/contact-us",
 }: LocationHeroProps) {
   return (
     <section className="relative overflow-hidden w-full h-[350px] md:h-[500px] pt-[120px] md:pt-[178px] font-lora text-[16px] font-normal leading-[24px] text-[#FFFFFF]">

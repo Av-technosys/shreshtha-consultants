@@ -20,6 +20,7 @@ export type AdminBlog = {
   authorName: string;
   date: string;
   image: string;
+  metaTitle?: string;
   metaDescription: string;
   status: AdminBlogStatus;
   faqs?: AdminBlogFaq[];
@@ -130,6 +131,7 @@ export async function createAdminBlog(input: AdminBlogInput) {
       publishDate: input.date,
       mainBannerImage: input.image,
       authorName: input.authorName,
+      metaTitle: input.metaTitle || input.title,
       metaDescription: input.metaDescription,
       content: input.content,
       isDraft: input.status === "Draft",
@@ -169,6 +171,7 @@ export async function updateAdminBlog(id: string, input: AdminBlogInput) {
         publishDate: input.date,
         mainBannerImage: input.image,
         authorName: input.authorName,
+        metaTitle: input.metaTitle || input.title,
         metaDescription: input.metaDescription,
         content: input.content,
         isDraft: input.status === "Draft",
@@ -314,6 +317,7 @@ function getBlogRows(where?: SQL) {
       authorName: blogs.authorName,
       date: blogs.publishDate,
       image: blogs.mainBannerImage,
+      metaTitle: blogs.metaTitle,
       metaDescription: blogs.metaDescription,
       isDraft: blogs.isDraft,
     })
@@ -338,6 +342,7 @@ function toAdminBlog(row: Awaited<ReturnType<typeof getBlogRows>>[number]): Admi
     authorName: row.authorName,
     date: row.date,
     image: row.image,
+    metaTitle: row.metaTitle || row.title,
     metaDescription: row.metaDescription,
     status: row.isDraft ? "Draft" : "Published",
   };

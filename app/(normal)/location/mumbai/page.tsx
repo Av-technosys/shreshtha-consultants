@@ -11,6 +11,9 @@ export const metadata = {
   title: "Professional MEP Services in Mumbai | Shreshtha Consultants",
   description:
     "Top-tier MEP consulting services in Mumbai. Shreshtha Consultants provides expert solutions for mechanical, electrical, and plumbing engineering projects.",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/location/mumbai",
+  },
 };
 
 export default function MumbaiLocationPage() {

@@ -1,7 +1,17 @@
+import type { Metadata } from "next";
 import { ServiceHero } from "@/components/services/service-hero";
 import { ServiceDeliverables } from "@/components/services/service-deliverables";
 import { ServiceCrossLinks } from "@/components/services/service-cross-links";
 import { ServiceCTA } from "@/components/services/service-cta";
+
+export const metadata: Metadata = {
+  title: "Shreshtha Consultants – Fire Fighting System Design Experts India",
+  description:
+    "Professional fire protection & firefighting system design by Shreshtha Consultants — safety-focused solutions for buildings across India.",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/fire-fighting",
+  },
+};
 
 const FIRE_FIGHTING_DELIVERABLES = [
   {
@@ -23,10 +33,10 @@ const FIRE_FIGHTING_DELIVERABLES = [
 ];
 
 const CROSS_LINKS = [
-  { title: "HVAC&R", href: "/services/hvac" },
-  { title: "Fire Fighting", href: "/services/fire-fighting" },
-  { title: "Safety and Security", href: "/services/safety-and-security" },
-  { title: "Plumbing", href: "/services/plumbing" },
+  { title: "HVAC", href: "/hvac" },
+  { title: "Electrical", href: "/electrical" },
+  { title: "Safety and Security", href: "/safety-and-security" },
+  { title: "Plumbing", href: "/plumbing" },
   { title: "BOQ", href: "/boq" },
   { title: "BIM", href: "/bim" },
 ];

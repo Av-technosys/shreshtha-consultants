@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/rajasthan-hospital",
+  },
+  title: "Rajasthan Hospital MEP Project | Shreshtha Consultants",
+  description:
+    "MEP consultancy for Rajasthan Hospital, Jaipur, floor-wise VRV/VRF systems & water-cooled chillers for a leading multispeciality hospital by Shreshtha Consultants.",
+};
 
 export default function RajasthanHospitalPage() {
   const projectInfo = [

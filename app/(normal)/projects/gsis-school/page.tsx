@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/gsis-school",
+  },
+  title: "GSIS School MEP Project | Shreshtha Consultants",
+  description:
+    "MEP consultancy for GSIS, Jaipur. VRV/VRF air conditioning & rainwater harvesting for an international-style, student-centric campus by Shreshtha Consultants.",
+};
 
 export default function GsisPage() {
   const projectInfo = [

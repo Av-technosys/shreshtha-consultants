@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  title: "Hotel Suryagarh Palace | Shreshtha Consultants",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/hotel-suryagarh-palace",
+  },
+};
 
 export default function SuryagarhPage() {
   const projectInfo = [

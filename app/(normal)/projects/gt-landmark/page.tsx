@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/gt-landmark",
+  },
+  title: "GT Landmark Mall MEP Project | Shreshtha Consultants",
+  description:
+    "MEP design for GT Landmark, Jaipur, a leading shopping & entertainment hub. Chiller systems, 33KV electrification & energy management by Shreshtha Consultants.",
+};
 
 export default function GTLandmarkPage() {
   const projectInfo = [

@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/jims-hospital",
+  },
+  title: "JIMS Hospital MEP Project | Shreshtha Consultants",
+  description:
+    "MEP consultancy for JIMS Hospital, Kolkata, an emerging healthcare & medical education hub. HVAC, electrical & safety systems by Shreshtha Consultants.",
+};
 
 export default function JimsPage() {
   const projectInfo = [

@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/umaid-bhawan-palace",
+  },
+  title: "Umaid Bhawan Palace MEP Project | Shreshtha Consultants",
+  description:
+    "Shreshtha Consultants executed the MEP renovation for Umaid Bhawan Palace, Jodhpur, a Taj Group heritage hotel & royal residence. Call us to discuss your project",
+};
 
 export default function UmaidBhawanPage() {
   const projectInfo = [

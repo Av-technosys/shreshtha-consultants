@@ -11,6 +11,9 @@ export const metadata = {
   title: "Best MEP Consulting Services in Bangalore | Shreshtha Consultants",
   description:
     "Top-tier MEP consulting services in Bangalore. Shreshtha Consultants provides expert solutions for mechanical, electrical, and plumbing engineering projects.",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/location/bangalore",
+  },
 };
 
 export default function BangaloreLocationPage() {

@@ -1,1 +1,1 @@
-export { default } from "../anantara/page";
+export { default, metadata } from "../anantara/page";

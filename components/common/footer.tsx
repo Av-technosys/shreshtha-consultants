@@ -3,29 +3,30 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { IconBrandFacebook, IconBrandInstagram, IconBrandLinkedin } from "@tabler/icons-react";
 import { Container } from "@/components/common/container";
 
 const services = [
-  { label: "Electrical", href: "/services/electrical" },
-  { label: "Plumbing", href: "/services/plumbing" },
-  { label: "Fire Fighting", href: "/services/fire-fighting" },
-  { label: "Safety & Security", href: "/services/safety-and-security" },
-  { label: "HVAC", href: "/services/hvac" },
+  { label: "Electrical", href: "/electrical" },
+  { label: "Plumbing", href: "/plumbing" },
+  { label: "Fire Fighting", href: "/fire-fighting" },
+  { label: "Safety & Security", href: "/safety-and-security" },
+  { label: "HVAC", href: "/hvac" },
 ];
 
 const companyLinks = [
   { label: "About us", href: "/about" },
-  { label: "Career", href: "/career" },
+  { label: "Careers", href: "/careers" },
   { label: "Projects", href: "/projects" },
   { label: "Blogs", href: "/blog" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Contact Us", href: "/contact-us" },
   { label: "BIM", href: "/bim" },
 ];
 
 const socialLinks = [
-  { label: "Facebook", href: "https://www.facebook.com/shreshthaconsultants", glyph: "f" },
-  { label: "Instagram", href: "https://www.instagram.com/shreshtha_consultants/", glyph: "◎" },
-  { label: "LinkedIn", href: "https://www.linkedin.com/company/shreshtha-consultants/", glyph: "in" },
+  { label: "Facebook", href: "https://www.facebook.com/shreshthaconsultants", icon: IconBrandFacebook },
+  { label: "Instagram", href: "https://www.instagram.com/shreshtha_consultants/", icon: IconBrandInstagram },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/shreshtha-consultants/", icon: IconBrandLinkedin },
 ];
 
 export function Footer() {
@@ -52,9 +53,9 @@ export function Footer() {
               <p>
                 <a
                   className="transition-colors hover:text-white"
-                  href="mailto:contact@shreshthconsultants.com"
+                  href="mailto:contact@shreshthaconsultants.com"
                 >
-                  contact@shreshthconsultants.com
+                  contact@shreshthaconsultants.com
                 </a>
               </p>
             </address>
@@ -85,14 +86,16 @@ export function Footer() {
               Follow Us
             </h2>
             <div className="mt-7 flex gap-3">
-              {socialLinks.map(({ label, href, glyph }) => (
+              {socialLinks.map(({ label, href, icon: Icon }) => (
                 <Link
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="grid size-10 place-items-center rounded-full border border-neutral-700 text-white transition-colors hover:border-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="grid size-10 place-items-center rounded-full border border-neutral-700 text-white transition-colors hover:border-white hover:text-white"
                 >
-                  <span className="text-sm font-semibold leading-none">{glyph}</span>
+                  <Icon size={18} stroke={1.75} />
                 </Link>
               ))}
             </div>
@@ -132,7 +135,7 @@ function LogoMark() {
     <span className="grid size-12 place-items-center rounded-lg bg-white">
       <Image
         src="/Common/logo.png"
-        alt=""
+        alt="Shreshtha Consultants Logo"
         width={34}
         height={34}
         className="size-[34px] shrink-0"

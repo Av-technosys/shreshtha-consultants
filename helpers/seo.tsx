@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const siteUrl = "https://shreshthaconsultants.com";
+const siteUrl = "https://www.shreshthaconsultants.com";
 const siteName = "Shreshtha Consultants";
 const locale = "en_IN";
 
@@ -15,7 +15,9 @@ export function createSeoMetadata({ title, description, path, image }: SeoConfig
   const url = `${siteUrl}${path}`;
 
   return {
-    title,
+    title: {
+      absolute: title,
+    },
     description,
     alternates: {
       canonical: url,
@@ -65,16 +67,16 @@ export const seo = {
     image: "https://shreshthaconsultants.com/wp-content/uploads/2025/08/About-us-intro-e1761118375301.jpeg.webp",
   },
   contact: {
-    title: "Contact Shreshtha Consultants – MEP Consultants in Jaipur",
+    title: "Contact Shreshtha Consultants – MEP Consultants in India",
     description:
-      "Get in touch with Shreshtha Consultants for MEP, HVAC, BIM & building services design. Call +91-9799858301, email us, or visit our Jaipur office.",
+      "Get in touch with Shreshtha Consultants for MEP, HVAC, BIM & building services design. Call +91-9799858301, email us, or visit our office.",
     path: "/contact-us",
     image: "https://shreshthaconsultants.com/wp-content/uploads/2026/02/Frame-28.png",
   },
   career: {
-    title: "Careers at Shreshtha Consultants – MEP Jobs in India",
+    title: "Careers at Shreshtha Consultants | MEP, HVAC & BIM Design Jobs",
     description:
-      "Join Shreshtha Consultants in India. Work on iconic MEP projects with AI-driven design tools alongside experienced engineers. See open roles and apply.",
+      "Explore career opportunities at Shreshtha Consultants, a leading AI-driven MEP design firm in India. Join our team of engineers working on projects.",
     path: "/careers",
     image: "https://shreshthaconsultants.com/wp-content/uploads/2026/02/Frame-28.png",
   },
@@ -83,6 +85,13 @@ export const seo = {
     description:
       "Electrical design consultants in India: wiring & conduit layouts, SLDs, automation and BOQ, compliant with NBC 2016. Request an electrical design proposal.",
     path: "/electrical",
+    image: "https://shreshthaconsultants.com/wp-content/uploads/2024/09/Electrical-jpg-scaled-1-e1756298375235.jpg",
+  },
+  boq: {
+    title: "Shreshtha Consultants – BOQ (Bill of Quantities) Services India",
+    description:
+      "Accurate MEP Bill of Quantities (BOQ) by Shreshtha Consultants. Automated NBC 2016 compliant BOQs for electrical, plumbing, HVAC & firefighting systems.",
+    path: "/boq",
     image: "https://shreshthaconsultants.com/wp-content/uploads/2024/09/Electrical-jpg-scaled-1-e1756298375235.jpg",
   },
 } satisfies Record<string, SeoConfig>;

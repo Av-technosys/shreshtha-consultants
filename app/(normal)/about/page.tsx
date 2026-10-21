@@ -1,8 +1,18 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import type { ReactNode } from "react";
 import { Container } from "@/components/common/container";
 import { TimelineMarker } from "@/components/about/timeline-marker";
 import { TimelineProgress } from "@/components/about/timeline-progress";
+
+export const metadata: Metadata = {
+  title: "About Shreshtha Consultants – MEP Experts in India Since 1997",
+  description:
+    "Shreshtha Consultants has delivered 1,050+ MEP projects since 1997. Meet our founders and 50+ engineers behind India's first AI tool for MEP design.",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/about",
+  },
+};
 
 
 type Panel = {

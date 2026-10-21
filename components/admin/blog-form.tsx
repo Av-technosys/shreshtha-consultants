@@ -183,6 +183,15 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
         />
       </Field>
 
+      <Field label="Meta Title">
+        <input
+          name="metaTitle"
+          defaultValue={blog?.metaTitle || ""}
+          placeholder="e.g. Best MEP Consultants in India | Shreshtha Consultants"
+          className={inputClassName}
+        />
+      </Field>
+
       <div className="grid grid-cols-2 items-start gap-4 max-[680px]:grid-cols-1">
         <Field label="Category">
           <input type="hidden" name="category" value={selectedCategory === "ADD_NEW" ? newCategory : selectedCategory} />

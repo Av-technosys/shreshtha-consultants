@@ -9,7 +9,7 @@ export default function AdminLoginPage() {
         <div className="relative flex flex-col justify-between overflow-hidden bg-[#111419] px-10 py-9 text-white max-[980px]:min-h-[360px] max-[640px]:px-6">
           <div className="relative z-10 flex items-center gap-3">
             <span className="grid size-12 place-items-center rounded-lg bg-white">
-              <Image src="/Common/logo.png" alt="" width={34} height={34} priority className="size-[34px]" />
+              <Image src="/Common/logo.png" alt="Shreshtha Consultants Logo" width={34} height={34} priority className="size-[34px]" />
             </span>
             <div>
               <p className="font-archivo text-xl font-semibold leading-none">Shreshtha</p>

@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/narsi-villa",
+  },
+  title: "Narsi Villa MEP Project | Shreshtha Consultants",
+  description:
+    "MEP consultancy for Narsi Villa, Nokha. Premium residential design with efficient electrification, HVAC, plumbing & safety systems by Shreshtha Consultants.",
+};
 
 export default function NarsiVillaPage() {
   const projectInfo = [

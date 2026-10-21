@@ -1,9 +1,18 @@
 
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { getPublishedBlogs, type AdminBlog } from "@/helpers/admin/blogs";
 import { Container } from "@/components/common/container";
 
+export const metadata: Metadata = {
+  title: "Shreshtha Consultants Blog – Insights on MEP & Building Design",
+  description:
+    "Read our blog for expert insights on MEP design, HVAC, plumbing, electrical systems & engineering trends by Shreshtha Consultants.",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/blog",
+  },
+};
 
 export const runtime = "nodejs";
 

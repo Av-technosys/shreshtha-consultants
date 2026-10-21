@@ -5,6 +5,9 @@ import { ServiceCTA } from "@/components/services/service-cta";
 
 export const metadata = {
   title: "Shreshtha Consultants – Safety & Security Systems India",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/safety-and-security",
+  },
 };
 
 const SAFETY_SECURITY_DELIVERABLES = [
@@ -27,10 +30,10 @@ const SAFETY_SECURITY_DELIVERABLES = [
 ];
 
 const CROSS_LINKS = [
-  { title: "HVAC&R", href: "/services/hvac" },
-  { title: "Fire Fighting", href: "/services/fire-fighting" },
-  { title: "Safety and Security", href: "/services/safety-and-security" },
-  { title: "Plumbing", href: "/services/plumbing" },
+  { title: "HVAC", href: "/hvac" },
+  { title: "Fire Fighting", href: "/fire-fighting" },
+  { title: "Electrical", href: "/electrical" },
+  { title: "Plumbing", href: "/plumbing" },
   { title: "BOQ", href: "/boq" },
   { title: "BIM", href: "/bim" },
 ];

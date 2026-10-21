@@ -34,9 +34,18 @@ export async function generateMetadata({ params }: BlogSlugPageProps): Promise<M
     };
   }
 
+  const pageTitle = post.metaTitle?.trim()
+    ? (post.metaTitle.toLowerCase().includes("shreshtha consultants")
+        ? post.metaTitle
+        : `${post.metaTitle} | Shreshtha Consultants`)
+    : `${post.title} | Shreshtha Consultants`;
+
   return {
-    title: `${post.title} | Shreshtha Consultants`,
+    title: pageTitle,
     description: post.metaDescription,
+    alternates: {
+      canonical: `https://www.shreshthaconsultants.com/blog/${slug}`,
+    },
   };
 }
 

@@ -12,17 +12,26 @@ const navItems = [
   { label: "Services", href: "#", marker: "▾", hasDropdown: true },
   { label: "Projects", href: "/projects" },
   { label: "BIM", href: "/bim" },
-  { label: "Careers", href: "/career" },
+  { label: "Careers", href: "/careers" },
   { label: "Blogs", href: "/blog" },
 ];
 
 const serviceItems = [
-  { label: "Electrical", href: "/services/electrical" },
-  { label: "Plumbing", href: "/services/plumbing" },
-  { label: "Fire Fighting", href: "/services/fire-fighting" },
-  { label: "Safety and Security", href: "/services/safety-and-security" },
-  { label: "HVAC", href: "/services/hvac" },
+  { label: "Electrical", href: "/electrical" },
+  { label: "Plumbing", href: "/plumbing" },
+  { label: "Fire Fighting", href: "/fire-fighting" },
+  { label: "Safety and Security", href: "/safety-and-security" },
+  { label: "HVAC", href: "/hvac" },
 ];
+
+function isServicesRoute(path: string) {
+  return (
+    path.startsWith("/services") ||
+    path === "/boq" ||
+    path.startsWith("/boq/") ||
+    serviceItems.some((s) => path === s.href || path.startsWith(s.href + "/"))
+  );
+}
 
 export function Header() {
   const pathname = usePathname();
@@ -42,7 +51,7 @@ export function Header() {
   }, [pathname]);
 
   useEffect(() => {
-    if (isOpen && pathname.startsWith("/services")) {
+    if (isOpen && isServicesRoute(pathname)) {
       setIsServicesOpen(true);
     }
   }, [isOpen, pathname]);
@@ -76,7 +85,7 @@ export function Header() {
           {navItems.map((item) => {
             const isActive =
               pathname === item.href ||
-              (item.hasDropdown && pathname.startsWith("/services"));
+              (item.hasDropdown && isServicesRoute(pathname));
 
             if (item.hasDropdown) {
               return (
@@ -145,10 +154,10 @@ export function Header() {
 
         <div className="hidden items-center lg:flex">
           <Link
-            href="/contact"
+            href="/contact-us"
             className="inline-flex h-12 items-center gap-3 rounded-full bg-[#191d21] px-6 text-sm font-semibold text-white transition-colors hover:bg-neutral-900"
           >
-            Get in Touch!!
+            Get in Touch
             <ArrowRight size={15} strokeWidth={2} />
           </Link>
         </div>
@@ -159,7 +168,7 @@ export function Header() {
           aria-expanded={isOpen}
           onClick={() => {
             setIsOpen((current) => !current);
-            setIsServicesOpen(pathname.startsWith("/services"));
+            setIsServicesOpen(isServicesRoute(pathname));
           }}
           className="inline-flex size-11 items-center justify-center text-neutral-950 lg:hidden"
         >
@@ -174,7 +183,7 @@ export function Header() {
             {navItems.map((item) => {
               const isActive =
                 pathname === item.href ||
-                (item.hasDropdown && pathname.startsWith("/services"));
+                (item.hasDropdown && isServicesRoute(pathname));
 
               return (
                 <div key={item.href}>
@@ -248,7 +257,7 @@ function LogoMark() {
   return (
     <Image
       src="/Common/logo.png"
-      alt=""
+      alt="Shreshtha Consultants Logo"
       width={36}
       height={36}
       priority

@@ -8,9 +8,10 @@ const staticRoutes = [
   { path: "/about/", changeFrequency: "monthly", priority: 0.8 },
   { path: "/electrical/", changeFrequency: "monthly", priority: 0.7 },
   { path: "/plumbing/", changeFrequency: "monthly", priority: 0.7 },
-  { path: "/fire-fighting-2/", changeFrequency: "monthly", priority: 0.7 },
-  { path: "/hvacr/", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/fire-fighting/", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/hvac/", changeFrequency: "monthly", priority: 0.7 },
   { path: "/safety-and-security/", changeFrequency: "monthly", priority: 0.7 },
+  { path: "/boq/", changeFrequency: "monthly", priority: 0.7 },
   { path: "/projects/", changeFrequency: "monthly", priority: 0.8 },
   { path: "/bim/", changeFrequency: "monthly", priority: 0.8 },
   { path: "/careers/", changeFrequency: "monthly", priority: 0.6 },
@@ -48,6 +49,7 @@ const projectRoutes = [
   "/projects/itc-jawai/",
   "/projects/city-park/",
   "/projects/nims/",
+  "/projects/taj-pratap-mahal/",
   "/projects/world-trade-park/",
 ] as const;
 
