@@ -280,6 +280,7 @@ export default function DelhiLocationPage() {
                   alt={logo.alt}
                   width={200}
                   height={65}
+                  unoptimized
                   className="h-11 sm:h-13 md:h-14 w-auto max-w-[155px] sm:max-w-[180px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
                 />
               </div>
@@ -472,6 +473,7 @@ export default function DelhiLocationPage() {
                     alt={card.title}
                     width={78}
                     height={78}
+                    unoptimized
                     className="object-contain"
                   />
                 </div>
@@ -498,6 +500,7 @@ export default function DelhiLocationPage() {
                     alt={card.title}
                     width={78}
                     height={78}
+                    unoptimized
                     className="object-contain"
                   />
                 </div>
