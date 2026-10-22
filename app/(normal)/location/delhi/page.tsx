@@ -188,7 +188,7 @@ export default function DelhiLocationPage() {
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#142436]/70 via-[#142436]/85 to-[#142436]/95" />
           {/* Radial Pink Glow */}
-          <div className="absolute -top-36 -right-28 w-[520px] h-[520px] rounded-full bg-[radial-gradient(circle,rgba(237,41,104,0.22),transparent_70%)] pointer-events-none" />
+          <div className="absolute -top-32 -right-24 w-[540px] h-[540px] rounded-full bg-[radial-gradient(circle,rgba(237,41,104,0.15),transparent_70%)] pointer-events-none" />
         </div>
 
         {/* Hero Content */}
