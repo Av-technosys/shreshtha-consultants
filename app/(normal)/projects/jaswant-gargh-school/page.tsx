@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  title: "Jaswant Gargh School | Shreshtha Consultants",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/jaswant-gargh-school",
+  },
+};
 
 export default function JaswantPage() {
   const projectInfo = [

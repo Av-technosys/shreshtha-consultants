@@ -17,7 +17,7 @@ const serviceCards = [
     icon: Droplet,
     items: [
       "Water supply (internal and external)",
-      "Vertical stake piping",
+      "Vertical stack piping",
       "Plumbing wall elevations",
       "Bill of quantities",
       "Product recommendations",
@@ -28,7 +28,7 @@ const serviceCards = [
     href: "/fire-fighting",
     icon: Flame,
     items: [
-      "Fire sprinklers layouts",
+      "Fire sprinkler layouts",
       "Fire hydrant layouts",
       "Fire alarms",
       "Bill of quantities",
@@ -56,9 +56,9 @@ const serviceCards = [
     href: "/electrical",
     icon: Zap,
     items: [
-      "Wiring/Controlling plans",
+      "Wiring and control plans",
       "Switchboard module tables",
-      "Electrical conduiting layouts",
+      "Electrical conduit layouts",
       "DB electrical SLD (Single Line Diagrams)",
       "Panel SLD",
       "Electrical automation",

@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  title: "Salasar Balaji Creation | Shreshtha Consultants",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/salasar-balaji-creation",
+  },
+};
 
 export default function SalasarPage() {
   const projectInfo = [

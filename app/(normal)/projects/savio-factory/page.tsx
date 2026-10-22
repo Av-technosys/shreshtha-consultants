@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/savio-factory",
+  },
+  title: "Savio Factory MEP Project | Shreshtha Consultants",
+  description:
+    "MEP consultancy for Savio Factory, Jaipur, Rajasthan. Advanced HVAC, STP/ETP water recovery & sustainable industrial design solutions by Shreshtha Consultants.",
+};
 
 export default function SavioFactoryPage() {
   const projectInfo = [

@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/sum-hospital",
+  },
+  title: "SUM Hospital MEP Project | Shreshtha Consultants",
+  description:
+    "MEP consultancy for SUM Hospital, Odisha, a leading SOA University multispeciality institution. HVAC, electrification & utility systems by Shreshtha Consultants",
+};
 
 export default function SumHospitalPage() {
   const projectInfo = [

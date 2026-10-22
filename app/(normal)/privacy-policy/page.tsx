@@ -1,6 +1,9 @@
 export const metadata = {
   title: "Privacy Policy | Shreshtha Consultants",
   description: "Privacy policy for Shreshtha Consultants.",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/privacy-policy",
+  },
 };
 
 export default function PrivacyPolicyPage() {

@@ -11,6 +11,9 @@ export const metadata = {
   title: "Best MEP Consultants in Hyderabad | Shreshtha Consultants",
   description:
     "Top-tier MEP consulting services in Hyderabad. Shreshtha Consultants provides expert solutions for mechanical, electrical, and plumbing engineering projects.",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/location/hyderabad",
+  },
 };
 
 export default function HyderabadLocationPage() {

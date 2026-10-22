@@ -27,6 +27,7 @@ export const blogs = pgTable(
     publishDate: date("publish_date", { mode: "string" }).notNull(),
     mainBannerImage: text("main_banner_image").notNull(),
     authorName: text("author_name").notNull(),
+    metaTitle: text("meta_title"),
     metaDescription: text("meta_description").notNull(),
     content: text("content").notNull(),
     isDraft: boolean("is_draft").default(false).notNull(),

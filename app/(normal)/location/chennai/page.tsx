@@ -11,6 +11,9 @@ export const metadata = {
   title: "MEP Consultants in Chennai | Shreshtha Consultants",
   description:
     "Top-tier MEP consulting services in Chennai. Shreshtha Consultants provides expert solutions for mechanical, electrical, and plumbing engineering projects.",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/location/chennai",
+  },
 };
 
 export default function ChennaiLocationPage() {

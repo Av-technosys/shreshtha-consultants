@@ -16,7 +16,7 @@ export async function AdminShell({
         <div>
           <div className="flex items-center gap-3">
             <span className="grid size-12 place-items-center rounded-lg bg-white">
-              <img src="/Common/logo.png" alt="" className="size-[34px]" />
+              <img src="/Common/logo.png" alt="Shreshtha Consultants Logo" className="size-[34px]" />
             </span>
             <div>
               <p className="font-archivo text-lg font-semibold leading-none">Shreshtha</p>

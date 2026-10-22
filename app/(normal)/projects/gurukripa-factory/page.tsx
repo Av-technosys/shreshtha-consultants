@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/gurukripa-factory",
+  },
+  title: "Gurukripa Factory MEP Project | Shreshtha Consultants",
+  description:
+    "MEP consultancy for Gurukripa Factory, Jaipur. Precious metal recovery systems, STP/ETP water reuse & sustainable industrial design by Shreshtha Consultants.",
+};
 
 export default function GurukripaFactoryPage() {
   const projectInfo = [

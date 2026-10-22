@@ -7,6 +7,9 @@ export const metadata = {
   title: "Shreshtha Consultants – Electrical Design Consultants India",
   description:
     "Professional electrical design services by Shreshtha Consultants — power systems, lighting, earthing & more for buildings across India.",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/electrical",
+  },
 };
 
 const ELECTRICAL_DELIVERABLES = [
@@ -35,10 +38,10 @@ const ELECTRICAL_DELIVERABLES = [
 ];
 
 const CROSS_LINKS = [
-  { title: "HVAC", href: "/services/hvac" },
-  { title: "Fire Fighting", href: "/services/fire-fighting" },
-  { title: "Safety and Security", href: "/services/safety-and-security" },
-  { title: "Plumbing", href: "/services/plumbing" },
+  { title: "HVAC", href: "/hvac" },
+  { title: "Fire Fighting", href: "/fire-fighting" },
+  { title: "Safety and Security", href: "/safety-and-security" },
+  { title: "Plumbing", href: "/plumbing" },
   { title: "BOQ", href: "/boq" },
   { title: "BIM", href: "/bim" },
 ];

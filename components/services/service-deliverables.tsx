@@ -37,7 +37,13 @@ export function ServiceDeliverables({
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div
+          className={
+            deliverables.length === 2
+              ? "grid grid-cols-1 gap-6 sm:grid-cols-2 max-w-5xl"
+              : "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+          }
+        >
           {deliverables.map((item, idx) => (
             <div key={idx} className="group flex flex-col overflow-hidden rounded-[24px] bg-white p-3.5 shadow-[0_8px_30px_rgb(0_0_0_/_0.04)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgb(0_0_0_/_0.08)]">
               <div className="relative w-full overflow-hidden rounded-[16px] border border-[#e3e0d8] bg-white aspect-[4/2.6]">

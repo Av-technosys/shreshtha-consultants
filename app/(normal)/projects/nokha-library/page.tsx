@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/nokha-library",
+  },
+  title: "Nokha Library MEP Project | Shreshtha Consultants",
+  description:
+    "MEP consultancy for Nokha Library, Rajasthan. Sustainable rainwater management design reusing terrace runoff for student knowledge hub by Shreshtha Consultants",
+};
 
 export default function NokhaPage() {
   const projectInfo = [

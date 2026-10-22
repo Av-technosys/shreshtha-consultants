@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/anantara",
+  },
+  title: "Anantara Jewel Bagh MEP Project | Shreshtha Consultants",
+  description:
+    "MEP consultancy for Anantara Jewel Bagh, Jaipur, Rajasthan. VRV/VRF air conditioning, 11KV electrification & heritage-sensitive rainwater drainage design.",
+};
 
 export default function AnantaraPage() {
   const projectInfo = [

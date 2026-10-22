@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/urban-square",
+  },
+  title: "Urban Square Mall MEP Project | Shreshtha Consultants",
+  description:
+    "MEP consultancy for Urban Square, Rajasthan’s largest mixed-use mall (1.8M sq. ft). Efficient HVAC, electrical & water management by Shreshtha Consultants.",
+};
 
 export default function UrbanSquarePage() {
   const projectInfo = [

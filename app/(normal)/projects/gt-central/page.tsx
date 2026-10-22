@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import React from "react";
 import { ProjectHero } from "@/components/projects/project-hero";
 import { ProjectDetails } from "@/components/projects/project-details";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/projects/gt-central",
+  },
+  title: "GT Central Mall MEP Project | Shreshtha Consultants",
+  description:
+    "End-to-end MEP solutions for GT Central, a leading retail & entertainment complex in Jaipur. HVAC, electrical & plumbing by Shreshtha Consultants.",
+};
 
 export default function GTCentralPage() {
   const projectInfo = [

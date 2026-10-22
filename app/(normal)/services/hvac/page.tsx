@@ -4,7 +4,10 @@ import { ServiceCrossLinks } from "@/components/services/service-cross-links";
 import { ServiceCTA } from "@/components/services/service-cta";
 
 export const metadata = {
-  title: "Shreshtha Consultants – HVACR Design Experts India",
+  title: "Shreshtha Consultants – HVAC Design Experts India",
+  alternates: {
+    canonical: "https://www.shreshthaconsultants.com/hvac",
+  },
 };
 
 const HVAC_DELIVERABLES = [
@@ -35,10 +38,10 @@ const HVAC_DELIVERABLES = [
 ];
 
 const CROSS_LINKS = [
-  { title: "HVAC", href: "/services/hvac" },
-  { title: "Fire Fighting", href: "/services/fire-fighting" },
-  { title: "Safety and Security", href: "/services/safety-and-security" },
-  { title: "Plumbing", href: "/services/plumbing" },
+  { title: "Electrical", href: "/electrical" },
+  { title: "Fire Fighting", href: "/fire-fighting" },
+  { title: "Safety and Security", href: "/safety-and-security" },
+  { title: "Plumbing", href: "/plumbing" },
   { title: "BOQ", href: "/boq" },
   { title: "BIM", href: "/bim" },
 ];
