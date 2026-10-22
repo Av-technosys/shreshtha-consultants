@@ -301,16 +301,18 @@ export default function DelhiLocationPage() {
               Our MEP Services
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
-              {MEP_SERVICES_TILES.map((tile) => (
+            <div className="grid grid-cols-2 gap-3 sm:gap-5">
+              {MEP_SERVICES_TILES.map((tile, idx) => (
                 <div
                   key={tile.num}
-                  className="bg-white border border-[#E3E0D8] rounded-[18px] p-6 sm:p-7 shadow-sm transition-all duration-300 hover:border-[#ED2968] hover:-translate-y-1 hover:shadow-md"
+                  className={`bg-white border border-[#E3E0D8] rounded-[14px] sm:rounded-[18px] p-4 sm:p-7 shadow-sm transition-all duration-300 hover:border-[#ED2968] hover:-translate-y-1 hover:shadow-md ${
+                    idx === 6 ? "col-span-2" : ""
+                  }`}
                 >
-                  <div className="font-archivo text-[12px] font-bold text-[#ED2968] tracking-[0.1em] mb-3">
+                  <div className="font-archivo text-[11px] sm:text-[12px] font-bold text-[#ED2968] tracking-[0.1em] mb-2 sm:mb-3">
                     {tile.num}
                   </div>
-                  <p className="font-inter text-[15px] sm:text-[15.5px] font-medium text-[#142436] leading-[1.45]">
+                  <p className="font-inter text-[13.5px] sm:text-[15.5px] font-medium text-[#142436] leading-[1.4]">
                     {tile.title}
                   </p>
                 </div>
@@ -527,11 +529,11 @@ export default function DelhiLocationPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="flex overflow-x-auto snap-x snap-mandatory scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden gap-4 pb-4 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0">
             {TESTIMONIALS.map((t, idx) => (
               <div
                 key={idx}
-                className="bg-[#F7F6F2] border border-[#E3E0D8] rounded-[22px] p-8 flex flex-col justify-between shadow-sm hover:border-[#ED2968] hover:shadow-md transition-all duration-300"
+                className="w-[82%] sm:w-[360px] md:w-auto shrink-0 snap-start bg-[#F7F6F2] border border-[#E3E0D8] rounded-[22px] p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:border-[#ED2968] hover:shadow-md transition-all duration-300"
               >
                 <div>
                   {/* Star Rating */}
@@ -541,13 +543,13 @@ export default function DelhiLocationPage() {
                     ))}
                   </div>
                   {/* Quote */}
-                  <p className="font-inter text-[15px] text-[#142436] leading-[1.75] italic mb-6">
+                  <p className="font-inter text-[14.5px] sm:text-[15px] text-[#142436] leading-[1.75] italic mb-6">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                 </div>
 
                 <div className="pt-4 border-t border-[#E3E0D8]">
-                  <h4 className="font-archivo text-[16px] font-bold text-[#142436]">
+                  <h4 className="font-archivo text-[15.5px] sm:text-[16px] font-bold text-[#142436]">
                     {t.name}
                   </h4>
                   <p className="font-inter text-[13px] text-[#5C6570]">
