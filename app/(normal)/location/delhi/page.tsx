@@ -2,16 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/common/container";
 import { ResendForm } from "@/components/forms/resend-form";
-import {
-  Star,
-  ChevronDown,
-} from "lucide-react";
+import { Star, ChevronDown } from "lucide-react";
 
 export const metadata = {
   title: "Best MEP Consulting Services in Delhi | Shreshtha Consultants",
   description:
     "Top-tier MEP consulting services in Delhi. Shreshtha Consultants provides expert solutions for mechanical, electrical, and plumbing engineering projects.",
-    alternates: {
+  alternates: {
     canonical: "https://www.shreshthaconsultants.com/location/delhi",
   },
 };
@@ -32,13 +29,41 @@ const TRUST_LOGOS = [
 ];
 
 const MEP_SERVICES_TILES = [
-  { num: "01", title: "HVAC Design and Consulting" },
-  { num: "02", title: "Electrical Design and Consulting" },
-  { num: "03", title: "Plumbing and Public Health Engineering" },
-  { num: "04", title: "Fire Fighting and Fire Alarm Design" },
-  { num: "05", title: "BIM and MEP Coordination" },
-  { num: "06", title: "Energy Efficiency and Green Building Support" },
-  { num: "07", title: "Tender Support and Site Supervision" },
+  {
+    num: "01",
+    title: "HVAC Design and Consulting",
+    desc: "Comfort, air quality, and energy efficiency, designed for Delhi's extreme climate. Services include load calculations, system selection, VRV/VRF, chilled water and DX systems, ventilation, and smoke management.",
+  },
+  {
+    num: "02",
+    title: "Electrical Design and Consulting",
+    desc: "Safe, reliable, and efficient power for every kind of building. Services include power distribution and load calculations, lighting design (interior and exterior), earthing and lightning protection, DG, UPS and renewable energy integration, and extra-low-voltage (ELV) systems.",
+  },
+  {
+    num: "03",
+    title: "Plumbing and Public Health Engineering",
+    desc: "Water supply, drainage and conservation systems designed for reliability and low maintenance. Services include water supply and drainage design, sewerage and stormwater management, rainwater harvesting, water treatment and pumping systems.",
+  },
+  {
+    num: "04",
+    title: "Fire Fighting and Fire Alarm Design",
+    desc: "Fire protection systems designed to NBC and local fire service requirements, coordinated with HVAC smoke management and electrical systems.",
+  },
+  {
+    num: "05",
+    title: "BIM and MEP Coordination",
+    desc: "Coordinated 3D models to detect clashes among MEP, structural, and architectural systems before construction begins, reducing rework and delays on site.",
+  },
+  {
+    num: "06",
+    title: "Energy Efficiency and Green Building Support",
+    desc: "Design strategies and documentation support for ECBC compliance and green building ratings, including IGBC, GRIHA, and LEED.",
+  },
+  {
+    num: "07",
+    title: "Tender Support and Site Supervision",
+    desc: "BOQs, technical specifications, tender evaluation, site coordination, and testing and commissioning support, so the installed systems match the design intent.",
+  },
 ];
 
 const INDUSTRIES_WE_SERVE = [
@@ -48,7 +73,7 @@ const INDUSTRIES_WE_SERVE = [
   "Hotels and hospitality",
   "Hospitals and healthcare facilities",
   "Educational institutions",
-  "Industrial and warehouse facilities"
+  "Industrial and warehouse facilities",
 ];
 
 const HVAC_APPROACH = [
@@ -180,81 +205,90 @@ const FAQS = [
 
 export default function DelhiLocationPage() {
   return (
-    <div className="bg-[#F7F6F2] text-[#142436] font-inter antialiased min-h-screen">
+    <div className="bg-[#f7f6f2] text-[#101418] antialiased min-h-screen">
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[75vh] lg:min-h-[80vh] flex items-end bg-[#142436] text-white overflow-hidden pt-24 pb-28 md:pt-28 md:pb-36">
-        {/* Background Image */}
+      <section className="relative overflow-hidden bg-[#142436] pt-[120px] pb-[100px] md:pb-[120px] max-[760px]:pt-[100px] max-[760px]:pb-[90px] text-white">
+        {/* Background & Overlays */}
         <div className="absolute inset-0 z-0 bg-[#142436]">
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#142436]/70 via-[#142436]/85 to-[#142436]/95" />
-          {/* Radial Pink Glow */}
+          <div className="absolute inset-0 bg-[#142436]/80 sm:bg-gradient-to-r sm:from-[#142436] sm:from-10% sm:via-[#142436]/85 sm:to-[#142436]/95" />
+          {/* Subtle Radial Glow */}
           <div className="absolute -top-32 -right-24 w-[540px] h-[540px] rounded-full bg-[radial-gradient(circle,rgba(237,41,104,0.15),transparent_70%)] pointer-events-none" />
         </div>
 
         {/* Hero Content */}
         <Container className="relative z-10 w-full">
-          {/* Kicker */}
-          <div className="flex items-center gap-2.5 font-archivo text-[12px] font-semibold tracking-[0.22em] uppercase text-white/70 mb-3.5">
-            <span className="w-[26px] h-[2px] bg-[#ED2968] inline-block" />
-            MEP CONSULTANTS · DELHI NCR
-          </div>
+          <div className="max-w-[760px]">
+            {/* Kicker */}
+            <div className="font-archivo mb-6 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-neutral-300 before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
+              MEP CONSULTANTS · DELHI NCR
+            </div>
 
-          {/* H1 - One-liner */}
-          <h1 className="font-archivo text-[28px] sm:text-[38px] md:text-[46px] lg:text-[54px] xl:text-[60px] font-bold text-white tracking-[-0.03em] leading-tight md:whitespace-nowrap mb-4">
-            MEP Consultants in Delhi NCR
-          </h1>
+            {/* H1 - One-liner */}
+            <h1 className="font-archivo mb-6 text-[32px] sm:text-[40px] md:text-[46px] font-bold leading-[1.15] tracking-[-0.02em] text-white">
+              MEP Consultants in Delhi NCR
+            </h1>
 
-          {/* Sub-headline - Normal text */}
-          <p className="font-inter text-[15px] sm:text-[16px] font-normal text-white/75 leading-[1.75] max-w-[850px] mb-6">
-            HVAC, electrical, plumbing and fire protection design for buildings across Delhi, Gurugram and Noida.
-          </p>
-
-          {/* H2 */}
-          <h2 className="font-archivo text-[20px] sm:text-[24px] md:text-[28px] font-bold text-white tracking-[-0.02em] leading-[1.25] mb-3.5">
-            Expert MEP Consulting Services in Delhi
-          </h2>
-
-          {/* Paragraphs */}
-          <div className="space-y-3.5 text-white/75 text-[15px] sm:text-[16px] leading-[1.8] max-w-[780px] font-inter">
-            <p>
-              Shreshtha Consultants is a trusted name among MEP consultants in Delhi, delivering comprehensive Mechanical, Electrical, and Plumbing engineering solutions for residential, commercial, industrial, and institutional projects.
+            {/* Sub-headline */}
+            <p className="mb-6 text-[16px] leading-[1.8] text-neutral-300">
+              HVAC, electrical, plumbing and fire protection design for
+              buildings across Delhi, Gurugram and Noida.
             </p>
-            <p>
-              We design the mechanical (HVAC), electrical, plumbing, and fire safety systems that keep buildings safe, comfortable, and efficient, working with architects, developers, project management consultants, and building owners.
-            </p>
-            <p>
-              As one of the leading MEP engineering consultancy firms featured, we are committed to delivering solutions that enhance building performance, safety, and energy efficiency.
-            </p>
-          </div>
 
-          {/* CTA Button */}
-          <div className="flex flex-wrap items-center gap-4 mt-8 pt-2">
-            <a
-              href="#form"
-              className="inline-flex items-center gap-2.5 font-archivo font-semibold text-[14px] bg-[#ED2968] hover:bg-white text-white hover:text-[#142436] px-7 py-3.5 rounded-full border border-[#ED2968] hover:border-white transition-all duration-300 shadow-lg shadow-[#ED2968]/20 group"
-            >
-              Request a Proposal{" "}
-              <span className="transition-transform duration-300 group-hover:translate-x-1">
-                →
-              </span>
-            </a>
+            {/* H2 */}
+            <h2 className="font-archivo mb-4 text-[20px] sm:text-[24px] md:text-[28px] font-bold leading-[1.25] tracking-[-0.02em] text-white">
+              Expert MEP Consulting Services in Delhi
+            </h2>
+
+            {/* Paragraphs */}
+            <div className="mb-8 flex flex-col gap-4 text-[16px] leading-[1.8] text-neutral-400">
+              <p>
+                Shreshtha Consultants is a trusted name among MEP consultants in
+                Delhi, delivering comprehensive Mechanical, Electrical, and
+                Plumbing engineering solutions for residential, commercial,
+                industrial, and institutional projects.
+              </p>
+              <p>
+                We design the mechanical (HVAC), electrical, plumbing, and fire
+                safety systems that keep buildings safe, comfortable, and
+                efficient, working with architects, developers, project
+                management consultants, and building owners.
+              </p>
+              <p>
+                As one of the leading MEP engineering consultancy firms
+                featured, we are committed to delivering solutions that enhance
+                building performance, safety, and energy efficiency.
+              </p>
+            </div>
+
+            {/* CTA Button */}
+            <div className="pt-2">
+              <Link
+                href="#form"
+                className="font-archivo group inline-flex items-center justify-center gap-2.5 rounded-full border border-white/10 bg-[#142436]/80 px-6 py-3.5 text-[13px] font-bold text-white backdrop-blur-sm transition duration-300 hover:bg-white hover:text-[#142436]"
+              >
+                Request a Proposal{" "}
+                <span className="transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
+              </Link>
+            </div>
           </div>
         </Container>
       </section>
 
       {/* 2. OVERLAPPING STATS BOX */}
-      <section className="relative z-20 -mt-[60px] md:-mt-[75px]">
+      <section className="relative z-20 -mt-[45px] md:-mt-[55px]">
         <Container>
-          <div className="bg-white border border-[#E3E0D8] rounded-[22px] shadow-[0_30px_60px_rgba(20,36,54,0.1)] grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 divide-y sm:divide-y-0 sm:divide-x divide-[#E3E0D8] overflow-hidden">
+          <div className="bg-white border border-[#e3e0d8] rounded-[24px] shadow-[0_8px_30px_rgb(0_0_0_/_0.04)] grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 divide-y sm:divide-y-0 sm:divide-x divide-[#e3e0d8] overflow-hidden">
             {STATS.map((stat, idx) => (
               <div
                 key={idx}
                 className="p-6 md:p-8 text-center flex flex-col justify-center items-center"
               >
-                <div className="font-archivo text-[30px] sm:text-[34px] lg:text-[38px] font-extrabold text-[#ED2968] leading-tight">
+                <div className="font-archivo text-[32px] sm:text-[36px] lg:text-[40px] font-bold text-[#ed2967] leading-tight">
                   {stat.n}
                 </div>
-                <div className="font-inter text-[11px] sm:text-[11.5px] font-semibold tracking-[0.12em] uppercase text-[#5C6570] mt-1.5">
+                <div className="font-archivo text-[11px] sm:text-[11.5px] font-bold tracking-[0.12em] uppercase text-[#5c6570] mt-1.5">
                   {stat.l}
                 </div>
               </div>
@@ -264,16 +298,16 @@ export default function DelhiLocationPage() {
       </section>
 
       {/* 3. INDUSTRY TRUSTED LOGOS */}
-      <section className="py-14 md:py-18 text-center">
+      <section className="py-[60px] max-[760px]:py-[40px] text-center">
         <Container>
-          <p className="font-archivo text-[12px] font-semibold tracking-[0.22em] uppercase text-[#5C6570] mb-8">
+          <p className="font-archivo text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] mb-8 inline-flex items-center justify-center gap-2.5 before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
             Industry Trusted
           </p>
-          <div className="flex justify-center items-center gap-6 sm:gap-8 md:gap-10 flex-wrap">
+          <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 flex-wrap">
             {TRUST_LOGOS.map((logo) => (
               <div
                 key={logo.id}
-                className="bg-white py-3.5 sm:py-4 px-7 sm:px-9 rounded-xl border border-[#E3E0D8]"
+                className="bg-white py-3.5 sm:py-4 px-7 sm:px-9 rounded-[16px] border border-[#e3e0d8] shadow-[0_4px_20px_rgba(0,0,0,0.02)]"
               >
                 <Image
                   src={logo.src}
@@ -290,83 +324,99 @@ export default function DelhiLocationPage() {
       </section>
 
       {/* 4. OUR MEP SERVICES & INDUSTRIES WE SERVE */}
-      <section className="py-16 md:py-24">
-        <Container className="grid grid-cols-1 lg:grid-cols-[1.22fr_0.78fr] gap-10 lg:gap-14 items-stretch">
+      <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px]">
+        <Container className="grid grid-cols-1 lg:grid-cols-[1.22fr_0.78fr] gap-10 lg:gap-14 items-start">
           {/* Left Column: Our MEP Services */}
           <div>
-            <div className="flex items-center gap-2.5 font-archivo text-[12px] font-semibold tracking-[0.22em] uppercase text-[#5C6570] mb-3">
-              <span className="w-[26px] h-[2px] bg-[#ED2968] inline-block" />
+            <div className="font-archivo mb-4 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
               OUR MEP SERVICES IN DELHI NCR
             </div>
-            <h2 className="font-archivo text-[32px] sm:text-[40px] md:text-[46px] font-bold text-[#142436] tracking-[-0.03em] leading-tight mb-8">
+            <h2 className="font-archivo mb-4 text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
               Our MEP Services
             </h2>
+            <p className="font-lora text-[16px] leading-[1.8] text-[#5c6570] mb-8">
+              MEP systems account for a large share of a building&apos;s
+              construction cost and most of its running cost. Good design at the
+              start saves money for the life of the building. We provide
+              integrated MEP consulting so that every system is designed to work
+              with the others, not in isolation.
+            </p>
 
-            <div className="grid grid-cols-2 gap-3 sm:gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               {MEP_SERVICES_TILES.map((tile, idx) => (
                 <div
                   key={tile.num}
-                  className={`bg-white border border-[#E3E0D8] rounded-[14px] sm:rounded-[18px] p-4 sm:p-7 shadow-sm transition-all duration-300 hover:border-[#ED2968] hover:-translate-y-1 hover:shadow-md ${
-                    idx === 6 ? "col-span-2" : ""
+                  className={`bg-white border border-[#e3e0d8] rounded-[18px] sm:rounded-[20px] p-5 sm:p-6 shadow-[0_8px_30px_rgb(0_0_0_/_0.04)] transition-all duration-300 hover:border-[#101418] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgb(0_0_0_/_0.08)] flex flex-col justify-start ${
+                    idx === 6 ? "sm:col-span-2" : ""
                   }`}
                 >
-                  <div className="font-archivo text-[11px] sm:text-[12px] font-bold text-[#ED2968] tracking-[0.1em] mb-2 sm:mb-3">
+                  <div className="font-archivo text-[11px] sm:text-[12px] font-bold text-[#ed2967] tracking-[0.1em] mb-2 sm:mb-2.5">
                     {tile.num}
                   </div>
-                  <p className="font-inter text-[13.5px] sm:text-[15.5px] font-medium text-[#142436] leading-[1.4]">
+                  <h3 className="font-archivo text-[16px] sm:text-[17px] font-bold leading-snug tracking-[0.01em] text-[#101418] mb-2.5">
                     {tile.title}
+                  </h3>
+                  <p className="font-lora text-[13.5px] sm:text-[14px] leading-[1.7] text-[#5c6570]">
+                    {tile.desc}
                   </p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Right Column: Industries We Serve */}
-          <div className="bg-[#142436] text-white rounded-[24px] p-8 sm:p-10 shadow-xl flex flex-col justify-start">
-            <h2 className="font-archivo text-[26px] sm:text-[30px] font-bold text-white mb-7 tracking-[-0.02em]">
-              Industries We Serve
-            </h2>
+          {/* Right Column: Industries We Serve (Sticky on desktop) */}
+          <div className="lg:sticky lg:top-[100px] self-start">
+            <div className="bg-[#142436] text-white rounded-[24px] p-8 sm:p-10 shadow-xl flex flex-col justify-start">
+              <h2 className="font-archivo text-[24px] sm:text-[28px] md:text-[32px] font-bold text-white mb-7 tracking-[-0.02em]">
+                Industries We Serve
+              </h2>
 
-            <div className="flex flex-col items-start gap-3.5">
-              {INDUSTRIES_WE_SERVE.map((ind, idx) => (
-                <span
-                  key={idx}
-                  className="font-inter text-[13.5px] sm:text-[14px] border border-white/20 px-5 py-3 rounded-full text-white/90 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:border-white/50 hover:bg-white/10"
-                >
-                  {ind}
-                </span>
-              ))}
+              <div className="flex flex-col items-start gap-3.5">
+                {INDUSTRIES_WE_SERVE.map((ind, idx) => (
+                  <span
+                    key={idx}
+                    className="font-archivo text-[13px] sm:text-[13.5px] font-medium border border-white/10 px-5 py-3 rounded-full text-white/90 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:border-white/30 hover:bg-white hover:text-[#142436]"
+                  >
+                    {ind}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </Container>
       </section>
 
       {/* 5. WHY HIRE HVAC CONSULTANTS IN DELHI */}
-      <section className="py-16 md:py-24 bg-white border-y border-[#E3E0D8]">
+      <section className="bg-white py-[70px] max-[760px]:py-[40px] border-y border-[#e3e0d8]">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
             {/* Left Column: Heading and Context */}
             <div className="lg:col-span-5">
-              <div className="flex items-center gap-2.5 font-archivo text-[12px] font-semibold tracking-[0.22em] uppercase text-[#5C6570]">
-                <span className="w-[26px] h-[2px] bg-[#ED2968] inline-block" />
+              <div className="font-archivo mb-4 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
                 Climate-Resilient Design
               </div>
-              <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[44px] font-bold text-[#142436] tracking-[-0.03em] leading-[1.12] mt-3 mb-5">
+              <h2 className="font-archivo mb-6 text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
                 Why Hire HVAC Consultants in Delhi
               </h2>
-              <div className="space-y-4 font-inter text-[15px] sm:text-[16px] text-[#5C6570] leading-[1.75]">
+              <div className="flex flex-col gap-4 text-[16px] leading-[1.8] text-[#5c6570]">
                 <p>
-                  Delhi&apos;s climate puts real demands on HVAC systems: summer temperatures above 45°C, cold winters, heavy dust and air pollution for much of the year. A system that is undersized fails on the hottest days. One that is oversized wastes energy and money every month.
+                  Delhi&apos;s climate puts real demands on HVAC systems: summer
+                  temperatures above 45°C, cold winters, heavy dust and air
+                  pollution for much of the year. A system that is undersized
+                  fails on the hottest days. One that is oversized wastes energy
+                  and money every month.
                 </p>
                 <p>
-                  As HVAC consultants in Delhi, we help you choose the right system for your building and design it properly, independent of any equipment supplier. Our approach covers:
+                  As HVAC consultants in Delhi, we help you choose the right
+                  system for your building and design it properly, independent
+                  of any equipment supplier. Our approach covers:
                 </p>
               </div>
 
               <div className="mt-8 pt-2">
                 <Link
                   href="/hvac"
-                  className="inline-flex items-center gap-2 font-archivo font-semibold text-[14.5px] text-[#ED2968] hover:text-[#142436] transition-colors group"
+                  className="font-archivo group inline-flex items-center gap-2 text-[14px] font-bold text-[#ed2967] hover:text-[#101418] transition-colors"
                 >
                   Explore our full HVAC consulting services{" "}
                   <span className="transition-transform duration-300 group-hover:translate-x-1">
@@ -381,16 +431,16 @@ export default function DelhiLocationPage() {
               {HVAC_APPROACH.map((item, idx) => (
                 <div
                   key={idx}
-                  className="bg-[#F7F6F2] border border-[#E3E0D8] rounded-[16px] p-5 sm:p-6 shadow-sm hover:border-[#ED2968] transition-all duration-300 flex items-start gap-4"
+                  className="bg-[#f7f6f2] border border-[#e3e0d8] rounded-[20px] p-5 sm:p-6 shadow-[0_8px_30px_rgb(0_0_0_/_0.04)] hover:-translate-y-0.5 hover:shadow-md transition-all duration-300 flex items-start gap-4"
                 >
-                  <span className="w-8 h-8 rounded-full bg-[#ED2968]/10 text-[#ED2968] font-archivo font-bold text-[13px] flex items-center justify-center shrink-0 mt-0.5">
+                  <span className="w-8 h-8 rounded-full bg-[#ed2967]/10 text-[#ed2967] font-archivo font-bold text-[13px] flex items-center justify-center shrink-0 mt-0.5">
                     {idx + 1}
                   </span>
                   <div>
-                    <h3 className="font-archivo text-[17px] font-bold text-[#142436] mb-1">
+                    <h3 className="font-archivo text-[15px] font-bold leading-tight tracking-[0.01em] text-[#101418] mb-1.5">
                       {item.title}
                     </h3>
-                    <p className="font-inter text-[14.5px] text-[#5C6570] leading-[1.6]">
+                    <p className="text-[13px] leading-[1.6] text-[#5c6570]">
                       {item.desc}
                     </p>
                   </div>
@@ -401,44 +451,45 @@ export default function DelhiLocationPage() {
 
           {/* HVAC Comparison Table */}
           <div className="mt-14 pt-2">
-            <div className="bg-[#F7F6F2] border border-[#E3E0D8] rounded-[22px] overflow-hidden shadow-sm">
+            <div className="bg-white border border-[#e3e0d8] rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgb(0_0_0_/_0.04)]">
               <div className="p-6 md:p-8 bg-[#142436] text-white">
-                <h3 className="font-archivo text-[20px] sm:text-[24px] font-bold mb-1">
+                <h3 className="font-archivo text-[20px] sm:text-[22px] md:text-[24px] font-bold mb-1.5 tracking-[-0.02em]">
                   HVAC System Comparison for Delhi NCR Buildings
                 </h3>
-                <p className="font-inter text-[14px] text-white/70">
-                  Selecting the right equipment architecture based on scale, zoning, and lifecycle expenditure.
+                <p className="text-[14px] text-neutral-400">
+                  Selecting the right equipment architecture based on scale,
+                  zoning, and lifecycle expenditure.
                 </p>
               </div>
 
               <div className="overflow-x-auto">
                 <table className="w-full text-left border-collapse min-w-[640px]">
                   <thead>
-                    <tr className="border-b border-[#E3E0D8] bg-white">
-                      <th className="py-4 px-6 font-archivo text-[13px] font-bold uppercase tracking-[0.1em] text-[#142436] w-1/4">
+                    <tr className="border-b border-[#e3e0d8] bg-[#f7f6f2]">
+                      <th className="py-4 px-6 font-archivo text-[11px] font-bold uppercase tracking-[0.15em] text-[#101418] w-1/4">
                         System
                       </th>
-                      <th className="py-4 px-6 font-archivo text-[13px] font-bold uppercase tracking-[0.1em] text-[#142436] w-1/3">
+                      <th className="py-4 px-6 font-archivo text-[11px] font-bold uppercase tracking-[0.15em] text-[#101418] w-1/3">
                         Best suited for
                       </th>
-                      <th className="py-4 px-6 font-archivo text-[13px] font-bold uppercase tracking-[0.1em] text-[#142436]">
+                      <th className="py-4 px-6 font-archivo text-[11px] font-bold uppercase tracking-[0.15em] text-[#101418]">
                         Key considerations
                       </th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-[#E3E0D8] font-inter text-[14.5px] bg-white">
+                  <tbody className="divide-y divide-[#e3e0d8] bg-white">
                     {HVAC_TABLE.map((row, idx) => (
                       <tr
                         key={idx}
-                        className="hover:bg-[#F7F6F2]/50 transition-colors"
+                        className="hover:bg-[#f7f6f2]/60 transition-colors"
                       >
-                        <td className="py-4 px-6 font-archivo font-bold text-[#ED2968] text-[16px]">
+                        <td className="py-4 px-6 font-archivo font-bold text-[#ed2967] text-[15px]">
                           {row.system}
                         </td>
-                        <td className="py-4 px-6 text-[#142436] font-medium">
+                        <td className="py-4 px-6 text-[#101418] font-medium text-[14px]">
                           {row.suited}
                         </td>
-                        <td className="py-4 px-6 text-[#5C6570] leading-[1.6]">
+                        <td className="py-4 px-6 text-[#5c6570] text-[13px] leading-[1.6]">
                           {row.considerations}
                         </td>
                       </tr>
@@ -452,10 +503,10 @@ export default function DelhiLocationPage() {
       </section>
 
       {/* 6. WHY CHOOSE SHRESHTHA CONSULTANTS AS YOUR MEP CONSULTANTS */}
-      <section className="py-16 md:py-24">
+      <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px]">
         <Container>
           <div className="text-center max-w-[760px] mx-auto mb-14">
-            <h2 className="font-archivo text-[28px] sm:text-[36px] md:text-[44px] font-bold text-[#142436] tracking-[-0.03em] leading-[1.15]">
+            <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
               Why Choose Shreshtha Consultants as Your MEP Consultants
             </h2>
           </div>
@@ -465,7 +516,7 @@ export default function DelhiLocationPage() {
             {WHY_CHOOSE_US.slice(0, 3).map((card, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-[16px] p-8 sm:p-9 flex flex-col items-center text-center shadow-[0_4px_25px_rgba(0,0,0,0.06)] border border-[#EAEAEA] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-[#ED2968]"
+                className="bg-white rounded-[24px] p-6 sm:p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgb(0_0_0_/_0.04)] border border-[#e3e0d8] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgb(0_0_0_/_0.08)]"
               >
                 <div className="w-[85px] h-[85px] relative mb-6 flex items-center justify-center">
                   <Image
@@ -477,10 +528,10 @@ export default function DelhiLocationPage() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-archivo text-[19px] sm:text-[21px] font-bold text-[#142436] mb-3 leading-snug">
+                <h3 className="font-archivo text-[15px] sm:text-[16px] font-bold leading-tight tracking-[0.01em] text-[#101418] mb-3">
                   {card.title}
                 </h3>
-                <p className="font-inter text-[14px] sm:text-[15px] text-[#5C6570] leading-[1.7]">
+                <p className="text-[13px] leading-[1.6] text-[#5c6570]">
                   {card.desc}
                 </p>
               </div>
@@ -492,7 +543,7 @@ export default function DelhiLocationPage() {
             {WHY_CHOOSE_US.slice(3, 5).map((card, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-[16px] p-8 sm:p-9 flex flex-col items-center text-center shadow-[0_4px_25px_rgba(0,0,0,0.06)] border border-[#EAEAEA] transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-[#ED2968]"
+                className="bg-white rounded-[24px] p-6 sm:p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgb(0_0_0_/_0.04)] border border-[#e3e0d8] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgb(0_0_0_/_0.08)]"
               >
                 <div className="w-[85px] h-[85px] relative mb-6 flex items-center justify-center">
                   <Image
@@ -504,10 +555,10 @@ export default function DelhiLocationPage() {
                     className="object-contain"
                   />
                 </div>
-                <h3 className="font-archivo text-[19px] sm:text-[21px] font-bold text-[#142436] mb-3 leading-snug">
+                <h3 className="font-archivo text-[15px] sm:text-[16px] font-bold leading-tight tracking-[0.01em] text-[#101418] mb-3">
                   {card.title}
                 </h3>
-                <p className="font-inter text-[14px] sm:text-[15px] text-[#5C6570] leading-[1.7]">
+                <p className="text-[13px] leading-[1.6] text-[#5c6570]">
                   {card.desc}
                 </p>
               </div>
@@ -517,18 +568,18 @@ export default function DelhiLocationPage() {
       </section>
 
       {/* 7. WHAT OUR CLIENTS SAY */}
-      <section className="py-16 md:py-24 bg-white border-y border-[#E3E0D8]">
+      <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px] border-t border-[#e3e0d8]">
         <Container>
           <div className="text-center max-w-[620px] mx-auto mb-14">
-            <div className="flex items-center justify-center gap-2.5 font-archivo text-[12px] font-semibold tracking-[0.22em] uppercase text-[#5C6570]">
-              <span className="w-[26px] h-[2px] bg-[#ED2968] inline-block" />
+            <div className="font-archivo mb-4 flex items-center justify-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
               Client Testimonials
             </div>
-            <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[44px] font-bold text-[#142436] tracking-[-0.03em] leading-[1.12] mt-3">
+            <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
               What Our Clients Say
             </h2>
-            <p className="font-inter text-[15px] text-[#5C6570] mt-3">
-              Trusted by leading architects, developers, and project managers across Delhi NCR.
+            <p className="mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
+              Trusted by leading architects, developers, and project managers
+              across Delhi NCR.
             </p>
           </div>
 
@@ -536,29 +587,30 @@ export default function DelhiLocationPage() {
             {TESTIMONIALS.map((t, idx) => (
               <div
                 key={idx}
-                className="w-[82%] sm:w-[360px] md:w-auto shrink-0 snap-start bg-[#F7F6F2] border border-[#E3E0D8] rounded-[22px] p-6 sm:p-8 flex flex-col justify-between shadow-sm hover:border-[#ED2968] hover:shadow-md transition-all duration-300"
+                className="w-[82%] sm:w-[360px] md:w-auto shrink-0 snap-start bg-white border border-[#e3e0d8] rounded-[24px] p-6 sm:p-8 flex flex-col justify-between shadow-[0_8px_30px_rgb(0_0_0_/_0.04)] hover:-translate-y-1 hover:shadow-[0_20px_40px_rgb(0_0_0_/_0.08)] transition-all duration-300"
               >
                 <div>
                   {/* Star Rating */}
-                  <div className="flex items-center gap-1 text-[#ED2968] mb-5">
+                  <div className="flex items-center gap-1 text-[#ed2967] mb-5">
                     {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-[#ED2968] text-[#ED2968]" />
+                      <Star
+                        key={i}
+                        className="w-4 h-4 fill-[#ed2967] text-[#ed2967]"
+                      />
                     ))}
                   </div>
                   {/* Quote */}
-                  <p className="font-inter text-[14.5px] sm:text-[15px] text-[#142436] leading-[1.75] italic mb-6">
+                  <p className="text-[14px] sm:text-[15px] text-[#101418] leading-[1.75] italic mb-6">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#E3E0D8]">
-                  <h4 className="font-archivo text-[15.5px] sm:text-[16px] font-bold text-[#142436]">
+                <div className="pt-4 border-t border-[#e3e0d8]">
+                  <h4 className="font-archivo text-[15px] font-bold text-[#101418]">
                     {t.name}
                   </h4>
-                  <p className="font-inter text-[13px] text-[#5C6570]">
-                    {t.designation}
-                  </p>
-                  <p className="font-inter text-[12.5px] font-semibold text-[#ED2968] mt-0.5">
+                  <p className="text-[13px] text-[#5c6570]">{t.designation}</p>
+                  <p className="font-archivo text-[12px] font-bold text-[#ed2967] mt-0.5">
                     {t.company}
                   </p>
                 </div>
@@ -569,18 +621,18 @@ export default function DelhiLocationPage() {
       </section>
 
       {/* 8. FREQUENTLY ASKED QUESTIONS */}
-      <section className="py-16 md:py-24">
+      <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px] border-t border-[#e3e0d8]">
         <Container className="max-w-[850px]">
           <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-2.5 font-archivo text-[12px] font-semibold tracking-[0.22em] uppercase text-[#5C6570]">
-              <span className="w-[26px] h-[2px] bg-[#ED2968] inline-block" />
+            <div className="font-archivo mb-4 flex items-center justify-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
               Got Questions?
             </div>
-            <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[44px] font-bold text-[#142436] tracking-[-0.03em] leading-[1.12] mt-3">
+            <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
               Frequently Asked Questions
             </h2>
-            <p className="font-inter text-[15px] text-[#5C6570] mt-3">
-              Everything you need to know about appointing MEP &amp; HVAC consultants in Delhi NCR.
+            <p className="mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
+              Everything you need to know about appointing MEP &amp; HVAC
+              consultants in Delhi NCR.
             </p>
           </div>
 
@@ -588,15 +640,15 @@ export default function DelhiLocationPage() {
             {FAQS.map((faq, idx) => (
               <details
                 key={idx}
-                className="group rounded-[16px] border border-[#E3E0D8] bg-white transition-all duration-300 open:shadow-sm"
+                className="group rounded-[20px] border border-[#e3e0d8] bg-white transition-all duration-300 open:shadow-[0_8px_30px_rgb(0_0_0_/_0.04)]"
               >
-                <summary className="font-archivo flex cursor-pointer list-none items-center justify-between gap-4 p-5 sm:p-6 text-[16.5px] sm:text-[18px] font-bold text-[#142436] outline-none transition-colors hover:text-[#ED2968] group-open:text-[#ED2968] [&::-webkit-details-marker]:hidden">
+                <summary className="font-archivo flex cursor-pointer list-none items-center justify-between gap-4 p-5 sm:p-6 text-[15px] sm:text-[16px] font-bold text-[#101418] outline-none transition-colors hover:text-[#ed2967] group-open:text-[#ed2967] [&::-webkit-details-marker]:hidden">
                   <span className="leading-snug">{faq.q}</span>
-                  <span className="grid size-8 shrink-0 place-items-center rounded-full bg-[#F7F6F2] text-[#142436] transition-all duration-300 group-open:rotate-180 group-open:bg-[#142436] group-open:text-white">
+                  <span className="grid size-8 shrink-0 place-items-center rounded-full bg-[#f7f6f2] text-[#101418] transition-all duration-300 group-open:rotate-180 group-open:bg-[#101418] group-open:text-white">
                     <ChevronDown className="w-4 h-4" />
                   </span>
                 </summary>
-                <div className="font-inter px-5 sm:px-6 pb-6 text-[15px] sm:text-[15.5px] leading-[1.75] text-[#5C6570]">
+                <div className="px-5 sm:px-6 pb-6 text-[14px] sm:text-[14.5px] leading-[1.75] text-[#5c6570]">
                   {faq.a}
                 </div>
               </details>
@@ -611,26 +663,34 @@ export default function DelhiLocationPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
             {/* Left Column: Heading and Text */}
             <div>
-              <div className="font-archivo mb-3.5 flex items-center gap-2.5 text-[11.5px] font-bold uppercase tracking-[0.25em] text-white/60">
-                <span className="w-[26px] h-[2px] bg-[#ED2968] inline-block" />
+              <div className="font-archivo mb-4 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-white/60 before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
                 Book a Consultation
               </div>
-              <h2 className="font-archivo text-[clamp(28px,3.5vw,44px)] font-bold leading-[1.18] tracking-[-0.03em] text-white">
+              <h2 className="font-archivo text-[28px] sm:text-[36px] md:text-[46px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
                 Book a Consultation with Shreshtha Consultants
               </h2>
-              <p className="font-inter text-[15.5px] sm:text-[16.5px] text-white/70 mt-4 leading-[1.7] max-w-[500px]">
-                Tell us about your project and our engineers will get back to you with the next steps.
+              <p className="mt-4 text-[16px] leading-[1.8] text-white/70 max-w-[500px]">
+                Tell us about your project and our engineers will get back to
+                you with the next steps.
               </p>
             </div>
 
             {/* Right Column: Form Card */}
             <div>
               <div className="rounded-[24px] border border-white/[0.12] bg-white/[0.05] p-6 sm:p-9 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] backdrop-blur-sm text-left">
-                <ResendForm formType="Delhi Location Consultation" className="flex flex-col gap-4">
+                <h3 className="font-archivo text-[30px] sm:text-[32px] font-bold text-white mb-6">
+                  Book a Consultation | Contact Shreshtha Consultants Today
+                </h3>
+                <ResendForm
+                  formType="Delhi Location Consultation"
+                  className="flex flex-col gap-4"
+                >
                   <div className="flex flex-col gap-2">
-                    <label className="font-archivo text-[13px] font-bold text-white/90">Name*</label>
+                    <label className="font-archivo text-[13px] font-bold text-white/90">
+                      Name*
+                    </label>
                     <input
-                      className="w-full rounded-xl border border-white/[0.18] bg-white/[0.08] px-5 py-[13px] text-[15px] text-white placeholder:text-white/40 outline-none transition focus:border-[#ED2968] focus:bg-white/[0.12] focus:shadow-[0_0_0_4px_rgba(237,41,104,0.25)]"
+                      className="w-full rounded-xl border border-white/[0.18] bg-white/[0.08] px-5 py-[13px] text-[15px] text-white placeholder:text-white/40 outline-none transition focus:border-[#ed2967] focus:bg-white/[0.12] focus:shadow-[0_0_0_4px_rgba(237,41,104,0.25)]"
                       name="name"
                       type="text"
                       required
@@ -638,9 +698,11 @@ export default function DelhiLocationPage() {
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label className="font-archivo text-[13px] font-bold text-white/90">Email*</label>
+                    <label className="font-archivo text-[13px] font-bold text-white/90">
+                      Email*
+                    </label>
                     <input
-                      className="w-full rounded-xl border border-white/[0.18] bg-white/[0.08] px-5 py-[13px] text-[15px] text-white placeholder:text-white/40 outline-none transition focus:border-[#ED2968] focus:bg-white/[0.12] focus:shadow-[0_0_0_4px_rgba(237,41,104,0.25)]"
+                      className="w-full rounded-xl border border-white/[0.18] bg-white/[0.08] px-5 py-[13px] text-[15px] text-white placeholder:text-white/40 outline-none transition focus:border-[#ed2967] focus:bg-white/[0.12] focus:shadow-[0_0_0_4px_rgba(237,41,104,0.25)]"
                       name="email"
                       type="email"
                       required
@@ -648,9 +710,11 @@ export default function DelhiLocationPage() {
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label className="font-archivo text-[13px] font-bold text-white/90">Phone*</label>
+                    <label className="font-archivo text-[13px] font-bold text-white/90">
+                      Phone*
+                    </label>
                     <input
-                      className="w-full rounded-xl border border-white/[0.18] bg-white/[0.08] px-5 py-[13px] text-[15px] text-white placeholder:text-white/40 outline-none transition focus:border-[#ED2968] focus:bg-white/[0.12] focus:shadow-[0_0_0_4px_rgba(237,41,104,0.25)]"
+                      className="w-full rounded-xl border border-white/[0.18] bg-white/[0.08] px-5 py-[13px] text-[15px] text-white placeholder:text-white/40 outline-none transition focus:border-[#ed2967] focus:bg-white/[0.12] focus:shadow-[0_0_0_4px_rgba(237,41,104,0.25)]"
                       name="phone"
                       type="tel"
                       required
@@ -659,10 +723,13 @@ export default function DelhiLocationPage() {
                   </div>
                   <div className="pt-2">
                     <button
-                      className="font-archivo group flex w-full items-center justify-center gap-2.5 rounded-full bg-[#ED2968] hover:bg-white text-white hover:text-[#142436] px-8 py-[15px] sm:py-[17px] text-[15px] font-bold transition duration-300 shadow-lg shadow-[#ED2968]/25 cursor-pointer"
+                      className="font-archivo group flex w-full items-center justify-center gap-2.5 rounded-full bg-[#ed2967] hover:bg-white text-white hover:text-[#142436] px-8 py-[14px] sm:py-[18px] text-[15px] font-bold transition duration-300 shadow-lg shadow-[#ed2967]/25 cursor-pointer"
                       type="submit"
                     >
-                      Request a Proposal <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                      Request a Proposal{" "}
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">
+                        →
+                      </span>
                     </button>
                   </div>
                 </ResendForm>

@@ -4,10 +4,12 @@ import { useMemo, useState, useTransition } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
-import { Plus, Trash2 } from "lucide-react";
+import { Plus, Trash2, ChevronDown, Loader2 } from "lucide-react";
 import type { AdminBlog, AdminBlogFaq } from "@/helpers/admin/blogs";
-import { createCategoryAction, type CategoryActionState } from "@/helpers/admin/blog-actions";
-
+import {
+  createCategoryAction,
+  type CategoryActionState,
+} from "@/helpers/admin/blog-actions";
 
 const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
 const initialCategoryState: CategoryActionState = { ok: false, message: "" };
@@ -25,14 +27,18 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
 
   const [localCategories, setLocalCategories] = useState<string[]>(categories);
   const [isAddingCategory, startCategoryTransition] = useTransition();
-  const [categoryMessage, setCategoryMessage] = useState<CategoryActionState>(initialCategoryState);
+  const [categoryMessage, setCategoryMessage] =
+    useState<CategoryActionState>(initialCategoryState);
 
   const [selectedCategory, setSelectedCategory] = useState(() => {
     if (blog?.category && !categories.includes(blog.category)) return "ADD_NEW";
-    return blog?.category || (categories.length > 0 ? categories[0] : "ADD_NEW");
+    return (
+      blog?.category || (categories.length > 0 ? categories[0] : "ADD_NEW")
+    );
   });
   const [newCategory, setNewCategory] = useState(() => {
-    if (blog?.category && !categories.includes(blog.category)) return blog.category;
+    if (blog?.category && !categories.includes(blog.category))
+      return blog.category;
     return "";
   });
 
@@ -87,15 +93,28 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
         color: "#000",
       },
       buttons: [
-        "paragraph", "fontsize", "brush", "|",
-        "bold", "italic", "underline", "strikethrough", "|",
-        "align", "|",
-        "ul", "ol", "|",
-        "table", "link", "image", "|",
-        "source"
+        "paragraph",
+        "fontsize",
+        "brush",
+        "|",
+        "bold",
+        "italic",
+        "underline",
+        "strikethrough",
+        "|",
+        "align",
+        "|",
+        "ul",
+        "ol",
+        "|",
+        "table",
+        "link",
+        "image",
+        "|",
+        "source",
       ],
     }),
-    []
+    [],
   );
 
   const addFaq = () => {
@@ -106,7 +125,11 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
     setFaqs(faqs.filter((_, i) => i !== index));
   };
 
-  const updateFaq = (index: number, field: "question" | "answer", value: string) => {
+  const updateFaq = (
+    index: number,
+    field: "question" | "answer",
+    value: string,
+  ) => {
     const newFaqs = [...faqs];
     newFaqs[index] = { ...newFaqs[index], [field]: value };
     setFaqs(newFaqs);
@@ -114,7 +137,9 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
 
   return (
     <form action={action} className="grid gap-5 p-5">
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
         .jodit-container .jodit-wysiwyg { 
           font-family: var(--font-inter-family), sans-serif; 
           font-size: 17px;
@@ -154,7 +179,9 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
         .jodit-wysiwyg th, .jodit-wysiwyg td { border: 1px solid #e1ddd5; padding: 8px; }
         .jodit-wysiwyg th { font-weight: 600; background-color: #f7f6f2; }
         .jodit-wysiwyg img { max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1em; }
-      `}} />
+      `,
+        }}
+      />
       {blog && <input name="existingImage" type="hidden" value={blog.image} />}
       <input name="content" type="hidden" value={content} />
       <input name="faqs" type="hidden" value={JSON.stringify(faqs)} />
@@ -187,24 +214,37 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
         <input
           name="metaTitle"
           defaultValue={blog?.metaTitle || ""}
-          placeholder="e.g. Best MEP Consultants in India | Shreshtha Consultants"
+          placeholder="Enter custom meta title"
           className={inputClassName}
         />
       </Field>
 
       <div className="grid grid-cols-2 items-start gap-4 max-[680px]:grid-cols-1">
         <Field label="Category">
-          <input type="hidden" name="category" value={selectedCategory === "ADD_NEW" ? newCategory : selectedCategory} />
-          <select
-            value={selectedCategory}
-            onChange={(e) => setSelectedCategory(e.target.value)}
-            className={`${inputClassName} cursor-pointer appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%2348423c%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%2F%3E%3C%2Fsvg%3E')] bg-[length:16px] bg-[position:right_12px_center] bg-no-repeat pr-10`}
-          >
-            <option value="ADD_NEW" className="font-semibold text-[#ed2967]">+ Add New Category</option>
-            {localCategories.map((category) => (
-              <option key={category} value={category}>{category}</option>
-            ))}
-          </select>
+          <input
+            type="hidden"
+            name="category"
+            value={
+              selectedCategory === "ADD_NEW" ? newCategory : selectedCategory
+            }
+          />
+          <div className="relative">
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className={`${inputClassName} cursor-pointer appearance-none pr-10`}
+            >
+              <option value="ADD_NEW" className="font-semibold text-[#ed2967]">
+                + Add New Category
+              </option>
+              {localCategories.map((category) => (
+                <option key={category} value={category}>
+                  {category}
+                </option>
+              ))}
+            </select>
+            <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 size-4 text-[#48423c]" />
+          </div>
           {selectedCategory === "ADD_NEW" && (
             <div className="mt-2 flex items-center gap-2">
               <input
@@ -223,10 +263,7 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
                 className="inline-flex h-11 shrink-0 items-center justify-center rounded-md bg-[#111419] px-4 text-sm font-semibold text-white transition hover:bg-[#252a32] disabled:opacity-70 min-w-[70px]"
               >
                 {isAddingCategory ? (
-                  <svg className="size-4 animate-spin text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                  </svg>
+                  <Loader2 className="size-4 animate-spin text-white" />
                 ) : (
                   "Add"
                 )}
@@ -245,7 +282,13 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
           )}
         </Field>
         <Field label="Publish Date">
-          <input name="date" type="date" defaultValue={blog?.date || new Date().toISOString().split("T")[0]} required className={inputClassName} />
+          <input
+            name="date"
+            type="date"
+            defaultValue={blog?.date || new Date().toISOString().split("T")[0]}
+            required
+            className={inputClassName}
+          />
         </Field>
       </div>
 
@@ -260,21 +303,35 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
           />
           {blog && (
             <span className="text-xs font-medium text-[#817a72]">
-              Current: {blog.image.startsWith("data:") ? "(Custom Image)" : blog.image}
+              Current:{" "}
+              {blog.image.startsWith("data:") ? "(Custom Image)" : blog.image}
             </span>
           )}
         </Field>
         <Field label="Author Name">
-          <input name="authorName" defaultValue={blog?.authorName || "Shreshtha Mathur"} required className={inputClassName} />
+          <input
+            name="authorName"
+            defaultValue={blog?.authorName || "Shreshtha Mathur"}
+            required
+            className={inputClassName}
+          />
         </Field>
       </div>
 
       <Field label="Short Meta Description">
-        <textarea name="metaDescription" defaultValue={blog?.metaDescription} rows={3} required className={`${inputClassName} h-auto resize-none py-3 leading-6`} />
+        <textarea
+          name="metaDescription"
+          defaultValue={blog?.metaDescription}
+          rows={3}
+          required
+          className={`${inputClassName} h-auto resize-none py-3 leading-6`}
+        />
       </Field>
 
       <div className="grid gap-2">
-        <label className="text-sm font-semibold text-[#48423c]">Main Blog Content</label>
+        <label className="text-sm font-semibold text-[#48423c]">
+          Main Blog Content
+        </label>
         <div className="rounded-md border border-[#e1ddd5] bg-white text-[#151515] overflow-hidden">
           <JoditEditor
             value={content}
@@ -286,7 +343,9 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
 
       <div className="grid gap-3 border-t border-[#ebe7df] pt-5">
         <div className="flex items-center justify-between">
-          <h3 className="text-sm font-semibold text-[#48423c]">FAQs (Optional)</h3>
+          <h3 className="text-sm font-semibold text-[#48423c]">
+            FAQs (Optional)
+          </h3>
           <button
             type="button"
             onClick={addFaq}
@@ -301,7 +360,10 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
         )}
 
         {faqs.map((faq, i) => (
-          <div key={i} className="relative grid gap-3 rounded-md border border-[#e1ddd5] bg-[#fbfaf7] p-4 pt-8">
+          <div
+            key={i}
+            className="relative grid gap-3 rounded-md border border-[#e1ddd5] bg-[#fbfaf7] p-4 pt-8"
+          >
             <button
               type="button"
               onClick={() => removeFaq(i)}
@@ -333,23 +395,36 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
 
       <label className="mt-2 flex cursor-pointer items-center justify-between gap-4 rounded-lg border border-[#e5e1d8] bg-[#fbfaf7] p-4 transition hover:border-[#d8d2c8]">
         <span>
-          <span className="block text-sm font-semibold text-[#48423c]">Save as draft</span>
+          <span className="block text-sm font-semibold text-[#48423c]">
+            Save as draft
+          </span>
           <span className="mt-1 block text-sm leading-6 text-[#746e66]">
             Saving publishes by default. Turn this on to keep the blog drafted.
           </span>
         </span>
         <span className="relative inline-flex shrink-0 items-center">
-          <input name="saveAsDraft" type="checkbox" defaultChecked={blog?.status === "Draft"} className="peer sr-only" />
+          <input
+            name="saveAsDraft"
+            type="checkbox"
+            defaultChecked={blog?.status === "Draft"}
+            className="peer sr-only"
+          />
           <span className="h-7 w-12 rounded-full border border-[#d7d1c8] bg-white transition peer-checked:border-[#ed2967] peer-checked:bg-[#ed2967]" />
           <span className="absolute left-1 size-5 rounded-full bg-[#817a72] transition peer-checked:left-6 peer-checked:bg-white" />
         </span>
       </label>
 
       <div className="flex flex-wrap items-center justify-end gap-3 border-t border-[#ebe7df] pt-5">
-        <Link href="/admin/blogs" className="inline-flex h-11 items-center rounded-full border border-[#111419] px-5 text-sm font-semibold text-[#111419] transition hover:bg-[#111419] hover:text-white">
+        <Link
+          href="/admin/blogs"
+          className="inline-flex h-11 items-center rounded-full border border-[#111419] px-5 text-sm font-semibold text-[#111419] transition hover:bg-[#111419] hover:text-white"
+        >
           Back
         </Link>
-        <button type="submit" className="inline-flex h-11 items-center rounded-full bg-[#ed2967] px-6 text-sm font-semibold text-white transition hover:bg-[#111419]">
+        <button
+          type="submit"
+          className="inline-flex h-11 items-center rounded-full bg-[#ed2967] px-6 text-sm font-semibold text-white transition hover:bg-[#111419]"
+        >
           Save Changes
         </button>
       </div>
@@ -357,7 +432,13 @@ export function BlogForm({ blog, categories, action }: BlogFormProps) {
   );
 }
 
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
+function Field({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
   return (
     <label className="grid gap-2 text-sm font-semibold text-[#48423c]">
       {label}
