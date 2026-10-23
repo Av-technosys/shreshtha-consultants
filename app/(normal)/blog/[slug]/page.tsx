@@ -5,7 +5,6 @@ import { CalendarDays, UserRound } from "lucide-react";
 import { getPublishedBlogBySlug } from "@/helpers/admin/blogs";
 import { BlogFaq } from "@/components/blog-faq";
 
-
 type BlogSlugPageProps = {
   params: Promise<{ slug: string }>;
 };
@@ -19,12 +18,17 @@ export async function generateStaticParams() {
     const blogs = await getPublishedBlogs();
     return blogs.map((b) => ({ slug: b.slug }));
   } catch (error) {
-    console.warn("Could not generate static params for blogs during build:", error);
+    console.warn(
+      "Could not generate static params for blogs during build:",
+      error,
+    );
     return [];
   }
 }
 
-export async function generateMetadata({ params }: BlogSlugPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: BlogSlugPageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = await getPublishedBlogBySlug(slug);
 
@@ -34,14 +38,12 @@ export async function generateMetadata({ params }: BlogSlugPageProps): Promise<M
     };
   }
 
-  const pageTitle = post.metaTitle?.trim()
-    ? (post.metaTitle.toLowerCase().includes("shreshtha consultants")
-        ? post.metaTitle
-        : `${post.metaTitle} | Shreshtha Consultants`)
-    : `${post.title} | Shreshtha Consultants`;
+  const pageTitle = post.metaTitle?.trim() || post.title;
 
   return {
-    title: pageTitle,
+    title: {
+      absolute: pageTitle,
+    },
     description: post.metaDescription,
     alternates: {
       canonical: `https://www.shreshthaconsultants.com/blog/${slug}`,
@@ -66,20 +68,29 @@ export default async function BlogSlugPage({ params }: BlogSlugPageProps) {
           <p className="text-[22px] font-bold uppercase leading-none tracking-[0.12em] text-[#202020] max-[700px]:text-base">
             Industry Insights
           </p>
-          <h1 className="font-archivo mt-4 max-w-[900px] text-[clamp(31px,3.15vw,44px)] font-semibold leading-[1.14] tracking-[-0.025em] text-[#111] max-[520px]:text-[28px]">
+          <h1 className="font-archivo mt-4 max-w-[900px] text-[28px] sm:text-[36px] md:text-[44px] font-semibold leading-[1.14] tracking-[-0.025em] text-[#111]">
             {post.title}
           </h1>
 
           <div className="mt-9 flex flex-wrap items-center gap-x-10 gap-y-3 text-base max-[640px]:mt-7 max-[640px]:gap-x-6 max-[520px]:flex-nowrap max-[520px]:gap-x-3 max-[520px]:text-[13px]">
             <div className="inline-flex shrink-0 items-center gap-2.5 font-bold capitalize text-[#202020] max-[520px]:gap-1.5">
               <span className="grid size-8 shrink-0 place-items-center rounded-full bg-[#f7f6f2] text-[#ed2967] max-[520px]:size-[22px]">
-                <UserRound className="h-[15px] w-[15px] max-[520px]:h-3 max-[520px]:w-3" strokeWidth={2} />
+                <UserRound
+                  className="h-[15px] w-[15px] max-[520px]:h-3 max-[520px]:w-3"
+                  strokeWidth={2}
+                />
               </span>
               <span className="whitespace-nowrap">{post.authorName}</span>
             </div>
-            <time dateTime={post.date} className="inline-flex shrink-0 items-center gap-2.5 font-bold text-[#777] max-[520px]:gap-1.5">
+            <time
+              dateTime={post.date}
+              className="inline-flex shrink-0 items-center gap-2.5 font-bold text-[#777] max-[520px]:gap-1.5"
+            >
               <span className="grid size-8 shrink-0 place-items-center rounded-full bg-[#f7f6f2] text-[#ed2967] max-[520px]:size-[22px]">
-                <CalendarDays className="h-[15px] w-[15px] max-[520px]:h-3 max-[520px]:w-3" strokeWidth={2} />
+                <CalendarDays
+                  className="h-[15px] w-[15px] max-[520px]:h-3 max-[520px]:w-3"
+                  strokeWidth={2}
+                />
               </span>
               <span className="whitespace-nowrap">{formatDate(post.date)}</span>
             </time>
@@ -124,7 +135,9 @@ export default async function BlogSlugPage({ params }: BlogSlugPageProps) {
 
           {/* Main Content Area */}
           <div className="flex-1 w-full max-w-[760px] text-[17px] leading-[1.75] text-black max-[700px]:text-[16px]">
-            <style dangerouslySetInnerHTML={{ __html: `
+            <style
+              dangerouslySetInnerHTML={{
+                __html: `
               .blog-content { 
                 font-family: var(--font-inter-family), sans-serif !important; 
                 font-size: 17px;
@@ -192,7 +205,9 @@ export default async function BlogSlugPage({ params }: BlogSlugPageProps) {
               .blog-content th, .blog-content td { border: 1px solid #e1ddd5; padding: 8px; }
               .blog-content th { font-weight: 600; background-color: #f7f6f2; }
               .blog-content img, .blog-content video, .blog-content iframe { max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1em; }
-            `}} />
+            `,
+              }}
+            />
             <div
               className="blog-content"
               dangerouslySetInnerHTML={{ __html: parsedContent }}
@@ -220,22 +235,28 @@ function parseAndInjectHeadingIds(content: string) {
   const headings: { id: string; text: string }[] = [];
   let index = 0;
 
-  const newContent = sanitized.replace(/<h2([^>]*)>(.*?)<\/h2>/gi, (match, attrs, innerText) => {
-    const text = innerText.replace(/<[^>]+>/g, "").trim();
-    let id = text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-    if (!id) id = `heading-${index}`;
-    index++;
-    
-    // Check if id already exists in attrs
-    const idMatch = attrs.match(/id="([^"]+)"/i);
-    if (idMatch) {
-      headings.push({ id: idMatch[1], text });
-      return match;
-    }
-    
-    headings.push({ id, text });
-    return `<h2 id="${id}"${attrs}>${innerText}</h2>`;
-  });
+  const newContent = sanitized.replace(
+    /<h2([^>]*)>(.*?)<\/h2>/gi,
+    (match, attrs, innerText) => {
+      const text = innerText.replace(/<[^>]+>/g, "").trim();
+      let id = text
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/(^-|-$)/g, "");
+      if (!id) id = `heading-${index}`;
+      index++;
+
+      // Check if id already exists in attrs
+      const idMatch = attrs.match(/id="([^"]+)"/i);
+      if (idMatch) {
+        headings.push({ id: idMatch[1], text });
+        return match;
+      }
+
+      headings.push({ id, text });
+      return `<h2 id="${id}"${attrs}>${innerText}</h2>`;
+    },
+  );
 
   return { parsedContent: newContent, headings };
 }
@@ -249,6 +270,11 @@ function formatDate(date: string) {
 }
 
 function getImageSrc(image: string) {
-  if (image.startsWith("/") || image.startsWith("http") || image.startsWith("data:")) return image;
+  if (
+    image.startsWith("/") ||
+    image.startsWith("http") ||
+    image.startsWith("data:")
+  )
+    return image;
   return "/blogcover.png";
 }
