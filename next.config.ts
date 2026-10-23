@@ -39,6 +39,18 @@ const nextConfig: NextConfig = {
       { source: "/projects/dwps", destination: "/projects/delhi-world-public-school", permanent: true },
       { source: "/projects/nokha", destination: "/projects/nokha-library", permanent: true },
       { source: "/projects/acl-green", destination: "/projects/acl-greens", permanent: true },
+      { source: "/chennai", destination: "/location/chennai", permanent: true },
+      { source: "/chennai/:path*", destination: "/location/chennai", permanent: true },
+      { source: "/delhi", destination: "/location/delhi", permanent: true },
+      { source: "/delhi/:path*", destination: "/location/delhi", permanent: true },
+      { source: "/mumbai", destination: "/location/mumbai", permanent: true },
+      { source: "/mumbai/:path*", destination: "/location/mumbai", permanent: true },
+      { source: "/hyderabad", destination: "/location/hyderabad", permanent: true },
+      { source: "/hyderabad/:path*", destination: "/location/hyderabad", permanent: true },
+      { source: "/bangalore", destination: "/location/bangalore", permanent: true },
+      { source: "/bangalore/:path*", destination: "/location/bangalore", permanent: true },
+      { source: "/bengaluru", destination: "/location/bangalore", permanent: true },
+      { source: "/bengaluru/:path*", destination: "/location/bangalore", permanent: true },
     ];
   },
 };
