@@ -14,6 +14,14 @@ const services = [
   { label: "HVAC", href: "/hvac" },
 ];
 
+const locations = [
+  { label: "Bangalore", href: "/location/bangalore" },
+  { label: "Chennai", href: "/location/chennai" },
+  { label: "Delhi", href: "/location/delhi" },
+  { label: "Hyderabad", href: "/location/hyderabad" },
+  { label: "Mumbai", href: "/location/mumbai" },
+];
+
 const companyLinks = [
   { label: "About us", href: "/about" },
   { label: "Careers", href: "/careers" },
@@ -39,7 +47,7 @@ export function Footer() {
   return (
     <footer className="bg-[#111419] py-20 text-neutral-300 sm:py-20 lg:py-24">
       <Container>
-        <div className="grid gap-11 md:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr] lg:gap-16">
+        <div className="grid gap-11 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr_0.9fr] lg:gap-10 xl:gap-14">
           <div>
             <LogoMark />
 
@@ -52,7 +60,7 @@ export function Footer() {
               </p>
               <p>
                 <a
-                  className="transition-colors hover:text-white"
+                  className="break-words transition-colors hover:text-white"
                   href="mailto:contact@shreshthaconsultants.com"
                 >
                   contact@shreshthaconsultants.com
@@ -71,6 +79,16 @@ export function Footer() {
             ))}
           </FooterGroup>
 
+          <FooterGroup title="Locations">
+            {locations.map((location) => (
+              <li key={location.label}>
+                <Link className="transition-colors hover:text-white" href={location.href}>
+                  {location.label}
+                </Link>
+              </li>
+            ))}
+          </FooterGroup>
+
           <FooterGroup title="Company">
             {companyLinks.map((item) => (
               <li key={item.href}>
@@ -81,7 +99,7 @@ export function Footer() {
             ))}
           </FooterGroup>
 
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <h2 className="text-xs font-medium uppercase tracking-[0.35em] text-neutral-500">
               Follow Us
             </h2>
