@@ -47,6 +47,14 @@ const projects = [
     image: "/Projects/gt Landmark/gt Landmark.png",
     link: "/projects/gt-landmark",
   },
+   {
+    id: "world-trade-park",
+    category: "COMMERCIAL",
+    title: "World Trade Park",
+    details: "Jaipur",
+    image: "/Projects/world trade park/wtp-hero.png",
+    link: "/projects/world-trade-park",
+  },
   {
     id: "rajasthan-hospital",
     category: "HEALTHCARE",
@@ -282,7 +290,7 @@ function ProjectsGridContent() {
         {visibleCount < filteredProjects.length && (
           <div className="mt-[48px] md:mt-[64px] flex justify-center w-full">
             <button
-              onClick={() => setVisibleCount((prev) => prev + 3)}
+              onClick={() => setVisibleCount((prev) => prev + filteredProjects.length)}
               className="border border-[#101418] rounded-full px-[24px] md:px-[32px] py-[10px] md:py-[12px] transition-colors duration-300 hover:bg-[#101418] hover:text-[#FFFFFF] text-[#101418] flex items-center justify-center gap-2 font-archivo text-[13px] md:text-[14px] font-semibold leading-[1.5]"
             >
               Show More Projects &rarr;

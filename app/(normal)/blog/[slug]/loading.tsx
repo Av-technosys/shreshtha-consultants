@@ -28,7 +28,7 @@ export default function BlogSlugLoading() {
           </div>
         </header>
 
-        <Skeleton className="relative mt-6 block aspect-[1140/540] w-full rounded-[14px] max-[700px]:aspect-[4/3]" />
+        <Skeleton className="relative mt-6 block aspect-[16/10] sm:aspect-[725/491] w-full rounded-[14px]" />
 
         <div className="mx-auto mt-12 flex max-w-[1140px] flex-col gap-10 lg:flex-row lg:items-start lg:justify-between max-[700px]:mt-8">
           <aside className="hidden w-full shrink-0 lg:block lg:w-[280px] lg:sticky lg:top-[120px]">

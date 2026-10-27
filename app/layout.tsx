@@ -56,12 +56,12 @@ const organizationSchema = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.shreshthaconsultants.com"),
-  title: {
-    default: "Shreshtha Consultants – AI-Driven MEP Design Consultants in India",
-    template: "%s | Shreshtha Consultants",
-  },
+  title: "Shreshtha Consultants – AI-Driven MEP Design Consultants in India",
   description:
     "Shreshtha Consultants is a leading MEP consultancy in India offering AI-driven HVAC, electrical, plumbing & firefighting design with BIM coordination.",
+  verification: {
+    google: "S14O5fom4ecWx5qUmfBUmJBZBSo75vd_QVz_wUCmXJk",
+  },
   icons: {
     icon: "/Common/logo.png",
     shortcut: "/Common/logo.png",
@@ -87,13 +87,45 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={`${archivo.variable} ${inter.variable} ${lora.variable} ${poppins.variable}`}>
+    <html
+      lang="en"
+      className={`${archivo.variable} ${inter.variable} ${lora.variable} ${poppins.variable}`}
+    >
+      <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f
+);})(window,document,'script','dataLayer','GTM-5S8PJWDD');`,
+          }}
+        />
+        {/* End Google Tag Manager */}
+      </head>
       <body className="min-h-screen font-lora">
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5S8PJWDD"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
         />
         {children}
       </body>

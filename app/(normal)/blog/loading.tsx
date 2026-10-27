@@ -23,7 +23,7 @@ export default function BlogLoading() {
                 key={index}
                 className="flex h-full flex-col overflow-hidden rounded-[14px] bg-white p-[10px] shadow-[0_8px_22px_rgb(32_28_23_/_0.08)] max-[520px]:p-2"
               >
-                <Skeleton className="block aspect-[506/333] rounded-[10px] max-[520px]:rounded-[9px]" />
+                <Skeleton className="block aspect-[725/491] rounded-[10px] max-[520px]:rounded-[9px]" />
                 <div className="flex flex-1 flex-col px-3 pb-3 pt-5 max-[520px]:px-2.5 max-[520px]:pt-4">
                   <Skeleton className="h-6 w-full rounded-md" />
                   <Skeleton className="mt-2 h-6 w-4/5 rounded-md" />

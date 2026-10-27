@@ -97,14 +97,14 @@ export default async function BlogSlugPage({ params }: BlogSlugPageProps) {
           </div>
         </header>
 
-        <div className="relative mt-6 aspect-[1140/540] w-full overflow-hidden rounded-[14px] bg-[#e8e4dc] max-[700px]:aspect-[4/3]">
+        <div className="relative mt-6 aspect-[16/10] sm:aspect-[725/491] w-full overflow-hidden rounded-[14px] bg-white border border-[#eae6df] shadow-sm">
           <Image
             src={getImageSrc(post.image)}
             alt=""
             fill
             priority
             sizes="(max-width: 1188px) calc(100vw - 48px), 1140px"
-            className="object-cover"
+            className="object-contain"
           />
         </div>
 

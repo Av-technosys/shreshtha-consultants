@@ -59,14 +59,18 @@ function BlogCard({ post, priority }: { post: AdminBlog; priority: boolean }) {
 
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-[14px] bg-white p-[10px] shadow-[0_8px_22px_rgb(32_28_23_/_0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_12px_28px_rgb(32_28_23_/_0.11)] max-[520px]:p-2">
-      <Link href={href} aria-label={post.title} className="relative block shrink-0 aspect-[506/333] overflow-hidden rounded-[10px] bg-[#e8e4dc] max-[520px]:rounded-[9px]">
+      <Link
+        href={href}
+        aria-label={post.title}
+        className="relative block shrink-0 aspect-[725/491] overflow-hidden rounded-[10px] bg-white border border-neutral-100 max-[520px]:rounded-[9px]"
+      >
         <Image
           src={getImageSrc(post.image)}
           alt=""
           fill
           priority={priority}
           sizes="(max-width: 720px) calc(100vw - 56px), (max-width: 1280px) calc(50vw - 58px), 31vw"
-          className="object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
+          className="object-contain transition duration-700 ease-out group-hover:scale-[1.02]"
         />
       </Link>
 
