@@ -364,7 +364,7 @@ export default function DelhiLocationPage() {
             </div>
           </div>
 
-          {/* Right Column: Industries We Serve (Sticky on desktop) */}
+          {/* Right Column: Industries We Serve*/}
           <div className="lg:sticky lg:top-[100px] self-start">
             <div className="bg-[#142436] text-white rounded-[24px] p-8 sm:p-10 shadow-xl flex flex-col justify-start">
               <h2 className="font-archivo text-[24px] sm:text-[28px] md:text-[32px] font-bold text-white mb-7 tracking-[-0.02em]">

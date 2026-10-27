@@ -39,7 +39,7 @@ const projects = [
     title: "World Trade Park",
     meta: "Jaipur",
     src: "/Projects/WorldTradePark.png",
-    href: "/projects",
+    href: "/projects/world-trade-park",
   },
 ];
 
@@ -69,6 +69,15 @@ export function ProjectsSection() {
           {projects.slice(2).map((project) => (
             <ProjectCard key={project.title} {...project} />
           ))}
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Link
+            href="/projects"
+            className="font-archivo group inline-flex items-center justify-center gap-2.5 rounded-full border border-[#101418] bg-[#101418] px-8 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:border-[#ed2967] hover:bg-[#ed2967]"
+          >
+            Explore More <span className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+          </Link>
         </div>
       </Container>
     </section>

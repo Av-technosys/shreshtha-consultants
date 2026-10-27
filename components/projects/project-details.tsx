@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/common/container";
 import { ResendForm } from "@/components/forms/resend-form";
 
@@ -39,9 +40,12 @@ export function ProjectDetails({
             ))}
 
             <div className="border-t border-black/10 pt-[32px] mt-[8px]">
-              <button className="w-full rounded-full py-[16px] transition-colors bg-[#101418] hover:bg-[#ED2967] text-[#FFFFFF] font-sans text-[14px] font-semibold leading-[1.6]">
+              <Link
+                href="/contact-us"
+                className="block w-full text-center rounded-full py-[16px] transition-colors bg-[#101418] hover:bg-[#ED2967] text-[#FFFFFF] font-sans text-[14px] font-semibold leading-[1.6]"
+              >
                 Discuss a Project &rarr;
-              </button>
+              </Link>
             </div>
           </div>
 

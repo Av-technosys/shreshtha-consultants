@@ -143,45 +143,6 @@ const DESIGN_PROCESS = [
   },
 ];
 
-const FEATURED_PROJECTS = [
-  {
-    name: "OMR IT Corridor Tech Park",
-    location: "Old Mahabalipuram Road, Chennai",
-    sector: "IT Campus & Commercial",
-    area: "1,100,000 sq. ft.",
-    scope: "HVAC, Electrical, Plumbing, Fire & BIM",
-    desc: "High-efficiency coastal HVAC design featuring corrosion-resistant VRV and chilled water systems, dual-source power reliability, and complete CMWSSB-compliant zero liquid discharge plumbing.",
-    img: "/Projects/WorldTradePark.png",
-  },
-  {
-    name: "Sriperumbudur Auto & Precision Plant",
-    location: "Sriperumbudur Industrial Corridor, Chennai",
-    sector: "Manufacturing & Warehousing",
-    area: "460,000 sq. ft.",
-    scope: "Industrial Ventilation, Power Substation & Deluge Fire",
-    desc: "Engineered heavy-load industrial electrical substations, roof heat mitigation ventilation, dedicated process water loops, and NBC-compliant high-velocity water spray fire systems.",
-    img: "/Projects/SavioFactory.png",
-  },
-  {
-    name: "ECR Coastal Luxury Residential Township",
-    location: "East Coast Road, Chennai",
-    sector: "Residential & Township",
-    area: "680,000 sq. ft.",
-    scope: "Plumbing, Stormwater, Electrical & STP",
-    desc: "Comprehensive flood-resilient stormwater drainage engineering, automated rainwater percolation systems, coastal salinity protection for electrical panels, and CMDA compliance.",
-    img: "/Projects/GoyalResidence.png",
-  },
-  {
-    name: "Guindy Super-Speciality Hospital",
-    location: "Guindy, Chennai",
-    sector: "Healthcare & Cleanrooms",
-    area: "390,000 sq. ft.",
-    scope: "Specialized HVAC, Medical Gas & Life Safety",
-    desc: "Critical OT cleanroom ventilation, laminar air flow systems, isolated power distribution with emergency UPS redundancy, and Tamil Nadu Fire and Rescue Services approved life safety planning.",
-    img: "/Projects/GoyalResidence.png",
-  },
-];
-
 const TESTIMONIALS = [
   {
     quote:
@@ -261,10 +222,20 @@ export default function ChennaiLocationPage() {
             {/* Sub-headline Paragraphs */}
             <div className="mb-8 flex flex-col gap-4 text-[16px] leading-[1.8] text-neutral-300 font-lora">
               <p>
-                Development in Chennai takes place in commercial areas, residential complexes, industries, and institutions, each of which has to deal with issues related to heat, humidity, sea breeze, and heavy monsoons. Shreshtha Consultants is an MEP Consulting Firm that provides mechanical (HVAC), electrical, plumbing, and firefighting solutions for structures in Chennai’s climatic conditions.
+                Development in Chennai takes place in commercial areas,
+                residential complexes, industries, and institutions, each of
+                which has to deal with issues related to heat, humidity, sea
+                breeze, and heavy monsoons. Shreshtha Consultants is an MEP
+                Consulting Firm that provides mechanical (HVAC), electrical,
+                plumbing, and firefighting solutions for structures in Chennai’s
+                climatic conditions.
               </p>
               <p>
-                We offer solutions in the form of detailed planning, value engineering, BIM-coordinated design, and implementation of the designs in various buildings. We serve as a trusted engineering partner in growing Chennai by providing energy-efficient designs.
+                We offer solutions in the form of detailed planning, value
+                engineering, BIM-coordinated design, and implementation of the
+                designs in various buildings. We serve as a trusted engineering
+                partner in growing Chennai by providing energy-efficient
+                designs.
               </p>
             </div>
 
@@ -343,7 +314,9 @@ export default function ChennaiLocationPage() {
               MEP Consulting Services in Chennai
             </h2>
             <p className="font-lora text-[16px] leading-[1.8] text-[#5c6570] mb-8">
-              We provide comprehensive building services engineering tailored for coastal climate durability, energy efficiency, and operational excellence.
+              We provide comprehensive building services engineering tailored
+              for coastal climate durability, energy efficiency, and operational
+              excellence.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
@@ -366,7 +339,9 @@ export default function ChennaiLocationPage() {
                         key={pIdx}
                         className="font-lora text-[13.5px] sm:text-[14px] leading-[1.65] text-[#5c6570] flex items-start gap-2.5"
                       >
-                        <span className="text-[#ed2967] mt-1 shrink-0 text-[10px]">●</span>
+                        <span className="text-[#ed2967] mt-1 shrink-0 text-[10px]">
+                          ●
+                        </span>
                         <span>{pt}</span>
                       </li>
                     ))}
@@ -409,10 +384,19 @@ export default function ChennaiLocationPage() {
           </h2>
           <div className="flex flex-col gap-5 text-[16px] leading-[1.8] text-[#5c6570] font-lora">
             <p>
-              In Chennai, there are multiple authorities involved, and each one has its own set of specifications. Our design will be according to the NBC 2016 and other IS codes, ECBC, fire safety specifications, and CMDA and DTCP building regulations, and the Tamil Nadu Electricity Board for the power supply and metering. Additionally, CMWSSB for water and sewerage, and Tamil Nadu Fire and Rescue Services for fire approvals should also be taken into consideration. It is recommended to confirm each authority and its nomenclature.
+              In Chennai, there are multiple authorities involved, and each one
+              has its own set of specifications. Our design will be according to
+              the NBC 2016 and other IS codes, ECBC, fire safety specifications,
+              and CMDA and DTCP building regulations, and the Tamil Nadu
+              Electricity Board for the power supply and metering. Additionally,
+              CMWSSB for water and sewerage, and Tamil Nadu Fire and Rescue
+              Services for fire approvals should also be taken into
+              consideration. It is recommended to confirm each authority and its
+              nomenclature.
             </p>
             <p>
-              It assists in saving time from getting delayed at the approval stage.
+              It assists in saving time from getting delayed at the approval
+              stage.
             </p>
           </div>
         </Container>
@@ -429,7 +413,8 @@ export default function ChennaiLocationPage() {
               What Makes Us the Preferred MEP Consultants in Chennai
             </h2>
             <p className="font-lora mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
-              Good engineering is a blend of experience, accuracy, and practicality. Here is how we do it differently:
+              Good engineering is a blend of experience, accuracy, and
+              practicality. Here is how we do it differently:
             </p>
           </div>
 
@@ -500,7 +485,9 @@ export default function ChennaiLocationPage() {
               Our MEP Design Process
             </h2>
             <p className="font-lora mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
-              From concept formulation to testing and commissioning, our 6-stage engineering workflow ensures zero site clashes and total regulatory compliance.
+              From concept formulation to testing and commissioning, our 6-stage
+              engineering workflow ensures zero site clashes and total
+              regulatory compliance.
             </p>
           </div>
 
@@ -538,7 +525,8 @@ export default function ChennaiLocationPage() {
               What Our Clients Say
             </h2>
             <p className="font-lora mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
-              Trusted by leading architects, industrial developers, and project managers across Chennai.
+              Trusted by leading architects, industrial developers, and project
+              managers across Chennai.
             </p>
           </div>
 
@@ -552,7 +540,10 @@ export default function ChennaiLocationPage() {
                   {/* Star Rating */}
                   <div className="flex items-center gap-1 text-[#ed2967] mb-5">
                     {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-[#ed2967] text-[#ed2967]" />
+                      <Star
+                        key={i}
+                        className="w-4 h-4 fill-[#ed2967] text-[#ed2967]"
+                      />
                     ))}
                   </div>
                   {/* Quote */}
@@ -589,7 +580,8 @@ export default function ChennaiLocationPage() {
               Frequently Asked Questions
             </h2>
             <p className="font-lora mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
-              Everything you need to know about appointing MEP consultants in Chennai.
+              Everything you need to know about appointing MEP consultants in
+              Chennai.
             </p>
           </div>
 
@@ -627,7 +619,9 @@ export default function ChennaiLocationPage() {
                 Partner With Top MEP Consulting Experts in Chennai
               </h2>
               <p className="font-lora mt-4 text-[16px] leading-[1.8] text-white/70 max-w-[500px]">
-                If you’re searching for dependable MEP consultants in Chennai, Shreshtha Consultants brings the technical strength and execution support needed to deliver a successful project.
+                If you’re searching for dependable MEP consultants in Chennai,
+                Shreshtha Consultants brings the technical strength and
+                execution support needed to deliver a successful project.
               </p>
             </div>
 
@@ -637,9 +631,14 @@ export default function ChennaiLocationPage() {
                 <h3 className="font-archivo text-[30px] sm:text-[32px] font-bold text-white mb-6">
                   Book a Consultation | Contact Shreshtha Consultants Today
                 </h3>
-                <ResendForm formType="Chennai Location Consultation" className="flex flex-col gap-4">
+                <ResendForm
+                  formType="Chennai Location Consultation"
+                  className="flex flex-col gap-4"
+                >
                   <div className="flex flex-col gap-2">
-                    <label className="font-archivo text-[13px] font-bold text-white/90">Name*</label>
+                    <label className="font-archivo text-[13px] font-bold text-white/90">
+                      Name*
+                    </label>
                     <input
                       className="w-full rounded-xl border border-white/[0.18] bg-white/[0.08] px-5 py-[13px] text-[15px] text-white placeholder:text-white/40 outline-none transition focus:border-[#ed2967] focus:bg-white/[0.12] focus:shadow-[0_0_0_4px_rgba(237,41,104,0.25)]"
                       name="name"
@@ -649,7 +648,9 @@ export default function ChennaiLocationPage() {
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label className="font-archivo text-[13px] font-bold text-white/90">Email*</label>
+                    <label className="font-archivo text-[13px] font-bold text-white/90">
+                      Email*
+                    </label>
                     <input
                       className="w-full rounded-xl border border-white/[0.18] bg-white/[0.08] px-5 py-[13px] text-[15px] text-white placeholder:text-white/40 outline-none transition focus:border-[#ed2967] focus:bg-white/[0.12] focus:shadow-[0_0_0_4px_rgba(237,41,104,0.25)]"
                       name="email"
@@ -659,7 +660,9 @@ export default function ChennaiLocationPage() {
                     />
                   </div>
                   <div className="flex flex-col gap-2">
-                    <label className="font-archivo text-[13px] font-bold text-white/90">Phone*</label>
+                    <label className="font-archivo text-[13px] font-bold text-white/90">
+                      Phone*
+                    </label>
                     <input
                       className="w-full rounded-xl border border-white/[0.18] bg-white/[0.08] px-5 py-[13px] text-[15px] text-white placeholder:text-white/40 outline-none transition focus:border-[#ed2967] focus:bg-white/[0.12] focus:shadow-[0_0_0_4px_rgba(237,41,104,0.25)]"
                       name="phone"
@@ -673,7 +676,10 @@ export default function ChennaiLocationPage() {
                       className="font-archivo group flex w-full items-center justify-center gap-2.5 rounded-full bg-[#ed2967] hover:bg-white text-white hover:text-[#142436] px-8 py-[14px] sm:py-[18px] text-[15px] font-bold transition duration-300 shadow-lg shadow-[#ed2967]/25 cursor-pointer"
                       type="submit"
                     >
-                      Request a Proposal <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+                      Request a Proposal{" "}
+                      <span className="transition-transform duration-300 group-hover:translate-x-1">
+                        →
+                      </span>
                     </button>
                   </div>
                 </ResendForm>

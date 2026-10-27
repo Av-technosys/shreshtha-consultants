@@ -357,7 +357,7 @@ export default function MumbaiLocationPage() {
         </Container>
       </section>
 
-      {/* 5. OUR MEP SERVICES & INDUSTRIES WE SERVE (MATCHING ATTACHED SCREENSHOT 2) */}
+      {/* 5. OUR MEP SERVICES & INDUSTRIES WE SERVE*/}
       <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px] border-t border-[#e3e0d8]">
         <Container className="grid grid-cols-1 lg:grid-cols-[1.22fr_0.78fr] gap-10 lg:gap-14 items-start">
           {/* Left Column: Our MEP Services */}
@@ -396,7 +396,7 @@ export default function MumbaiLocationPage() {
             </div>
           </div>
 
-          {/* Right Column: Industries We Serve (Sticky on desktop) */}
+          {/* Right Column: Industries We Serve*/}
           <div className="lg:sticky lg:top-[100px] self-start">
             <div className="bg-[#142436] text-white rounded-[24px] p-8 sm:p-10 shadow-xl flex flex-col justify-start">
               <h2 className="font-archivo text-[24px] sm:text-[32px] font-bold text-white mb-6 tracking-[-0.02em]">
@@ -525,7 +525,7 @@ export default function MumbaiLocationPage() {
             </h2>
             <p className="font-lora mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
               Everything you need to know about appointing MEP consultants in
-              Bengaluru.
+              Mumbai.
             </p>
           </div>
 

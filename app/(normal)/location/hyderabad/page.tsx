@@ -126,45 +126,6 @@ const DESIGN_PROCESS = [
   },
 ];
 
-const FEATURED_PROJECTS = [
-  {
-    name: "Genome Valley Biotech & Pharma Facility",
-    location: "Genome Valley, Hyderabad",
-    sector: "Pharma & Cleanrooms",
-    area: "380,000 sq. ft.",
-    scope: "Cleanroom HVAC, Process Piping & Fire Safety",
-    desc: "Engineered ISO Class 7 cleanrooms, specialized pressure cascade ventilation, dedicated purified water loops, and hazardous chemical exhaust systems compliant with FDA and local norms.",
-    img: "/Projects/WorldTradePark.png",
-  },
-  {
-    name: "HITEC City IT Park & Commercial Tower",
-    location: "Madhapur, Hyderabad",
-    sector: "IT Campus & Offices",
-    area: "1,150,000 sq. ft.",
-    scope: "HVAC, Electrical, Plumbing, Fire & BIM",
-    desc: "Integrated water-cooled chillers with magnetic bearing technology, complete HT/LT electrical substation distribution with 100% DG redundancy, and full BIM clash resolution.",
-    img: "/Projects/WorldTradePark.png",
-  },
-  {
-    name: "Gachibowli High-Rise Residential Enclave",
-    location: "Gachibowli, Hyderabad",
-    sector: "Residential Towers",
-    area: "760,000 sq. ft.",
-    scope: "Plumbing, Fire Protection & Electrical",
-    desc: "High-zone hydro-pneumatic water distribution, dual-plumbing networks, greywater recycling with STP, and Telangana State Disaster Response & Fire Services approved evacuation systems.",
-    img: "/Projects/GoyalResidence.png",
-  },
-  {
-    name: "Financial District Mixed-Use Complex",
-    location: "Nanakramguda, Hyderabad",
-    sector: "Mixed-Use & Retail",
-    area: "920,000 sq. ft.",
-    scope: "HVAC, Electrical, ELV, Fire & BMS",
-    desc: "Energy-efficient centralized HVAC with thermal energy storage, smart building automation (BMS), addressable fire alarms, and HMWSSB-compliant zero liquid discharge plumbing.",
-    img: "/Projects/SavioFactory.png",
-  },
-];
-
 const TESTIMONIALS = [
   {
     quote:
@@ -487,7 +448,7 @@ export default function HyderabadLocationPage() {
         </Container>
       </section>
 
-      {/* 7. OUR MEP DESIGN PROCESS (BG-WHITE WITH CREAM CARDS) */}
+      {/* 7. OUR MEP DESIGN PROCESS*/}
       <section className="bg-white py-[70px] max-[760px]:py-[40px] border-y border-[#e3e0d8]">
         <Container>
           <div className="text-center max-w-[760px] mx-auto mb-14">

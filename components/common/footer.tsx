@@ -20,6 +20,7 @@ const locations = [
   { label: "Delhi", href: "/location/delhi" },
   { label: "Hyderabad", href: "/location/hyderabad" },
   { label: "Mumbai", href: "/location/mumbai" },
+  { label: "Ahmedabad", href: "/location/ahmedabad" },
 ];
 
 const companyLinks = [

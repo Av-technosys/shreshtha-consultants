@@ -121,45 +121,6 @@ const DESIGN_PROCESS = [
   },
 ];
 
-const FEATURED_PROJECTS = [
-  {
-    name: "Prestige Tech Cloud IT Campus",
-    location: "Whitefield, Bengaluru",
-    sector: "IT Park & Commercial",
-    area: "1,250,000 sq. ft.",
-    scope: "HVAC, Electrical, Plumbing, Fire & BIM",
-    desc: "Comprehensive MEP design featuring high-efficiency water-cooled chilled water plants, dedicated outdoor air systems (DOAS), and complete BWSSB-compliant dual plumbing with zero liquid discharge.",
-    img: "/Projects/WorldTradePark.png",
-  },
-  {
-    name: "Apollo Multispeciality Hospital",
-    location: "Electronic City, Bengaluru",
-    sector: "Healthcare & Labs",
-    area: "420,000 sq. ft.",
-    scope: "Specialized HVAC, Medical Gas, Electrical & Fire",
-    desc: "Engineered critical cleanroom ventilation, positive/negative pressure isolation rooms, redundant UPS/DG power architecture, and NFPA/NBC compliant life safety systems.",
-    img: "/Projects/WorldTradePark.png",
-  },
-  {
-    name: "Brigade Gateway High-Rise Residential",
-    location: "North Bengaluru",
-    sector: "Residential & Mixed-Use",
-    area: "850,000 sq. ft.",
-    scope: "Plumbing, Fire Protection, Electrical & STP",
-    desc: "Engineered sustainable rainwater harvesting systems, automated hydro-pneumatic water pumping, rooftop solar integration, and BBMP & Karnataka State Fire compliance.",
-    img: "/Projects/GoyalResidence.png",
-  },
-  {
-    name: "Aerospace & Precision Manufacturing Plant",
-    location: "Peenya Industrial Area, Bengaluru",
-    sector: "Industrial & Warehousing",
-    area: "310,000 sq. ft.",
-    scope: "Industrial Ventilation, Power Distribution & Fire",
-    desc: "Industrial MEP engineering with high-capacity transformer substations, precision process cooling, exhaust scrubbers, and high-hazard foam deluge fire systems.",
-    img: "/Projects/SavioFactory.png",
-  },
-];
-
 const TESTIMONIALS = [
   {
     quote:
