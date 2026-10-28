@@ -128,25 +128,25 @@ const DESIGN_PROCESS = [
 
 const TESTIMONIALS = [
   {
+    initials: "HP",
+    name: "Harshad Patil",
+    role: "Strategy Head, Kolte Patil Developers",
     quote:
-      "Shreshtha Consultants provided exceptional MEP design and cleanroom ventilation coordination for our pharma lab in Genome Valley. Their BIM clash resolution eliminated virtually all on-site installation disputes.",
-    name: "Dr. Srinivas Rao",
-    designation: "VP - Infrastructure & Facilities",
-    company: "Biotech Innovations Ltd, Hyderabad",
+      "Shreshtha offers a unique AI-enabled consultancy for MEP. With AI, optimised MEP designs to save materials, clash-coordinated drawings & multiple routing options are now possible.",
   },
   {
+    initials: "SK",
+    name: "Satish Kamble",
+    role: "MEP Head, HOSMAC",
     quote:
-      "Managing cooling loads in Hyderabad's harsh summer requires precise right-sizing. Shreshtha's HVAC engineering reduced our projected power consumption by 18% while meeting all GHMC and ECBC requirements.",
-    name: "Vikram Reddy",
-    designation: "Managing Director",
-    company: "Acro Towers & Estates, HITEC City",
+      "We have nurtured a strong partnership with Shreshtha for our hospital projects. Their consultancy support for MEP helps us with quick & highly-detailed drawings for efficient project execution.",
   },
   {
+    initials: "AJ",
+    name: "Ar. Atishay Jain",
+    role: "Managing Director, AJ Studios",
     quote:
-      "Their prompt handling of Telangana Fire Services approvals and seamless coordination between electrical, plumbing, and HVAC systems made our commercial high-rise project run on schedule.",
-    name: "K. Mohan Krishna",
-    designation: "Chief Project Coordinator",
-    company: "Pragati Infra Holdings, Gachibowli",
+      "As architects, we are often pushed to deliver on tight deadlines. Shreshtha team has helped us identify key coordination items to meet critical deadlines with coordinated designs.",
   },
 ];
 
@@ -526,16 +526,18 @@ export default function HyderabadLocationPage() {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#e3e0d8]">
-                  <h4 className="font-archivo text-[15px] font-bold text-[#101418]">
-                    {t.name}
-                  </h4>
-                  <p className="font-lora text-[13px] text-[#5c6570]">
-                    {t.designation}
-                  </p>
-                  <p className="font-archivo text-[12px] font-bold text-[#ed2967] mt-0.5">
-                    {t.company}
-                  </p>
+                <div className="pt-4 border-t border-[#e3e0d8] flex items-center gap-3.5">
+                  <div className="font-archivo grid size-[46px] flex-none place-items-center rounded-full bg-[#101418] font-bold text-[#ed2967]">
+                    {t.initials}
+                  </div>
+                  <div>
+                    <h4 className="font-archivo text-[15px] font-bold text-[#101418]">
+                      {t.name}
+                    </h4>
+                    <span className="font-lora text-[12.5px] text-[#5c6570] block">
+                      {t.role}
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}

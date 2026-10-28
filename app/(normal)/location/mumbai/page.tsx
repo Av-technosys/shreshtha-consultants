@@ -135,25 +135,25 @@ const DESIGN_PROCESS = [
 
 const TESTIMONIALS = [
   {
+    initials: "HP",
+    name: "Harshad Patil",
+    role: "Strategy Head, Kolte Patil Developers",
     quote:
-      "Shreshtha Consultants delivered impeccable MEP and BIM coordination for our high-rise commercial project in BKC. Designing around Mumbai's tight space constraints and high ambient humidity was critical, and their engineering precision prevented costly on-site clashes.",
-    name: "Vikram Singhania",
-    designation: "Senior VP (Infrastructure & Projects)",
-    company: "Apex Landmark Developers, Mumbai",
+      "Shreshtha offers a unique AI-enabled consultancy for MEP. With AI, optimised MEP designs to save materials, clash-coordinated drawings & multiple routing options are now possible.",
   },
   {
+    initials: "SK",
+    name: "Satish Kamble",
+    role: "MEP Head, HOSMAC",
     quote:
-      "Designing HVAC and plumbing systems for Mumbai's heavy monsoon and coastal salt exposure requires specialized expertise. Shreshtha optimized our central chiller plant and stormwater drainage layouts flawlessly.",
-    name: "Pooja Merchant",
-    designation: "Principal Architect",
-    company: "Merchant & Associates, Mumbai",
+      "We have nurtured a strong partnership with Shreshtha for our hospital projects. Their consultancy support for MEP helps us with quick & highly-detailed drawings for efficient project execution.",
   },
   {
+    initials: "AJ",
+    name: "Ar. Atishay Jain",
+    role: "Managing Director, AJ Studios",
     quote:
-      "Their mastery over MCGM compliance, NBC standards, and Mumbai Fire Brigade norms made statutory approvals smooth and fast for our multi-specialty hospital facility in Navi Mumbai.",
-    name: "Dr. Rajesh Kothari",
-    designation: "Director of Projects",
-    company: "Metropolis Healthcare Trust, Navi Mumbai",
+      "As architects, we are often pushed to deliver on tight deadlines. Shreshtha team has helped us identify key coordination items to meet critical deadlines with coordinated designs.",
   },
 ];
 
@@ -496,16 +496,18 @@ export default function MumbaiLocationPage() {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#e3e0d8]">
-                  <h4 className="font-archivo text-[15px] font-bold text-[#142436]">
-                    {t.name}
-                  </h4>
-                  <p className="font-lora text-[13px] text-[#5c6570]">
-                    {t.designation}
-                  </p>
-                  <p className="font-archivo text-[12px] font-bold text-[#ed2967] mt-0.5">
-                    {t.company}
-                  </p>
+                <div className="pt-4 border-t border-[#e3e0d8] flex items-center gap-3.5">
+                  <div className="font-archivo grid size-[46px] flex-none place-items-center rounded-full bg-[#101418] font-bold text-[#ed2967]">
+                    {t.initials}
+                  </div>
+                  <div>
+                    <h4 className="font-archivo text-[15px] font-bold text-[#142436]">
+                      {t.name}
+                    </h4>
+                    <span className="font-lora text-[12.5px] text-[#5c6570] block">
+                      {t.role}
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}

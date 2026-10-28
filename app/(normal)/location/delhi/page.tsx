@@ -150,25 +150,25 @@ const WHY_CHOOSE_US = [
 
 const TESTIMONIALS = [
   {
+    initials: "HP",
+    name: "Harshad Patil",
+    role: "Strategy Head, Kolte Patil Developers",
     quote:
-      "Shreshtha Consultants delivered high-precision MEP coordination for our commercial project in Gurugram. Their proactive clash detection on BIM saved us weeks of rework on site.",
-    name: "Rajiv Mehra",
-    designation: "Vice President (Projects)",
-    company: "Skyline Developers, Gurugram",
+      "Shreshtha offers a unique AI-enabled consultancy for MEP. With AI, optimised MEP designs to save materials, clash-coordinated drawings & multiple routing options are now possible.",
   },
   {
+    initials: "SK",
+    name: "Satish Kamble",
+    role: "MEP Head, HOSMAC",
     quote:
-      "Designing HVAC systems for Delhi's extreme climate is notoriously difficult. Shreshtha's engineering team optimized our central plant, drastically cutting both initial tonnage and ongoing energy bills.",
-    name: "Sunil Sharma",
-    designation: "Principal Architect",
-    company: "Studio Synthesis, New Delhi",
+      "We have nurtured a strong partnership with Shreshtha for our hospital projects. Their consultancy support for MEP helps us with quick & highly-detailed drawings for efficient project execution.",
   },
   {
+    initials: "AJ",
+    name: "Ar. Atishay Jain",
+    role: "Managing Director, AJ Studios",
     quote:
-      "Their depth of knowledge in fire safety norms, local authority guidelines, and electrical reliability made our hospital project in Noida seamless from concept through commissioning.",
-    name: "Dr. Ananya Verma",
-    designation: "Director of Infrastructure",
-    company: "CarePlus Healthcare Group, Noida",
+      "As architects, we are often pushed to deliver on tight deadlines. Shreshtha team has helped us identify key coordination items to meet critical deadlines with coordinated designs.",
   },
 ];
 
@@ -605,14 +605,18 @@ export default function DelhiLocationPage() {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#e3e0d8]">
-                  <h4 className="font-archivo text-[15px] font-bold text-[#101418]">
-                    {t.name}
-                  </h4>
-                  <p className="text-[13px] text-[#5c6570]">{t.designation}</p>
-                  <p className="font-archivo text-[12px] font-bold text-[#ed2967] mt-0.5">
-                    {t.company}
-                  </p>
+                <div className="pt-4 border-t border-[#e3e0d8] flex items-center gap-3.5">
+                  <div className="font-archivo grid size-[46px] flex-none place-items-center rounded-full bg-[#101418] font-bold text-[#ed2967]">
+                    {t.initials}
+                  </div>
+                  <div>
+                    <h4 className="font-archivo text-[15px] font-bold text-[#101418]">
+                      {t.name}
+                    </h4>
+                    <span className="text-[12.5px] text-[#5c6570] block">
+                      {t.role}
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}

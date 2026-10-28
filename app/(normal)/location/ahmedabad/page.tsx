@@ -129,25 +129,25 @@ const DESIGN_PROCESS = [
 
 const TESTIMONIALS = [
   {
+    initials: "HP",
+    name: "Harshad Patil",
+    role: "Strategy Head, Kolte Patil Developers",
     quote:
-      "Shreshtha Consultants delivered end-to-end MEP coordination for our 800,000 sq. ft. IT campus in Ahmedabad. Their proactive BIM clash resolution and deep understanding of AMC and UGVCL protocols saved us over 6 weeks during execution.",
-    name: "Siddharth Nambiar",
-    designation: "Project Director",
-    company: "Nexus Tech Parks, Ahmedabad",
+      "Shreshtha offers a unique AI-enabled consultancy for MEP. With AI, optimised MEP designs to save materials, clash-coordinated drawings & multiple routing options are now possible.",
   },
   {
+    initials: "SK",
+    name: "Satish Kamble",
+    role: "MEP Head, HOSMAC",
     quote:
-      "Designing MEP for Ahmedabad's climate requires intelligent right-sizing rather than over-cooling. Shreshtha's HVAC and PHE design delivered significant lifecycle savings while fulfilling all rainwater harvesting mandates seamlessly.",
-    name: "Archana Hegde",
-    designation: "Lead Infrastructure Architect",
-    company: "Urban Matrix Studio, Ahmedabad",
+      "We have nurtured a strong partnership with Shreshtha for our hospital projects. Their consultancy support for MEP helps us with quick & highly-detailed drawings for efficient project execution.",
   },
   {
+    initials: "AJ",
+    name: "Ar. Atishay Jain",
+    role: "Managing Director, AJ Studios",
     quote:
-      "Their prompt handling of Gujarat State Fire NOC documentation and comprehensive fire-fighting schematics made our healthcare facility expansion completely hassle-free. Truly one of the finest MEP consultants in Ahmedabad.",
-    name: "Dr. K. R. Venkatesh",
-    designation: "Managing Trustee",
-    company: "Apex Healthcare Institutions, Ahmedabad",
+      "As architects, we are often pushed to deliver on tight deadlines. Shreshtha team has helped us identify key coordination items to meet critical deadlines with coordinated designs.",
   },
 ];
 
@@ -528,16 +528,18 @@ export default function AhmedabadLocationPage() {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#e3e0d8]">
-                  <h4 className="font-archivo text-[15px] font-bold text-[#101418]">
-                    {t.name}
-                  </h4>
-                  <p className="font-lora text-[13px] text-[#5c6570]">
-                    {t.designation}
-                  </p>
-                  <p className="font-archivo text-[12px] font-bold text-[#ed2967] mt-0.5">
-                    {t.company}
-                  </p>
+                <div className="pt-4 border-t border-[#e3e0d8] flex items-center gap-3.5">
+                  <div className="font-archivo grid size-[46px] flex-none place-items-center rounded-full bg-[#101418] font-bold text-[#ed2967]">
+                    {t.initials}
+                  </div>
+                  <div>
+                    <h4 className="font-archivo text-[15px] font-bold text-[#101418]">
+                      {t.name}
+                    </h4>
+                    <span className="font-lora text-[12.5px] text-[#5c6570] block">
+                      {t.role}
+                    </span>
+                  </div>
                 </div>
               </div>
             ))}
