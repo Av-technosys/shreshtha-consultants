@@ -7,7 +7,7 @@
 @theme {
   --font-archivo: var(--font-archivo-family), sans-serif;
   --font-inter: var(--font-inter-family), sans-serif;
-  --font-lora: var(--font-lora-family), serif;
+  --font-lora: var(--font-inter-family), sans-serif;
   --font-poppins: var(--font-poppins-family), sans-serif;
 }
 
@@ -21,7 +21,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background font-lora text-foreground antialiased;
+    @apply bg-background font-inter text-foreground antialiased;
   }
   h1,
   h2,

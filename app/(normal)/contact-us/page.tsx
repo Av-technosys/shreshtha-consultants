@@ -24,7 +24,7 @@ const HeroSection = () => (
           <br className="hidden md:block" /> journey.
         </h1>
         <p
-          className={`font-lora text-[16px] md:text-[17px] font-normal leading-[25.6px] md:leading-[27.2px] tracking-normal text-[#5C6570] m-0 max-w-[520px] px-[16px] md:px-0`}
+          className={`font-inter text-[16px] md:text-[17px] font-normal leading-[25.6px] md:leading-[27.2px] tracking-normal text-[#5C6570] m-0 max-w-[520px] px-[16px] md:px-0`}
         >
           Connect with us to collaborate, share ideas, or start a
           <br className="hidden md:block" /> conversation.
@@ -49,7 +49,7 @@ const CardsSection = () => (
               Visit Us
             </h3>
             <p
-              className={`font-lora text-[13px] font-normal leading-[20.8px] text-[#5C6570] m-0 pr-[8px]`}
+              className={`font-inter text-[13px] font-normal leading-[20.8px] text-[#5C6570] m-0 pr-[8px]`}
             >
               D - 27, Near Pillar No. 107, New Sanganer Rd., Shyam Nagar, Jaipur
             </p>
@@ -67,7 +67,7 @@ const CardsSection = () => (
               Call Us
             </h3>
             <p
-              className={`font-lora text-[13px] font-normal leading-[20.8px] text-[#5C6570] m-0`}
+              className={`font-inter text-[13px] font-normal leading-[20.8px] text-[#5C6570] m-0`}
             >
               +91-9799858301
             </p>
@@ -85,7 +85,7 @@ const CardsSection = () => (
               Email Us
             </h3>
             <p
-              className={`font-lora text-[13px] font-normal leading-[20.8px] text-[#5C6570] m-0 truncate w-full`}
+              className={`font-inter text-[13px] font-normal leading-[20.8px] text-[#5C6570] m-0 truncate w-full`}
             >
               contact@shreshthaconsultants.com
             </p>
@@ -103,7 +103,7 @@ const ConnectSection = () => {
     <section className="pb-[120px] flex flex-col items-center">
       <Container className="flex flex-col items-center max-lg:px-[4%]">
         <div
-          className={`font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] bg-white p-[8px] rounded-[16px] md:rounded-full border border-[#eee] shadow-[0_2px_12px_rgba(0,0,0,0.02)] flex items-center mb-[48px] w-full max-w-[500px] mx-auto`}
+          className={`font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] bg-white p-[8px] rounded-[16px] md:rounded-full border border-[#eee] shadow-[0_2px_12px_rgba(0,0,0,0.02)] flex items-center mb-[48px] w-full max-w-[500px] mx-auto`}
         >
           <button
             onClick={() => setActiveTab("general")}
@@ -128,7 +128,7 @@ const ConnectSection = () => {
                 Let&apos;s Connect
               </h2>
               <p
-                className={`font-lora text-[14.5px] font-normal leading-[23.2px] text-[#5C6570] max-w-[420px] mx-auto m-0`}
+                className={`font-inter text-[14.5px] font-normal leading-[23.2px] text-[#5C6570] max-w-[420px] mx-auto m-0`}
               >
                 We&apos;d love to hear from you. Tell us about your project and
                 the Shreshtha team will get in touch.
@@ -292,7 +292,7 @@ const ConnectSection = () => {
                 Interested in Partnering?
               </h2>
               <p
-                className={`font-lora text-[14.5px] font-normal leading-[23.2px] text-[#5C6570] max-w-[540px] mx-auto m-0`}
+                className={`font-inter text-[14.5px] font-normal leading-[23.2px] text-[#5C6570] max-w-[540px] mx-auto m-0`}
               >
                 Share your details and tell us about your products or services.
                 Our team will get in touch if there&apos;s a suitable
@@ -418,7 +418,7 @@ const ConnectSection = () => {
 
 const MeetUsSection = () => (
   <section
-    className={`font-lora w-full grid grid-cols-1 md:grid-cols-2 text-[16px] font-normal leading-[25.6px] text-white`}
+    className={`font-inter w-full grid grid-cols-1 md:grid-cols-2 text-[16px] font-normal leading-[25.6px] text-white`}
   >
     <div className="bg-[#101418] flex flex-col justify-center py-[80px] md:py-[120px] md:items-end">
       <div className="w-full max-w-[640px] px-[6vw] md:px-[4vw] lg:pl-[32px] lg:pr-[40px] flex flex-col items-start">
@@ -438,7 +438,7 @@ const MeetUsSection = () => (
         </h2>
 
         <p
-          className={`font-lora text-[14.5px] font-normal leading-[25.375px] text-white mb-[40px] max-w-[420px]`}
+          className={`font-inter text-[14.5px] font-normal leading-[25.375px] text-white mb-[40px] max-w-[420px]`}
         >
           Visit Shreshtha Consultants to experience smart, AI-driven engineering
           solutions firsthand.
@@ -494,7 +494,7 @@ const MeetUsSection = () => (
 export default function ContactPage() {
   return (
     <div
-      className={`font-lora min-h-screen bg-[#F7F6F2] text-[16px] font-normal leading-[25.6px] tracking-normal text-[#101418]`}
+      className={`font-inter min-h-screen bg-[#F7F6F2] text-[16px] font-normal leading-[25.6px] tracking-normal text-[#101418]`}
     >
       <HeroSection />
       <CardsSection />

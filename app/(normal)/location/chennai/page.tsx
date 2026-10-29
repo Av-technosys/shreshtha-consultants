@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/common/container";
+import { TrustSection } from "@/components/home/trust-section";
 import { ResendForm } from "@/components/forms/resend-form";
 import { Star, ChevronDown } from "lucide-react";
 
@@ -21,38 +22,30 @@ const STATS = [
   { n: "50+", l: "Team Size" },
 ];
 
-const TRUST_LOGOS = [
-  { id: 1, src: "/Home/clients/logo-1.png", alt: "Client Logo 1" },
-  { id: 2, src: "/Home/clients/logo-2.png", alt: "Client Logo 2" },
-  { id: 3, src: "/Home/clients/logo-3.png", alt: "Client Logo 3" },
-  { id: 4, src: "/Home/clients/logo-4.png", alt: "Client Logo 4" },
-];
-
-const WHY_CHOOSE_US = [
+const WHY_WORK_ROWS = [
   {
-    icon: "/location/chennai/card1-img.png",
+    num: "01",
     title: "MEP engineering expert team",
     desc: "Team of domain experts in HVAC, electrical design, water engineering, and fire-safety compliance.",
+    img: "/location/chennai/card1-img.jpg",
+    alt: "MEP engineering expert team",
+    rev: false,
   },
   {
-    icon: "/location/chennai/card2-img.png",
+    num: "02",
     title: "Domain expertise with industry projects",
     desc: "We have approx. 1050+ completed projects all across India in varied industries requiring interdisciplinary collaboration.",
+    img: "/location/chennai/card2-img.JPG",
+    alt: "Domain expertise with industry projects",
+    rev: true,
   },
   {
-    icon: "/location/chennai/card3-img.png",
+    num: "03",
     title: "Compliance and safety assurances",
     desc: "Our projects are based on CMDA standards, NBC, IS code compliance, and fire department norms.",
-  },
-  {
-    icon: "/location/chennai/card4-img.png",
-    title: "Efficient engineering and cost savings",
-    desc: "Accurate loading calculation, energy modelling, and planning of resources can help save life cycle cost.",
-  },
-  {
-    icon: "/location/chennai/card5-img.png",
-    title: "Effective client delivery",
-    desc: "Effective communication and no site holdups.",
+    img: "/location/chennai/card3-img.jpeg",
+    alt: "Compliance and safety assurances",
+    rev: false,
   },
 ];
 
@@ -196,7 +189,7 @@ const FAQS = [
 
 export default function ChennaiLocationPage() {
   return (
-    <div className="bg-[#f7f6f2] text-[#101418] font-lora antialiased min-h-screen">
+    <div className="bg-[#f7f6f2] text-[#101418] font-inter antialiased min-h-screen">
       {/* 1. HERO SECTION */}
       <section className="relative overflow-hidden bg-[#142436] pt-[120px] pb-[100px] md:pb-[120px] max-[760px]:pt-[100px] max-[760px]:pb-[90px] text-white">
         {/* Background & Overlays */}
@@ -220,7 +213,7 @@ export default function ChennaiLocationPage() {
             </h1>
 
             {/* Sub-headline Paragraphs */}
-            <div className="mb-8 flex flex-col gap-4 text-[16px] leading-[1.8] text-neutral-300 font-lora">
+            <div className="mb-8 flex flex-col gap-4 text-[16px] leading-[1.8] text-neutral-300 font-inter">
               <p>
                 Development in Chennai takes place in commercial areas,
                 residential complexes, industries, and institutions, each of
@@ -277,32 +270,86 @@ export default function ChennaiLocationPage() {
       </section>
 
       {/* 3. INDUSTRY TRUSTED LOGOS */}
-      <section className="py-[60px] max-[760px]:py-[40px] text-center">
+      <TrustSection />
+
+      {/* 4. WHY WORK WITH US */}
+      <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px]">
         <Container>
-          <p className="font-archivo text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] mb-8 inline-flex items-center justify-center gap-2.5 before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
-            Industry Trusted
-          </p>
-          <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 flex-wrap">
-            {TRUST_LOGOS.map((logo) => (
+          <div className="text-center max-w-[760px] mx-auto mb-14">
+            <div className="font-archivo mb-4 flex items-center justify-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
+              Why Work With Us
+            </div>
+            <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#142436]">
+              What Makes Us the Preferred MEP Consultants in Chennai
+            </h2>
+            <p className="font-inter mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
+              Good engineering is a blend of experience, accuracy, and
+              practicality. Here is how we do it differently:
+            </p>
+          </div>
+
+          <div className="space-y-6 sm:space-y-8 max-w-[1240px] mx-auto">
+            {WHY_WORK_ROWS.map((row) => (
               <div
-                key={logo.id}
-                className="bg-white py-3.5 sm:py-4 px-7 sm:px-9 rounded-[16px] border border-[#e3e0d8] shadow-[0_4px_20px_rgba(0,0,0,0.02)]"
+                key={row.num}
+                className="grid grid-cols-1 md:grid-cols-2 items-stretch rounded-[22px] shadow-[0_4px_25px_rgba(0,0,0,0.04)] overflow-hidden"
               >
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={200}
-                  height={65}
-                  unoptimized
-                  className="h-11 sm:h-13 md:h-14 w-auto max-w-[155px] sm:max-w-[180px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
-                />
+                {!row.rev ? (
+                  <>
+                    <div className="relative min-h-[280px] md:min-h-[340px] bg-[#e3e0d8] rounded-[22px_22px_0_0] md:rounded-[22px_0_0_22px] overflow-hidden">
+                      <Image
+                        src={row.img}
+                        alt={row.alt}
+                        fill
+                        unoptimized
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
+                    <div className="bg-white border border-[#e3e0d8] md:border-l-0 rounded-[0_0_22px_22px] md:rounded-[0_22px_22px_0] p-8 sm:p-12 lg:p-14 flex flex-col justify-center">
+                      <div className="font-archivo text-[11px] sm:text-[12px] font-bold tracking-[0.1em] text-[#ed2967] mb-3">
+                        {row.num}
+                      </div>
+                      <h3 className="font-archivo text-[20px] sm:text-[22px] md:text-[24px] font-bold text-[#142436] mb-3 leading-snug tracking-[-0.02em]">
+                        {row.title}
+                      </h3>
+                      <p className="font-inter text-[16px] text-[#5c6570] leading-[1.8] max-w-[440px]">
+                        {row.desc}
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="bg-white border border-[#e3e0d8] md:border-r-0 rounded-[0_0_22px_22px] md:rounded-[22px_0_0_22px] p-8 sm:p-12 lg:p-14 flex flex-col justify-center order-2 md:order-1">
+                      <div className="font-archivo text-[11px] sm:text-[12px] font-bold tracking-[0.1em] text-[#ed2967] mb-3">
+                        {row.num}
+                      </div>
+                      <h3 className="font-archivo text-[20px] sm:text-[22px] md:text-[24px] font-bold text-[#142436] mb-3 leading-snug tracking-[-0.02em]">
+                        {row.title}
+                      </h3>
+                      <p className="font-inter text-[16px] text-[#5c6570] leading-[1.8] max-w-[440px]">
+                        {row.desc}
+                      </p>
+                    </div>
+                    <div className="relative min-h-[280px] md:min-h-[340px] bg-[#e3e0d8] rounded-[22px_22px_0_0] md:rounded-[0_22px_22px_0] overflow-hidden order-1 md:order-2">
+                      <Image
+                        src={row.img}
+                        alt={row.alt}
+                        fill
+                        unoptimized
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
+                  </>
+                )}
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* 4. OUR MEP SERVICES & INDUSTRIES WE SERVE */}
+      {/* 5. OUR MEP SERVICES & INDUSTRIES WE SERVE */}
       <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px] border-t border-[#e3e0d8]">
         <Container className="grid grid-cols-1 lg:grid-cols-[1.22fr_0.78fr] gap-10 lg:gap-14 items-start">
           {/* Left Column: Our MEP Services */}
@@ -313,7 +360,7 @@ export default function ChennaiLocationPage() {
             <h2 className="font-archivo mb-4 text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
               MEP Consulting Services in Chennai
             </h2>
-            <p className="font-lora text-[16px] leading-[1.8] text-[#5c6570] mb-8">
+            <p className="font-inter text-[16px] leading-[1.8] text-[#5c6570] mb-8">
               We provide comprehensive building services engineering tailored
               for coastal climate durability, energy efficiency, and operational
               excellence.
@@ -337,7 +384,7 @@ export default function ChennaiLocationPage() {
                     {tile.points.map((pt, pIdx) => (
                       <li
                         key={pIdx}
-                        className="font-lora text-[13.5px] sm:text-[14px] leading-[1.65] text-[#5c6570] flex items-start gap-2.5"
+                        className="font-inter text-[13.5px] sm:text-[14px] leading-[1.65] text-[#5c6570] flex items-start gap-2.5"
                       >
                         <span className="text-[#ed2967] mt-1 shrink-0 text-[10px]">
                           ●
@@ -373,108 +420,7 @@ export default function ChennaiLocationPage() {
         </Container>
       </section>
 
-      {/* 5. CHENNAI REGULATIONS, APPROVALS AND COMPLIANCE */}
-      <section className="bg-white py-[70px] max-[760px]:py-[40px] border-y border-[#e3e0d8]">
-        <Container className="max-w-[850px]">
-          <div className="font-archivo mb-4 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
-            Statutory Compliance
-          </div>
-          <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418] mb-6">
-            Chennai Regulations, Approvals and Compliance
-          </h2>
-          <div className="flex flex-col gap-5 text-[16px] leading-[1.8] text-[#5c6570] font-lora">
-            <p>
-              In Chennai, there are multiple authorities involved, and each one
-              has its own set of specifications. Our design will be according to
-              the NBC 2016 and other IS codes, ECBC, fire safety specifications,
-              and CMDA and DTCP building regulations, and the Tamil Nadu
-              Electricity Board for the power supply and metering. Additionally,
-              CMWSSB for water and sewerage, and Tamil Nadu Fire and Rescue
-              Services for fire approvals should also be taken into
-              consideration. It is recommended to confirm each authority and its
-              nomenclature.
-            </p>
-            <p>
-              It assists in saving time from getting delayed at the approval
-              stage.
-            </p>
-          </div>
-        </Container>
-      </section>
-
-      {/* 6. WHAT MAKES US THE PREFERRED MEP CONSULTANTS IN CHENNAI */}
-      <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px]">
-        <Container>
-          <div className="text-center max-w-[760px] mx-auto mb-14">
-            <div className="font-archivo mb-4 flex items-center justify-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
-              Engineering Excellence
-            </div>
-            <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
-              What Makes Us the Preferred MEP Consultants in Chennai
-            </h2>
-            <p className="font-lora mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
-              Good engineering is a blend of experience, accuracy, and
-              practicality. Here is how we do it differently:
-            </p>
-          </div>
-
-          {/* Top Row: 3 White Cards on Cream Background */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
-            {WHY_CHOOSE_US.slice(0, 3).map((card, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-[24px] p-6 sm:p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgb(0_0_0_/_0.04)] border border-[#e3e0d8] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgb(0_0_0_/_0.08)] hover:border-[#101418]"
-              >
-                <div className="w-[85px] h-[85px] relative mb-6 flex items-center justify-center">
-                  <Image
-                    src={card.icon}
-                    alt={card.title}
-                    width={78}
-                    height={78}
-                    unoptimized
-                    className="object-contain"
-                  />
-                </div>
-                <h3 className="font-archivo text-[16px] sm:text-[17px] font-bold leading-tight tracking-[0.01em] text-[#101418] mb-3">
-                  {card.title}
-                </h3>
-                <p className="font-lora text-[13.5px] leading-[1.65] text-[#5c6570]">
-                  {card.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Bottom Row: 2 White Cards Centered */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-[850px] mx-auto">
-            {WHY_CHOOSE_US.slice(3, 5).map((card, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-[24px] p-6 sm:p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgb(0_0_0_/_0.04)] border border-[#e3e0d8] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgb(0_0_0_/_0.08)] hover:border-[#101418]"
-              >
-                <div className="w-[85px] h-[85px] relative mb-6 flex items-center justify-center">
-                  <Image
-                    src={card.icon}
-                    alt={card.title}
-                    width={78}
-                    height={78}
-                    unoptimized
-                    className="object-contain"
-                  />
-                </div>
-                <h3 className="font-archivo text-[16px] sm:text-[17px] font-bold leading-tight tracking-[0.01em] text-[#101418] mb-3">
-                  {card.title}
-                </h3>
-                <p className="font-lora text-[13.5px] leading-[1.65] text-[#5c6570]">
-                  {card.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* 7. OUR MEP DESIGN PROCESS*/}
+      {/* 6. OUR MEP DESIGN PROCESS*/}
       <section className="bg-white py-[70px] max-[760px]:py-[40px] border-y border-[#e3e0d8]">
         <Container>
           <div className="text-center max-w-[760px] mx-auto mb-14">
@@ -484,7 +430,7 @@ export default function ChennaiLocationPage() {
             <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
               Our MEP Design Process
             </h2>
-            <p className="font-lora mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
+            <p className="font-inter mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
               From concept formulation to testing and commissioning, our 6-stage
               engineering workflow ensures zero site clashes and total
               regulatory compliance.
@@ -504,7 +450,7 @@ export default function ChennaiLocationPage() {
                   <h3 className="font-archivo text-[16px] sm:text-[17px] font-bold leading-tight tracking-[0.01em] text-[#101418] mb-2.5">
                     {proc.title}
                   </h3>
-                  <p className="font-lora text-[13.5px] leading-[1.65] text-[#5c6570]">
+                  <p className="font-inter text-[13.5px] leading-[1.65] text-[#5c6570]">
                     {proc.desc}
                   </p>
                 </div>
@@ -514,7 +460,7 @@ export default function ChennaiLocationPage() {
         </Container>
       </section>
 
-      {/* 8. WHAT OUR CLIENTS SAY */}
+      {/* 7. WHAT OUR CLIENTS SAY */}
       <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px] border-t border-[#e3e0d8]">
         <Container>
           <div className="text-center max-w-[620px] mx-auto mb-14">
@@ -524,7 +470,7 @@ export default function ChennaiLocationPage() {
             <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
               What Our Clients Say
             </h2>
-            <p className="font-lora mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
+            <p className="font-inter mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
               Trusted by leading architects, industrial developers, and project
               managers across Chennai.
             </p>
@@ -547,7 +493,7 @@ export default function ChennaiLocationPage() {
                     ))}
                   </div>
                   {/* Quote */}
-                  <p className="font-lora text-[14px] sm:text-[15px] text-[#101418] leading-[1.75] italic mb-6">
+                  <p className="font-inter text-[14px] sm:text-[15px] text-[#101418] leading-[1.75] italic mb-6">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                 </div>
@@ -560,7 +506,7 @@ export default function ChennaiLocationPage() {
                     <h4 className="font-archivo text-[15px] font-bold text-[#101418]">
                       {t.name}
                     </h4>
-                    <span className="font-lora text-[12.5px] text-[#5c6570] block">
+                    <span className="font-inter text-[12.5px] text-[#5c6570] block">
                       {t.role}
                     </span>
                   </div>
@@ -571,7 +517,7 @@ export default function ChennaiLocationPage() {
         </Container>
       </section>
 
-      {/* 9. FREQUENTLY ASKED QUESTIONS */}
+      {/* 8. FREQUENTLY ASKED QUESTIONS */}
       <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px] border-t border-[#e3e0d8]">
         <Container className="max-w-[850px]">
           <div className="text-center mb-12">
@@ -581,7 +527,7 @@ export default function ChennaiLocationPage() {
             <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
               Frequently Asked Questions
             </h2>
-            <p className="font-lora mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
+            <p className="font-inter mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
               Everything you need to know about appointing MEP consultants in
               Chennai.
             </p>
@@ -599,7 +545,7 @@ export default function ChennaiLocationPage() {
                     <ChevronDown className="w-4 h-4" />
                   </span>
                 </summary>
-                <div className="font-lora px-5 sm:px-6 pb-6 text-[14px] sm:text-[14.5px] leading-[1.75] text-[#5c6570]">
+                <div className="font-inter px-5 sm:px-6 pb-6 text-[14px] sm:text-[14.5px] leading-[1.75] text-[#5c6570]">
                   {faq.a}
                 </div>
               </details>
@@ -608,7 +554,7 @@ export default function ChennaiLocationPage() {
         </Container>
       </section>
 
-      {/* 10. BOOK A CONSULTATION FORM */}
+      {/* 9. BOOK A CONSULTATION FORM */}
       <section className="bg-[#142436] text-white py-16 md:py-24" id="form">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
@@ -620,7 +566,7 @@ export default function ChennaiLocationPage() {
               <h2 className="font-archivo text-[28px] sm:text-[36px] md:text-[46px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
                 Partner With Top MEP Consulting Experts in Chennai
               </h2>
-              <p className="font-lora mt-4 text-[16px] leading-[1.8] text-white/70 max-w-[500px]">
+              <p className="font-inter mt-4 text-[16px] leading-[1.8] text-white/70 max-w-[500px]">
                 If you’re searching for dependable MEP consultants in Chennai,
                 Shreshtha Consultants brings the technical strength and
                 execution support needed to deliver a successful project.

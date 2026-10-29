@@ -33,7 +33,7 @@ const HeroSection = () => {
             management.
           </h1>
 
-          <p className="font-lora text-[16px] md:text-[18px] font-normal leading-[26px] md:leading-[28px] text-white max-w-[640px] m-0 text-white/90 pr-[10%] md:pr-0">
+          <p className="font-inter text-[16px] md:text-[18px] font-normal leading-[26px] md:leading-[28px] text-white max-w-[640px] m-0 text-white/90 pr-[10%] md:pr-0">
             At Shreshtha Consultancy, we leverage cutting-edge Building
             Information Modeling to ensure accuracy, efficiency, and seamless
             project execution — from conceptual design to final implementation.
@@ -47,7 +47,7 @@ const HeroSection = () => {
 const TypesOfBimSection = () => {
   return (
     <section className="w-full bg-[#F7F6F2] pt-[80px] md:pt-[100px] pb-[8px]">
-      <Container className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] max-lg:px-[6%]">
+      <Container className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] max-lg:px-[6%]">
         <div className="flex items-center gap-[12px] mb-[16px]">
           <span className="block w-[28px] h-[1.5px] bg-[#ee2559] shrink-0" />
           <span className="font-archivo text-[12px] font-semibold leading-[19.2px] tracking-[2.64px] text-[#5C6570] uppercase">
@@ -61,13 +61,13 @@ const TypesOfBimSection = () => {
         </h2>
 
         <div>
-          <div className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
+          <div className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] flex flex-col pt-[40px] md:pt-[64px] pl-[16px] md:pl-[48px]"
+              className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] flex flex-col pt-[40px] md:pt-[64px] pl-[16px] md:pl-[48px]"
             >
               <span className="font-archivo text-[13px] font-bold leading-[20.8px] text-[#ED2967] mb-[20px]">
                 01
@@ -75,7 +75,7 @@ const TypesOfBimSection = () => {
               <h3 className="font-archivo text-[22px] font-bold leading-[22.88px] tracking-[-0.66px] text-[#101418] mb-[24px]">
                 3D BIM Modeling
               </h3>
-              <p className="font-lora text-[14px] font-normal leading-[23.1px] text-[#5C6570] m-0 max-w-[420px]">
+              <p className="font-inter text-[14px] font-normal leading-[23.1px] text-[#5C6570] m-0 max-w-[420px]">
                 Detailed, coordinated 3D models that let you preview a project&apos;s
                 performance and aesthetics before a single beam goes up.
               </p>
@@ -86,7 +86,7 @@ const TypesOfBimSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-              className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418]"
+              className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418]"
             >
               <div className="bg-white rounded-[24px] p-[16px] shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-[#eee] flex items-center justify-center">
                 <img
@@ -100,13 +100,13 @@ const TypesOfBimSection = () => {
         </div>
 
         <div>
-          <div className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
+          <div className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
             <motion.div
               initial={{ opacity: 0, scale: 1.05 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-              className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] order-last md:order-first flex justify-center"
+              className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] order-last md:order-first flex justify-center"
             >
               <div className="bg-white w-full max-w-[460px] aspect-[4/3] rounded-[24px] p-[20px] shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-[#eee] flex items-center justify-center ml-[20px] md:ml-[60px]">
                 <img
@@ -122,7 +122,7 @@ const TypesOfBimSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] flex flex-col pt-[40px] md:pt-[64px] pr-[16px] md:pr-[48px] order-first md:order-last"
+              className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] flex flex-col pt-[40px] md:pt-[64px] pr-[16px] md:pr-[48px] order-first md:order-last"
             >
               <span className="font-archivo text-[13px] font-bold leading-[20.8px] text-[#ED2967] mb-[20px]">
                 02
@@ -130,7 +130,7 @@ const TypesOfBimSection = () => {
               <h3 className="font-archivo text-[22px] font-bold leading-[22.88px] tracking-[-0.66px] text-[#101418] mb-[24px]">
                 Clash Detection & Coordination
               </h3>
-              <p className="font-lora text-[14px] font-normal leading-[23.1px] text-[#5C6570] m-0 max-w-[420px]">
+              <p className="font-inter text-[14px] font-normal leading-[23.1px] text-[#5C6570] m-0 max-w-[420px]">
                 We identify and resolve conflicts between architectural,
                 structural, and MEP systems early, keeping designs
                 installation-ready and construction on schedule.
@@ -140,13 +140,13 @@ const TypesOfBimSection = () => {
         </div>
 
         <div>
-          <div className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
+          <div className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] flex flex-col pt-[40px] md:pt-[64px] pl-[16px] md:pl-[48px]"
+              className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] flex flex-col pt-[40px] md:pt-[64px] pl-[16px] md:pl-[48px]"
             >
               <span className="font-archivo text-[13px] font-bold leading-[20.8px] text-[#ED2967] mb-[20px]">
                 03
@@ -154,7 +154,7 @@ const TypesOfBimSection = () => {
               <h3 className="font-archivo text-[22px] font-bold leading-[22.88px] tracking-[-0.66px] text-[#101418] mb-[24px]">
                 BOQ & Quantity Takeoff
               </h3>
-              <p className="font-lora text-[14px] font-normal leading-[23.1px] text-[#5C6570] m-0 max-w-[420px]">
+              <p className="font-inter text-[14px] font-normal leading-[23.1px] text-[#5C6570] m-0 max-w-[420px]">
                 Automatic, accurate quantity takeoffs generate precise bills of
                 quantities for tighter procurement and budget control.
               </p>
@@ -165,7 +165,7 @@ const TypesOfBimSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-              className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418]"
+              className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418]"
             >
               <div className="bg-white rounded-[24px] p-[16px] shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-[#eee] flex items-center justify-center">
                 <img
@@ -179,13 +179,13 @@ const TypesOfBimSection = () => {
         </div>
 
         <div>
-          <div className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
+          <div className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
             <motion.div
               initial={{ opacity: 0, scale: 1.05 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-              className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] order-last md:order-first flex justify-center"
+              className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] order-last md:order-first flex justify-center"
             >
               <div className="bg-white w-full max-w-[460px] aspect-[4/3] rounded-[24px] p-[20px] shadow-[0_4px_20px_rgba(0,0,0,0.02)] border border-[#eee] flex items-center justify-center ml-[20px] md:ml-[60px]">
                 <img
@@ -201,7 +201,7 @@ const TypesOfBimSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] flex flex-col pt-[40px] md:pt-[64px] pr-[16px] md:pr-[48px] order-first md:order-last"
+              className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] flex flex-col pt-[40px] md:pt-[64px] pr-[16px] md:pr-[48px] order-first md:order-last"
             >
               <span className="font-archivo text-[13px] font-bold leading-[20.8px] text-[#ED2967] mb-[20px]">
                 04
@@ -209,7 +209,7 @@ const TypesOfBimSection = () => {
               <h3 className="font-archivo text-[22px] font-bold leading-[22.88px] tracking-[-0.66px] text-[#101418] mb-[24px]">
                 Shop Drawings & Documentation
               </h3>
-              <p className="font-lora text-[14px] font-normal leading-[23.1px] text-[#5C6570] m-0 max-w-[420px]">
+              <p className="font-inter text-[14px] font-normal leading-[23.1px] text-[#5C6570] m-0 max-w-[420px]">
                 Construction-ready shop drawings and complete documentation
                 derived directly from the model, built for smooth contractor
                 handovers.
@@ -219,13 +219,13 @@ const TypesOfBimSection = () => {
         </div>
 
         <div>
-          <div className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
+          <div className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] flex flex-col pt-[32px] md:pt-[100px] pl-[16px] md:pl-[48px]"
+              className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] flex flex-col pt-[32px] md:pt-[100px] pl-[16px] md:pl-[48px]"
             >
               <span className="font-archivo text-[13px] font-bold leading-[20.8px] text-[#ED2967] mb-[20px]">
                 05
@@ -233,7 +233,7 @@ const TypesOfBimSection = () => {
               <h3 className="font-archivo text-[22px] font-bold leading-[22.88px] tracking-[-0.66px] text-[#101418] mb-[24px]">
                 Digital Twin
               </h3>
-              <p className="font-lora text-[14px] font-normal leading-[23.1px] text-[#5C6570] m-0 max-w-[420px]">
+              <p className="font-inter text-[14px] font-normal leading-[23.1px] text-[#5C6570] m-0 max-w-[420px]">
                 Support with NOCs, fire safety approvals, and environmental
                 clearances, backed by the model&apos;s precision.
               </p>
@@ -244,7 +244,7 @@ const TypesOfBimSection = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-              className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] py-[8px]"
+              className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] py-[8px]"
             >
               <div className="rounded-[24px] shadow-[0_4px_20px_rgba(0,0,0,0.06)] overflow-hidden flex items-center justify-center w-full">
                 <img
@@ -258,13 +258,13 @@ const TypesOfBimSection = () => {
         </div>
 
         <div>
-          <div className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
+          <div className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] grid grid-cols-1 md:grid-cols-2 gap-[48px] items-start">
             <motion.div
               initial={{ opacity: 0, scale: 1.05 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-              className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] py-[8px]"
+              className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] py-[8px]"
             >
               <div className="rounded-[24px] shadow-[0_4px_20px_rgba(0,0,0,0.06)] overflow-hidden flex items-center justify-center w-full">
                 <img
@@ -280,7 +280,7 @@ const TypesOfBimSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] flex flex-col pt-[32px] md:pt-[100px] pl-[16px] md:pl-[48px]"
+              className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] flex flex-col pt-[32px] md:pt-[100px] pl-[16px] md:pl-[48px]"
             >
               <span className="font-archivo text-[13px] font-bold leading-[20.8px] text-[#ED2967] mb-[20px]">
                 06
@@ -288,7 +288,7 @@ const TypesOfBimSection = () => {
               <h3 className="font-archivo text-[22px] font-bold leading-[22.88px] tracking-[-0.66px] text-[#101418] mb-[24px]">
                 Scan to BIM
               </h3>
-              <p className="font-lora text-[14px] font-normal leading-[23.1px] text-[#5C6570] m-0 max-w-[420px]">
+              <p className="font-inter text-[14px] font-normal leading-[23.1px] text-[#5C6570] m-0 max-w-[420px]">
                 Long-term operational insights drawn from the model, built for
                 efficiency well beyond handover.
               </p>
@@ -303,7 +303,7 @@ const TypesOfBimSection = () => {
 const GetStartedSection = () => {
   return (
     <section className="w-full bg-[#F7F6F2] pt-[100px] pb-[80px] md:pb-[120px]">
-      <Container className="font-lora text-[16px] font-normal leading-[25.6px] text-[#101418] max-lg:px-[6%] flex flex-col items-center text-center">
+      <Container className="font-inter text-[16px] font-normal leading-[25.6px] text-[#101418] max-lg:px-[6%] flex flex-col items-center text-center">
         <div className="flex items-center gap-[12px] mb-[24px] justify-center">
           <span className="block w-[28px] h-[1.5px] bg-[#ee2559] shrink-0" />
           <span className="font-archivo text-[12px] font-semibold leading-[19.2px] tracking-[2.64px] text-[#5C6570] uppercase">

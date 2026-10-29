@@ -254,7 +254,7 @@ function ProjectsGridContent() {
   const visibleProjects = filteredProjects.slice(0, visibleCount);
 
   return (
-    <section className="w-full bg-[#F7F6F2] pb-[80px] lg:pb-[120px] pt-[48px] lg:pt-[80px] font-lora text-[16px] font-normal leading-[25.6px] text-[#101418]">
+    <section className="w-full bg-[#F7F6F2] pb-[80px] lg:pb-[120px] pt-[48px] lg:pt-[80px] font-inter text-[16px] font-normal leading-[25.6px] text-[#101418]">
       <Container className="max-lg:px-[4%]">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[28px]">
           {visibleProjects.map((project) => (
@@ -279,7 +279,7 @@ function ProjectsGridContent() {
                 <h3 className="mb-[4px] font-archivo text-[20px] md:text-[23px] font-bold leading-[1.15] tracking-[-0.69px] text-[#FFFFFF]">
                   {project.title}
                 </h3>
-                <p className="font-lora text-[12px] md:text-[13.5px] font-normal leading-[1.6] text-white/65">
+                <p className="font-inter text-[12px] md:text-[13.5px] font-normal leading-[1.6] text-white/65">
                   {project.details}
                 </p>
               </div>

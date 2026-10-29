@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Inter, Lora, Poppins } from "next/font/google";
+import { Archivo, Inter, Poppins } from "next/font/google";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -11,12 +11,6 @@ const archivo = Archivo({
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter-family",
-  display: "swap",
-});
-
-const lora = Lora({
-  subsets: ["latin"],
-  variable: "--font-lora-family",
   display: "swap",
 });
 
@@ -95,7 +89,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${inter.variable} ${lora.variable} ${poppins.variable}`}
+      className={`${archivo.variable} ${inter.variable} ${poppins.variable}`}
     >
       <head>
         {/* Google Tag Manager */}
@@ -110,7 +104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
         {/* End Google Tag Manager */}
       </head>
-      <body className="min-h-screen font-lora">
+      <body className="min-h-screen font-inter">
         {/* Google Tag Manager (noscript) */}
         <noscript>
           <iframe

@@ -51,7 +51,7 @@ export function SimpleProjectPage({
           </aside>
 
           <div className="max-w-[820px]">
-            <p className="font-lora text-[17px] leading-[1.8] text-[#343a40]">
+            <p className="font-inter text-[17px] leading-[1.8] text-[#343a40]">
               {title} is part of Shreshtha Consultants&apos; project portfolio, with services focused on reliable,
               coordinated MEP systems for efficient site execution and long-term building performance.
             </p>

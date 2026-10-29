@@ -12,9 +12,9 @@ interface LocationInfoProps {
 
 export function LocationInfo({ title, paragraphs }: LocationInfoProps) {
   return (
-    <section className="w-full bg-[#FFFFFF] py-[60px] md:py-[100px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
+    <section className="w-full bg-[#FFFFFF] py-[60px] md:py-[100px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
       <Container className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-[40px] lg:gap-[60px]">
-        <div className="flex flex-col font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
+        <div className="flex flex-col font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
           <h2 className="font-poppins text-[24px] md:text-[32px] font-semibold leading-[30px] md:leading-[32px] text-[#000000] mb-[20px] md:mb-[24px]">
             {title}
           </h2>
@@ -31,14 +31,14 @@ export function LocationInfo({ title, paragraphs }: LocationInfoProps) {
           </div>
         </div>
 
-        <div className="w-full h-fit bg-[#FFFFFF] rounded-[16px] shadow-[0_10px_40px_rgba(0,0,0,0.15)] p-[30px] md:p-[40px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
+        <div className="w-full h-fit bg-[#FFFFFF] rounded-[16px] shadow-[0_10px_40px_rgba(0,0,0,0.15)] p-[30px] md:p-[40px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
           <h3 className="font-poppins text-[22px] md:text-[26px] font-medium leading-[26px] text-[#ED2967] text-center mb-[24px] md:mb-[30px]">
             Connect With Us
           </h3>
 
           <ResendForm
             formType="Location Info Inquiry"
-            className="flex flex-col gap-[16px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]"
+            className="flex flex-col gap-[16px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]"
           >
             <input
               type="text"
