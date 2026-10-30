@@ -24,7 +24,7 @@ const HeroSection = () => (
           experts.
         </h1>
         <p
-          className={`font-lora text-[18px] font-normal leading-[28.8px] tracking-normal text-[#5C6570] m-0 px-[16px] md:px-0`}
+          className={`font-inter text-[18px] font-normal leading-[28.8px] tracking-normal text-[#5C6570] m-0 px-[16px] md:px-0`}
         >
           Be part of an innovative and inspiring journey.
         </p>
@@ -105,7 +105,7 @@ const TilesSection = () => (
                   {t.title}
                 </h3>
                 <p
-                  className={`font-lora text-[#5C6570] text-[14px] font-normal leading-[23.8px] tracking-normal m-0 max-w-[660px]`}
+                  className={`font-inter text-[#5C6570] text-[14px] font-normal leading-[23.8px] tracking-normal m-0 max-w-[660px]`}
                 >
                   {t.text}
                 </p>
@@ -246,7 +246,7 @@ const ApplySection = () => (
         </h2>
 
         <p
-          className={`font-lora text-[15px] font-normal leading-[26.25px] tracking-normal text-[#5C6570] mb-[48px] lg:mb-[40px] max-w-[480px]`}
+          className={`font-inter text-[15px] font-normal leading-[26.25px] tracking-normal text-[#5C6570] mb-[48px] lg:mb-[40px] max-w-[480px]`}
         >
           Whether or not a role is open today, we&apos;re always glad to hear from
           engineers who want to build something real.
@@ -279,7 +279,7 @@ const ApplySection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-        className="font-lora text-[16px] font-normal leading-[25.6px] tracking-normal text-[#101418] bg-white p-[48px] rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100"
+        className="font-inter text-[16px] font-normal leading-[25.6px] tracking-normal text-[#101418] bg-white p-[48px] rounded-[32px] shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100"
       >
         <ResendForm formType="Career Application" className="flex flex-col gap-[24px]">
           <div className="flex flex-col gap-[10px]">

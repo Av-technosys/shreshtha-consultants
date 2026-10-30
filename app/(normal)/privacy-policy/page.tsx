@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
         <h1 className="font-archivo mt-4 text-[clamp(34px,4vw,54px)] font-semibold leading-[1.05] tracking-[-0.04em]">
           Privacy Policy
         </h1>
-        <div className="mt-8 space-y-5 font-lora text-[16px] leading-8 text-[#5c6570]">
+        <div className="mt-8 space-y-5 font-inter text-[16px] leading-8 text-[#5c6570]">
           <p>
             We collect only the information needed to respond to enquiries, applications, and project requests submitted through this website.
           </p>

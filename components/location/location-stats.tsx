@@ -37,18 +37,18 @@ const STATS = [
 
 export function LocationStats() {
   return (
-    <section className="w-full bg-[#142436] py-[60px] md:py-[100px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
-      <Container className="font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
-        <div className="flex flex-wrap lg:flex-nowrap justify-between gap-y-[40px] md:gap-[40px] lg:gap-0 w-full font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
+    <section className="w-full bg-[#142436] py-[60px] md:py-[100px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
+      <Container className="font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
+        <div className="flex flex-wrap lg:flex-nowrap justify-between gap-y-[40px] md:gap-[40px] lg:gap-0 w-full font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
           {STATS.map((stat, idx) => (
             <div
               key={idx}
-              className={`flex flex-col items-start gap-[16px] md:gap-[24px] font-lora text-[16px] font-normal leading-[24px] text-[#333333] ${
+              className={`flex flex-col items-start gap-[16px] md:gap-[24px] font-inter text-[16px] font-normal leading-[24px] text-[#333333] ${
                 idx < 2 ? "w-[48%] md:w-auto" : "w-[31%] md:w-auto"
               }`}
             >
               <div
-                className={`relative font-lora text-[16px] font-normal leading-[24px] text-[#333333] ${
+                className={`relative font-inter text-[16px] font-normal leading-[24px] text-[#333333] ${
                   idx < 2
                     ? "w-[60px] h-[60px] md:w-[80px] md:h-[80px]"
                     : "w-[50px] h-[50px] md:w-[80px] md:h-[80px]"

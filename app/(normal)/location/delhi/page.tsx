@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/common/container";
+import { TrustSection } from "@/components/home/trust-section";
 import { ResendForm } from "@/components/forms/resend-form";
 import { Star, ChevronDown } from "lucide-react";
 
@@ -19,13 +20,6 @@ const STATS = [
   { n: "25+", l: "Years of Experience" },
   { n: "500+", l: "Clients Served" },
   { n: "50+", l: "Team Size" },
-];
-
-const TRUST_LOGOS = [
-  { id: 1, src: "/Home/clients/logo-1.png", alt: "Client Logo 1" },
-  { id: 2, src: "/Home/clients/logo-2.png", alt: "Client Logo 2" },
-  { id: 3, src: "/Home/clients/logo-3.png", alt: "Client Logo 3" },
-  { id: 4, src: "/Home/clients/logo-4.png", alt: "Client Logo 4" },
 ];
 
 const MEP_SERVICES_TILES = [
@@ -66,6 +60,39 @@ const MEP_SERVICES_TILES = [
   },
 ];
 
+const DESIGN_PROCESS = [
+  {
+    step: "01",
+    title: "Project Study & Requirement Gathering",
+    desc: "We go through your brief, architectural drawings, and the information about the site, after which we establish design parameters and performance goals for the building.",
+  },
+  {
+    step: "02",
+    title: "Conceptual Planning",
+    desc: "We offer the suitable systems, equipment and space allocation, and provide preliminary cost estimates for the budget verification.",
+  },
+  {
+    step: "03",
+    title: "Detailed Engineering",
+    desc: "Our engineers create calculations, layouts, diagrams, and technical specifications in a coordinated BIM environment.",
+  },
+  {
+    step: "04",
+    title: " Statutory Approvals Assistance",
+    desc: "We prepare and organize all necessary documentation for the approvals by local authorities, utility companies, and the fire department.",
+  },
+  {
+    step: "05",
+    title: "Tender and BOQ Drafting",
+    desc: "We prepare tender packages and bill of quantities, and assist you with bid evaluation and comparison of contractors' proposals.",
+  },
+  {
+    step: "06",
+    title: "On-site Assistance & Commissioning",
+    desc: "We assist with the execution of the work on site and its testing and commissioning.",
+  },
+];
+
 const INDUSTRIES_WE_SERVE = [
   "Residential buildings and townships",
   "Commercial offices",
@@ -76,75 +103,46 @@ const INDUSTRIES_WE_SERVE = [
   "Industrial and warehouse facilities",
 ];
 
-const HVAC_APPROACH = [
+const WHY_WORK_ROWS = [
   {
-    title: "Accurate load calculations",
-    desc: "Based on the building's use, orientation, envelope and occupancy, not rules of thumb.",
-  },
-  {
-    title: "System selection by building type",
-    desc: "VRV/VRF suits offices and hotels. Chilled water suits large malls, hospitals and campuses. DX and packaged systems suit smaller floors and industrial spaces.",
-  },
-  {
-    title: "Fresh air, filtration and indoor air quality",
-    desc: "In a city with severe outdoor air pollution, ventilation and filtration design matters as much as cooling capacity.",
-  },
-  {
-    title: "Smoke management and pressurisation",
-    desc: "For stairwells, lobbies and basements, seamlessly coordinated with fire safety design.",
-  },
-  {
-    title: "Lifecycle cost optimization",
-    desc: "We compare capital cost against running cost, so you can see the true cost of each option over 10-15 years.",
-  },
-];
-
-const HVAC_TABLE = [
-  {
-    system: "VRV / VRF",
-    suited: "Offices, hotels, apartments, mid-size buildings",
-    considerations:
-      "Flexible zoning and good part-load efficiency; refrigerant piping limits and higher upfront cost at very large scale",
-  },
-  {
-    system: "Chilled water",
-    suited: "Malls, hospitals, campuses, large commercial buildings",
-    considerations:
-      "Efficient at large scale; needs plant room space, water treatment and skilled maintenance",
-  },
-  {
-    system: "DX / packaged",
-    suited: "Small floors, showrooms, warehouses, industrial",
-    considerations:
-      "Lower cost and simple to install; less efficient for large or varied loads",
-  },
-];
-
-const WHY_CHOOSE_US = [
-  {
-    icon: "/location/delhi/consultant-img1.png",
+    num: "01",
     title: "Proven Expertise",
     desc: "With years of experience in Delhi NCR, we understand local codes, authority requirements, and construction practices, enabling faster approvals and smoother execution.",
+    img: "/location/delhi/consultants-delhi1.png",
+    alt: "Proven Expertise in Delhi NCR",
+    rev: false,
   },
   {
-    icon: "/location/delhi/consultant-img2.png",
+    num: "02",
     title: "Integrated Design Approach",
     desc: "Our coordinated MEP designs minimize clashes, reduce rework, and improve construction efficiency.",
+    img: "/location/delhi/consultants-delhi2.jpg",
+    alt: "Integrated Design Approach",
+    rev: true,
   },
   {
-    icon: "/location/delhi/consultant-img3.png",
+    num: "03",
     title: "Energy-Efficient Solutions",
     desc: "We emphasize sustainable design strategies that reduce operating costs and enhance long-term building performance.",
+    img: "/location/delhi/consultants-delhi3.jpg",
+    alt: "Energy-Efficient Solutions",
+    rev: false,
   },
   {
-    icon: "/location/delhi/consultant-img4.png",
+    num: "04",
     title: "Compliance & Quality Assurance",
     desc: "All designs adhere to NBC, IS codes, international standards, and project-specific requirements.",
+    img: "/location/delhi/consultants-delhi4.jpeg",
+    alt: "Compliance & Quality Assurance",
+    rev: true,
   },
   {
-    icon: "/location/delhi/consultant-img5.png",
+    num: "05",
     title: "Client-Centric Approach",
     desc: "We work closely with clients, architects, and project teams to deliver customized solutions aligned with project goals.",
+    img: "/location/delhi/consultants-delhi5.jpg",
+    alt: "Client-Centric Approach",
+    rev: false,
   },
 ];
 
@@ -298,32 +296,82 @@ export default function DelhiLocationPage() {
       </section>
 
       {/* 3. INDUSTRY TRUSTED LOGOS */}
-      <section className="py-[60px] max-[760px]:py-[40px] text-center">
+      <TrustSection />
+
+      {/* 4. WHY WORK WITH US */}
+      <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px]">
         <Container>
-          <p className="font-archivo text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] mb-8 inline-flex items-center justify-center gap-2.5 before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
-            Industry Trusted
-          </p>
-          <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 flex-wrap">
-            {TRUST_LOGOS.map((logo) => (
+          <div className="text-center max-w-[760px] mx-auto mb-14">
+            <div className="font-archivo mb-4 flex items-center justify-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
+              Why Work With Us
+            </div>
+            <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#142436]">
+              Why Choose Shreshtha Consultants as Your MEP Consultants
+            </h2>
+          </div>
+
+          <div className="space-y-6 sm:space-y-8 max-w-[1240px] mx-auto">
+            {WHY_WORK_ROWS.map((row) => (
               <div
-                key={logo.id}
-                className="bg-white py-3.5 sm:py-4 px-7 sm:px-9 rounded-[16px] border border-[#e3e0d8] shadow-[0_4px_20px_rgba(0,0,0,0.02)]"
+                key={row.num}
+                className="grid grid-cols-1 md:grid-cols-2 items-stretch rounded-[22px] shadow-[0_4px_25px_rgba(0,0,0,0.04)] overflow-hidden"
               >
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={200}
-                  height={65}
-                  unoptimized
-                  className="h-11 sm:h-13 md:h-14 w-auto max-w-[155px] sm:max-w-[180px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
-                />
+                {!row.rev ? (
+                  <>
+                    <div className="relative min-h-[280px] md:min-h-[340px] bg-[#e3e0d8] rounded-[22px_22px_0_0] md:rounded-[22px_0_0_22px] overflow-hidden">
+                      <Image
+                        src={row.img}
+                        alt={row.alt}
+                        fill
+                        unoptimized
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
+                    <div className="bg-white border border-[#e3e0d8] md:border-l-0 rounded-[0_0_22px_22px] md:rounded-[0_22px_22px_0] p-8 sm:p-12 lg:p-14 flex flex-col justify-center">
+                      <div className="font-archivo text-[11px] sm:text-[12px] font-bold tracking-[0.1em] text-[#ed2967] mb-3">
+                        {row.num}
+                      </div>
+                      <h3 className="font-archivo text-[20px] sm:text-[22px] md:text-[24px] font-bold text-[#142436] mb-3 leading-snug tracking-[-0.02em]">
+                        {row.title}
+                      </h3>
+                      <p className="font-inter text-[16px] text-[#5c6570] leading-[1.8] max-w-[440px]">
+                        {row.desc}
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="bg-white border border-[#e3e0d8] md:border-r-0 rounded-[0_0_22px_22px] md:rounded-[22px_0_0_22px] p-8 sm:p-12 lg:p-14 flex flex-col justify-center order-2 md:order-1">
+                      <div className="font-archivo text-[11px] sm:text-[12px] font-bold tracking-[0.1em] text-[#ed2967] mb-3">
+                        {row.num}
+                      </div>
+                      <h3 className="font-archivo text-[20px] sm:text-[22px] md:text-[24px] font-bold text-[#142436] mb-3 leading-snug tracking-[-0.02em]">
+                        {row.title}
+                      </h3>
+                      <p className="font-inter text-[16px] text-[#5c6570] leading-[1.8] max-w-[440px]">
+                        {row.desc}
+                      </p>
+                    </div>
+                    <div className="relative min-h-[280px] md:min-h-[340px] bg-[#e3e0d8] rounded-[22px_22px_0_0] md:rounded-[0_22px_22px_0] overflow-hidden order-1 md:order-2">
+                      <Image
+                        src={row.img}
+                        alt={row.alt}
+                        fill
+                        unoptimized
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
+                  </>
+                )}
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* 4. OUR MEP SERVICES & INDUSTRIES WE SERVE */}
+      {/* 5. OUR MEP SERVICES & INDUSTRIES WE SERVE */}
       <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px]">
         <Container className="grid grid-cols-1 lg:grid-cols-[1.22fr_0.78fr] gap-10 lg:gap-14 items-start">
           {/* Left Column: Our MEP Services */}
@@ -334,7 +382,7 @@ export default function DelhiLocationPage() {
             <h2 className="font-archivo mb-4 text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
               Our MEP Services
             </h2>
-            <p className="font-lora text-[16px] leading-[1.8] text-[#5c6570] mb-8">
+            <p className="font-inter text-[16px] leading-[1.8] text-[#5c6570] mb-8">
               MEP systems account for a large share of a building&apos;s
               construction cost and most of its running cost. Good design at the
               start saves money for the life of the building. We provide
@@ -356,7 +404,7 @@ export default function DelhiLocationPage() {
                   <h3 className="font-archivo text-[16px] sm:text-[17px] font-bold leading-snug tracking-[0.01em] text-[#101418] mb-2.5">
                     {tile.title}
                   </h3>
-                  <p className="font-lora text-[13.5px] sm:text-[14px] leading-[1.7] text-[#5c6570]">
+                  <p className="font-inter text-[13.5px] sm:text-[14px] leading-[1.7] text-[#5c6570]">
                     {tile.desc}
                   </p>
                 </div>
@@ -386,181 +434,40 @@ export default function DelhiLocationPage() {
         </Container>
       </section>
 
-      {/* 5. WHY HIRE HVAC CONSULTANTS IN DELHI */}
+      {/* 6. OUR MEP DESIGN PROCESS*/}
       <section className="bg-white py-[70px] max-[760px]:py-[40px] border-y border-[#e3e0d8]">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-            {/* Left Column: Heading and Context */}
-            <div className="lg:col-span-5">
-              <div className="font-archivo mb-4 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
-                Climate-Resilient Design
-              </div>
-              <h2 className="font-archivo mb-6 text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
-                Why Hire HVAC Consultants in Delhi
-              </h2>
-              <div className="flex flex-col gap-4 text-[16px] leading-[1.8] text-[#5c6570]">
-                <p>
-                  Delhi&apos;s climate puts real demands on HVAC systems: summer
-                  temperatures above 45°C, cold winters, heavy dust and air
-                  pollution for much of the year. A system that is undersized
-                  fails on the hottest days. One that is oversized wastes energy
-                  and money every month.
-                </p>
-                <p>
-                  As HVAC consultants in Delhi, we help you choose the right
-                  system for your building and design it properly, independent
-                  of any equipment supplier. Our approach covers:
-                </p>
-              </div>
-
-              <div className="mt-8 pt-2">
-                <Link
-                  href="/hvac"
-                  className="font-archivo group inline-flex items-center gap-2 text-[14px] font-bold text-[#ed2967] hover:text-[#101418] transition-colors"
-                >
-                  Explore our full HVAC consulting services{" "}
-                  <span className="transition-transform duration-300 group-hover:translate-x-1">
-                    →
-                  </span>
-                </Link>
-              </div>
-            </div>
-
-            {/* Right Column: Approach Points */}
-            <div className="lg:col-span-7 space-y-4">
-              {HVAC_APPROACH.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="bg-[#f7f6f2] border border-[#e3e0d8] rounded-[20px] p-5 sm:p-6 shadow-[0_8px_30px_rgb(0_0_0_/_0.04)] hover:-translate-y-0.5 hover:shadow-md transition-all duration-300 flex items-start gap-4"
-                >
-                  <span className="w-8 h-8 rounded-full bg-[#ed2967]/10 text-[#ed2967] font-archivo font-bold text-[13px] flex items-center justify-center shrink-0 mt-0.5">
-                    {idx + 1}
-                  </span>
-                  <div>
-                    <h3 className="font-archivo text-[15px] font-bold leading-tight tracking-[0.01em] text-[#101418] mb-1.5">
-                      {item.title}
-                    </h3>
-                    <p className="text-[13px] leading-[1.6] text-[#5c6570]">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* HVAC Comparison Table */}
-          <div className="mt-14 pt-2">
-            <div className="bg-white border border-[#e3e0d8] rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgb(0_0_0_/_0.04)]">
-              <div className="p-6 md:p-8 bg-[#142436] text-white">
-                <h3 className="font-archivo text-[20px] sm:text-[22px] md:text-[24px] font-bold mb-1.5 tracking-[-0.02em]">
-                  HVAC System Comparison for Delhi NCR Buildings
-                </h3>
-                <p className="text-[14px] text-neutral-400">
-                  Selecting the right equipment architecture based on scale,
-                  zoning, and lifecycle expenditure.
-                </p>
-              </div>
-
-              <div className="overflow-x-auto">
-                <table className="w-full text-left border-collapse min-w-[640px]">
-                  <thead>
-                    <tr className="border-b border-[#e3e0d8] bg-[#f7f6f2]">
-                      <th className="py-4 px-6 font-archivo text-[11px] font-bold uppercase tracking-[0.15em] text-[#101418] w-1/4">
-                        System
-                      </th>
-                      <th className="py-4 px-6 font-archivo text-[11px] font-bold uppercase tracking-[0.15em] text-[#101418] w-1/3">
-                        Best suited for
-                      </th>
-                      <th className="py-4 px-6 font-archivo text-[11px] font-bold uppercase tracking-[0.15em] text-[#101418]">
-                        Key considerations
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-[#e3e0d8] bg-white">
-                    {HVAC_TABLE.map((row, idx) => (
-                      <tr
-                        key={idx}
-                        className="hover:bg-[#f7f6f2]/60 transition-colors"
-                      >
-                        <td className="py-4 px-6 font-archivo font-bold text-[#ed2967] text-[15px]">
-                          {row.system}
-                        </td>
-                        <td className="py-4 px-6 text-[#101418] font-medium text-[14px]">
-                          {row.suited}
-                        </td>
-                        <td className="py-4 px-6 text-[#5c6570] text-[13px] leading-[1.6]">
-                          {row.considerations}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* 6. WHY CHOOSE SHRESHTHA CONSULTANTS AS YOUR MEP CONSULTANTS */}
-      <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px]">
-        <Container>
           <div className="text-center max-w-[760px] mx-auto mb-14">
+            <div className="font-archivo mb-4 flex items-center justify-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
+              Systematic Engineering
+            </div>
             <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
-              Why Choose Shreshtha Consultants as Your MEP Consultants
+              Our MEP Design Process
             </h2>
+            <p className="font-inter mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
+              From concept formulation to testing and commissioning, our 6-stage
+              engineering workflow ensures zero site clashes and total
+              regulatory compliance.
+            </p>
           </div>
 
-          {/* Top Row: 3 Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-6 sm:mb-8">
-            {WHY_CHOOSE_US.slice(0, 3).map((card, idx) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+            {DESIGN_PROCESS.map((proc) => (
               <div
-                key={idx}
-                className="bg-white rounded-[24px] p-6 sm:p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgb(0_0_0_/_0.04)] border border-[#e3e0d8] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgb(0_0_0_/_0.08)]"
+                key={proc.step}
+                className="bg-[#f7f6f2] rounded-[22px] p-6 sm:p-7 flex flex-col justify-between shadow-[0_8px_30px_rgb(0_0_0_/_0.04)] border border-[#e3e0d8] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgb(0_0_0_/_0.08)] hover:border-[#101418]"
               >
-                <div className="w-[85px] h-[85px] relative mb-6 flex items-center justify-center">
-                  <Image
-                    src={card.icon}
-                    alt={card.title}
-                    width={78}
-                    height={78}
-                    unoptimized
-                    className="object-contain"
-                  />
+                <div>
+                  <div className="font-archivo text-[11px] sm:text-[12px] font-bold text-[#ed2967] tracking-[0.1em] mb-2.5">
+                    STEP {proc.step}
+                  </div>
+                  <h3 className="font-archivo text-[16px] sm:text-[17px] font-bold leading-tight tracking-[0.01em] text-[#101418] mb-2.5">
+                    {proc.title}
+                  </h3>
+                  <p className="font-inter text-[13.5px] leading-[1.65] text-[#5c6570]">
+                    {proc.desc}
+                  </p>
                 </div>
-                <h3 className="font-archivo text-[15px] sm:text-[16px] font-bold leading-tight tracking-[0.01em] text-[#101418] mb-3">
-                  {card.title}
-                </h3>
-                <p className="text-[13px] leading-[1.6] text-[#5c6570]">
-                  {card.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* Bottom Row: 2 Cards Centered */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-[850px] mx-auto">
-            {WHY_CHOOSE_US.slice(3, 5).map((card, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-[24px] p-6 sm:p-8 flex flex-col items-center text-center shadow-[0_8px_30px_rgb(0_0_0_/_0.04)] border border-[#e3e0d8] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgb(0_0_0_/_0.08)]"
-              >
-                <div className="w-[85px] h-[85px] relative mb-6 flex items-center justify-center">
-                  <Image
-                    src={card.icon}
-                    alt={card.title}
-                    width={78}
-                    height={78}
-                    unoptimized
-                    className="object-contain"
-                  />
-                </div>
-                <h3 className="font-archivo text-[15px] sm:text-[16px] font-bold leading-tight tracking-[0.01em] text-[#101418] mb-3">
-                  {card.title}
-                </h3>
-                <p className="text-[13px] leading-[1.6] text-[#5c6570]">
-                  {card.desc}
-                </p>
               </div>
             ))}
           </div>

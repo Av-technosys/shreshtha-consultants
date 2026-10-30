@@ -18,9 +18,9 @@ export function LocationProjects({
   imageSrc,
 }: LocationProjectsProps) {
   return (
-    <section className="w-full bg-[#FFFFFF] py-[60px] md:py-[100px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
-      <Container className="grid grid-cols-1 lg:grid-cols-2 gap-[40px] lg:gap-[60px] items-start font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
-        <div className="w-full aspect-[4/3] sm:aspect-[16/10] relative rounded-[8px] bg-white shadow-[0_4px_30px_rgba(0,0,0,0.05)] font-lora text-[16px] font-normal leading-[24px] text-[#333333] flex items-center justify-center p-[20px]">
+    <section className="w-full bg-[#FFFFFF] py-[60px] md:py-[100px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
+      <Container className="grid grid-cols-1 lg:grid-cols-2 gap-[40px] lg:gap-[60px] items-start font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
+        <div className="w-full aspect-[4/3] sm:aspect-[16/10] relative rounded-[8px] bg-white shadow-[0_4px_30px_rgba(0,0,0,0.05)] font-inter text-[16px] font-normal leading-[24px] text-[#333333] flex items-center justify-center p-[20px]">
           <div className="relative w-full h-full">
             <Image
               src={imageSrc}
@@ -31,7 +31,7 @@ export function LocationProjects({
           </div>
         </div>
 
-        <div className="flex flex-col font-lora text-[16px] font-normal leading-[24px] text-[#333333] pt-[10px]">
+        <div className="flex flex-col font-inter text-[16px] font-normal leading-[24px] text-[#333333] pt-[10px]">
           <h2 className="font-poppins text-[24px] md:text-[32px] font-semibold leading-[30px] md:leading-[32px] text-[#142436] mb-[20px] md:mb-[24px]">
             {title}
           </h2>

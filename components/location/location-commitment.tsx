@@ -15,16 +15,16 @@ export function LocationCommitment({
   description = "At Shreshtha Consultants, we believe that efficient MEP systems are the backbone of any successful building. Our designs aim to optimize lifecycle costs, ensure occupant comfort, and support sustainable development. By leveraging advanced engineering tools and best industry practices, we consistently deliver value-driven outcomes for our clients.",
 }: LocationCommitmentProps) {
   return (
-    <section className="w-full bg-[#142436] py-[60px] md:py-[100px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
-      <Container className="grid grid-cols-1 lg:grid-cols-[1fr_450px] gap-[40px] lg:gap-[60px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
-        <div className="flex flex-col font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
+    <section className="w-full bg-[#142436] py-[60px] md:py-[100px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
+      <Container className="grid grid-cols-1 lg:grid-cols-[1fr_450px] gap-[40px] lg:gap-[60px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
+        <div className="flex flex-col font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
           <h2 className="font-poppins text-[24px] md:text-[32px] font-semibold leading-[30px] md:leading-[32px] text-[#FFFFFF] mb-[20px] md:mb-[24px]">
             {title}
           </h2>
           <p className="font-poppins text-[14px] md:text-[16px] font-normal leading-[22px] md:leading-[23px] text-[#FFFFFF] mb-[32px] md:mb-[40px]">
             {description}
           </p>
-          <div className="w-full relative aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:h-[350px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
+          <div className="w-full relative aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:h-[350px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
             <Image
               src={imageSrc}
               alt="Commitment to Excellence Diagram"
@@ -34,16 +34,16 @@ export function LocationCommitment({
           </div>
         </div>
 
-        <div className="bg-[#FFFFFF] p-[30px] md:p-[40px] rounded-[16px] shadow-[0_10px_40px_rgba(0,0,0,0.15)] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
+        <div className="bg-[#FFFFFF] p-[30px] md:p-[40px] rounded-[16px] shadow-[0_10px_40px_rgba(0,0,0,0.15)] font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
           <h3 className="font-poppins text-[20px] md:text-[24px] font-semibold leading-[28px] md:leading-[32px] text-[#000000] mb-[24px] md:mb-[30px]">
             Book a Consultation | Contact Shreshtha Consultants Today
           </h3>
 
           <ResendForm
             formType="Location Commitment Inquiry"
-            className="flex flex-col gap-[20px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]"
+            className="flex flex-col gap-[20px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]"
           >
-            <div className="flex flex-col gap-[6px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
+            <div className="flex flex-col gap-[6px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
               <label className="font-poppins text-[14px] font-medium leading-[20px] text-[#5A5A66]">
                 Name*
               </label>
@@ -55,7 +55,7 @@ export function LocationCommitment({
               />
             </div>
 
-            <div className="flex flex-col gap-[6px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
+            <div className="flex flex-col gap-[6px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
               <label className="font-poppins text-[14px] font-medium leading-[20px] text-[#5A5A66]">
                 Email*
               </label>
@@ -67,7 +67,7 @@ export function LocationCommitment({
               />
             </div>
 
-            <div className="flex flex-col gap-[6px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
+            <div className="flex flex-col gap-[6px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
               <label className="font-poppins text-[14px] font-medium leading-[20px] text-[#5A5A66]">
                 Phone number*
               </label>
@@ -79,7 +79,7 @@ export function LocationCommitment({
               />
             </div>
 
-            <div className="flex flex-col gap-[6px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
+            <div className="flex flex-col gap-[6px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
               <label className="font-poppins text-[14px] font-medium leading-[20px] text-[#5A5A66]">
                 Project Size (in sq. ft.)
               </label>
@@ -92,7 +92,7 @@ export function LocationCommitment({
               />
             </div>
 
-            <div className="flex flex-col gap-[6px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
+            <div className="flex flex-col gap-[6px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
               <label className="font-poppins text-[14px] font-medium leading-[20px] text-[#5A5A66]">
                 Project Location
               </label>
@@ -104,7 +104,7 @@ export function LocationCommitment({
               />
             </div>
 
-            <div className="flex flex-col gap-[6px] font-lora text-[16px] font-normal leading-[24px] text-[#333333]">
+            <div className="flex flex-col gap-[6px] font-inter text-[16px] font-normal leading-[24px] text-[#333333]">
               <label className="font-poppins text-[14px] font-medium leading-[20px] text-[#5A5A66]">
                 Type of Project
               </label>
@@ -147,7 +147,7 @@ export function LocationCommitment({
 
             <button
               type="submit"
-              className="w-full mt-[10px] bg-[#ED2967] hover:bg-[#172554] shadow-md hover:shadow-lg transform hover:-translate-y-[2px] transition-all duration-300 py-[14px] rounded-full font-lora text-[16px] font-normal leading-[24px] flex items-center justify-center"
+              className="w-full mt-[10px] bg-[#ED2967] hover:bg-[#172554] shadow-md hover:shadow-lg transform hover:-translate-y-[2px] transition-all duration-300 py-[14px] rounded-full font-inter text-[16px] font-normal leading-[24px] flex items-center justify-center"
             >
               <span className="font-poppins text-[16px] font-medium leading-[16px] text-[#FFFFFF]">
                 Request a Proposal

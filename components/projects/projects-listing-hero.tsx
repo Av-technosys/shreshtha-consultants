@@ -35,7 +35,7 @@ function ProjectsListingHeroContent() {
   };
 
   return (
-    <section className="font-lora text-[16px] font-normal leading-[25.6px] text-[#FFFFFF] w-full bg-[#101418] pt-[64px] md:pt-[100px] lg:pt-[120px] pb-[28px] md:pb-[32px]">
+    <section className="font-inter text-[16px] font-normal leading-[25.6px] text-[#FFFFFF] w-full bg-[#101418] pt-[64px] md:pt-[100px] lg:pt-[120px] pb-[28px] md:pb-[32px]">
       <Container className="flex flex-col items-start max-lg:px-[4%]">
         <div className="flex items-center gap-[12px] mb-[24px] md:mb-[16px]">
           <span className="block w-[24px] h-[1.5px] bg-[#ee2559] shrink-0" />
@@ -50,7 +50,7 @@ function ProjectsListingHeroContent() {
           <br className="block md:hidden" /> to end.
         </h1>
 
-        <p className="max-w-[600px] mb-[48px] md:mb-[56px] font-lora text-[14px] md:text-[17px] font-normal leading-[1.6] text-white/65">
+        <p className="max-w-[600px] mb-[48px] md:mb-[56px] font-inter text-[14px] md:text-[17px] font-normal leading-[1.6] text-white/65">
           From hospitality landmarks to healthcare campuses, industrial
           facilities to institutional buildings — a look at the MEP and
           infrastructure work behind them.

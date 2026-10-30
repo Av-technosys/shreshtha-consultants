@@ -19,7 +19,7 @@ export function LocationHero({
   ctaLink = "/contact-us",
 }: LocationHeroProps) {
   return (
-    <section className="relative overflow-hidden w-full h-[350px] md:h-[500px] pt-[120px] md:pt-[178px] font-lora text-[16px] font-normal leading-[24px] text-[#FFFFFF]">
+    <section className="relative overflow-hidden w-full h-[350px] md:h-[500px] pt-[120px] md:pt-[178px] font-inter text-[16px] font-normal leading-[24px] text-[#FFFFFF]">
       <div className="absolute inset-0 z-0">
         <Image
           src={imageSrc}

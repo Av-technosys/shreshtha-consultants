@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/common/container";
+import { TrustSection } from "@/components/home/trust-section";
 import { ResendForm } from "@/components/forms/resend-form";
 import { Star, ChevronDown } from "lucide-react";
 
@@ -19,13 +20,6 @@ const STATS = [
   { n: "25+", l: "Years of Experience" },
   { n: "500+", l: "Clients Served" },
   { n: "50+", l: "Team Size" },
-];
-
-const TRUST_LOGOS = [
-  { id: 1, src: "/Home/clients/logo-1.png", alt: "Client Logo 1" },
-  { id: 2, src: "/Home/clients/logo-2.png", alt: "Client Logo 2" },
-  { id: 3, src: "/Home/clients/logo-3.png", alt: "Client Logo 3" },
-  { id: 4, src: "/Home/clients/logo-4.png", alt: "Client Logo 4" },
 ];
 
 const WHY_WORK_ROWS = [
@@ -186,7 +180,7 @@ const FAQS = [
 
 export default function MumbaiLocationPage() {
   return (
-    <div className="bg-[#f7f6f2] text-[#142436] font-lora antialiased min-h-screen">
+    <div className="bg-[#f7f6f2] text-[#142436] font-inter antialiased min-h-screen">
       {/* 1. HERO SECTION */}
       <section className="relative overflow-hidden bg-[#142436] pt-[120px] pb-[100px] md:pb-[120px] max-[760px]:pt-[100px] max-[760px]:pb-[90px] text-white">
         {/* Background & Overlays */}
@@ -210,7 +204,7 @@ export default function MumbaiLocationPage() {
             </h1>
 
             {/* Sub-headline */}
-            <p className="font-lora mb-6 text-[16px] leading-[1.8] text-neutral-300">
+            <p className="font-inter mb-6 text-[16px] leading-[1.8] text-neutral-300">
               Engineering partner to provide efficient MEP solutions. Being the
               commercial and financial capital of India, Mumbai demands
               engineering solutions that cater to the needs of high demand,
@@ -258,30 +252,7 @@ export default function MumbaiLocationPage() {
       </section>
 
       {/* 3. INDUSTRY TRUSTED LOGOS */}
-      <section className="py-[60px] max-[760px]:py-[40px] text-center">
-        <Container>
-          <p className="font-archivo text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] mb-8 inline-flex items-center justify-center gap-2.5 before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
-            Industry Trusted
-          </p>
-          <div className="flex justify-center items-center gap-4 sm:gap-6 md:gap-8 flex-wrap">
-            {TRUST_LOGOS.map((logo) => (
-              <div
-                key={logo.id}
-                className="bg-white py-3.5 sm:py-4 px-7 sm:px-9 rounded-[16px] border border-[#e3e0d8] shadow-[0_4px_20px_rgba(0,0,0,0.02)]"
-              >
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={200}
-                  height={65}
-                  unoptimized
-                  className="h-11 sm:h-13 md:h-14 w-auto max-w-[155px] sm:max-w-[180px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
-                />
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+      <TrustSection />
 
       {/* 4. WHY WORK WITH US */}
       <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px]">
@@ -321,7 +292,7 @@ export default function MumbaiLocationPage() {
                       <h3 className="font-archivo text-[20px] sm:text-[22px] md:text-[24px] font-bold text-[#142436] mb-3 leading-snug tracking-[-0.02em]">
                         {row.title}
                       </h3>
-                      <p className="font-lora text-[16px] text-[#5c6570] leading-[1.8] max-w-[440px]">
+                      <p className="font-inter text-[16px] text-[#5c6570] leading-[1.8] max-w-[440px]">
                         {row.desc}
                       </p>
                     </div>
@@ -335,7 +306,7 @@ export default function MumbaiLocationPage() {
                       <h3 className="font-archivo text-[20px] sm:text-[22px] md:text-[24px] font-bold text-[#142436] mb-3 leading-snug tracking-[-0.02em]">
                         {row.title}
                       </h3>
-                      <p className="font-lora text-[16px] text-[#5c6570] leading-[1.8] max-w-[440px]">
+                      <p className="font-inter text-[16px] text-[#5c6570] leading-[1.8] max-w-[440px]">
                         {row.desc}
                       </p>
                     </div>
@@ -368,7 +339,7 @@ export default function MumbaiLocationPage() {
             <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#142436] mb-4">
               Our MEP Services
             </h2>
-            <p className="font-lora text-[16px] leading-[1.8] text-[#5c6570] mb-8">
+            <p className="font-inter text-[16px] leading-[1.8] text-[#5c6570] mb-8">
               Effective MEP design has a major influence on performance and
               operation costs. We offer integrated services in order for all
               systems to be designed in harmony.
@@ -388,7 +359,7 @@ export default function MumbaiLocationPage() {
                   <h3 className="font-archivo text-[16px] sm:text-[17px] font-bold leading-snug tracking-[-0.01em] text-[#142436] mb-2.5">
                     {tile.title}
                   </h3>
-                  <p className="font-lora text-[13.5px] sm:text-[14px] leading-[1.7] text-[#5c6570]">
+                  <p className="font-inter text-[13.5px] sm:text-[14px] leading-[1.7] text-[#5c6570]">
                     {tile.desc}
                   </p>
                 </div>
@@ -428,7 +399,7 @@ export default function MumbaiLocationPage() {
             <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#142436]">
               Our MEP Design Process
             </h2>
-            <p className="font-lora mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
+            <p className="font-inter mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
               From concept formulation to site commissioning, our 6-stage
               engineering process ensures total accuracy and zero site
               conflicts.
@@ -448,7 +419,7 @@ export default function MumbaiLocationPage() {
                   <h3 className="font-archivo text-[16px] sm:text-[17px] font-bold leading-tight tracking-[0.01em] text-[#142436] mb-2.5">
                     {proc.title}
                   </h3>
-                  <p className="font-lora text-[14px] sm:text-[14.5px] leading-[1.7] text-[#5c6570]">
+                  <p className="font-inter text-[14px] sm:text-[14.5px] leading-[1.7] text-[#5c6570]">
                     {proc.desc}
                   </p>
                 </div>
@@ -468,7 +439,7 @@ export default function MumbaiLocationPage() {
             <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#142436]">
               What Our Clients Say
             </h2>
-            <p className="font-lora mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
+            <p className="font-inter mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
               Trusted by leading architects, developers, and project managers
               across Mumbai.
             </p>
@@ -491,7 +462,7 @@ export default function MumbaiLocationPage() {
                     ))}
                   </div>
                   {/* Quote */}
-                  <p className="font-lora text-[14px] sm:text-[15px] text-[#142436] leading-[1.75] italic mb-6">
+                  <p className="font-inter text-[14px] sm:text-[15px] text-[#142436] leading-[1.75] italic mb-6">
                     &ldquo;{t.quote}&rdquo;
                   </p>
                 </div>
@@ -504,7 +475,7 @@ export default function MumbaiLocationPage() {
                     <h4 className="font-archivo text-[15px] font-bold text-[#142436]">
                       {t.name}
                     </h4>
-                    <span className="font-lora text-[12.5px] text-[#5c6570] block">
+                    <span className="font-inter text-[12.5px] text-[#5c6570] block">
                       {t.role}
                     </span>
                   </div>
@@ -525,7 +496,7 @@ export default function MumbaiLocationPage() {
             <h2 className="font-archivo text-[30px] sm:text-[38px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
               Frequently Asked Questions
             </h2>
-            <p className="font-lora mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
+            <p className="font-inter mt-4 text-[16px] leading-[1.8] text-[#5c6570]">
               Everything you need to know about appointing MEP consultants in
               Mumbai.
             </p>
@@ -543,7 +514,7 @@ export default function MumbaiLocationPage() {
                     <ChevronDown className="w-4 h-4" />
                   </span>
                 </summary>
-                <div className="font-lora px-5 sm:px-6 pb-6 text-[14px] sm:text-[14.5px] leading-[1.75] text-[#5c6570]">
+                <div className="font-inter px-5 sm:px-6 pb-6 text-[14px] sm:text-[14.5px] leading-[1.75] text-[#5c6570]">
                   {faq.a}
                 </div>
               </details>
@@ -564,7 +535,7 @@ export default function MumbaiLocationPage() {
               <h2 className="font-archivo text-[28px] sm:text-[36px] md:text-[46px] font-bold leading-[1.15] tracking-[-0.03em] text-white">
                 Consult With the Most Reliable MEP Consultants in Mumbai
               </h2>
-              <p className="font-lora mt-4 text-[16px] leading-[1.8] text-white/70 max-w-[500px]">
+              <p className="font-inter mt-4 text-[16px] leading-[1.8] text-white/70 max-w-[500px]">
                 If you are looking for technically capable, execution-driven MEP
                 consultants in Mumbai, Shreshtha Consultants is ready to support
                 your project, from concept design to commissioning.
