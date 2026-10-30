@@ -22,32 +22,40 @@ const STATS = [
   { n: "50+", l: "Team Size" },
 ];
 
-// const WHY_WORK_ROWS = [
-//   {
-//     num: "01",
-//     title: "Project delivery with no changes",
-//     desc: "Conflicts among services, structure, and architecture will be ironed out using coordinated designs and BIM clash detection before the actual construction takes place.",
-//     img: "/location/hyderabad/card1-img.jpg",
-//     alt: "Project delivery with no changes",
-//     rev: false,
-//   },
-//   {
-//     num: "02",
-//     title: "Code compliance and safety first",
-//     desc: "Our designs are in strict adherence to Hyderabad municipal requirements, NBC, IS codes, NFPA guidelines, and the necessary approval process.",
-//     img: "/location/hyderabad/card2-img.JPG",
-//     alt: "Code compliance and safety first",
-//     rev: true,
-//   },
-//   {
-//     num: "03",
-//     title: "MEP engineering consultancy from start to finish",
-//     desc: "We ensure feasibility studies, complete engineering consultancy till the final commissioning under one roof.",
-//     img: "/location/hyderabad/card3-img.jpeg",
-//     alt: "MEP engineering consultancy from start to finish",
-//     rev: false,
-//   },
-// ];
+const WHY_WORK_ROWS = [
+  {
+    num: "01",
+    title: "Project delivery with no changes",
+    desc: "Conflicts among services, structure, and architecture will be ironed out using coordinated designs and BIM clash detection before the actual construction takes place.",
+    img: "/location/hyderabad/card1.jpg",
+    alt: "Project delivery with no changes",
+    rev: false,
+  },
+  {
+    num: "02",
+    title: "Code compliance and safety first",
+    desc: "Our designs are in strict adherence to Hyderabad municipal requirements, NBC, IS codes, NFPA guidelines, and the necessary approval process.",
+    img: "/location/hyderabad/card2.jpg",
+    alt: "Code compliance and safety first",
+    rev: true,
+  },
+  {
+    num: "03",
+    title: "MEP engineering consultancy from start to finish",
+    desc: "We ensure feasibility studies, complete engineering consultancy till the final commissioning under one roof.",
+    img: "/location/hyderabad/card3.jpeg",
+    alt: "MEP engineering consultancy from start to finish",
+    rev: false,
+  },
+    {
+    num: "04",
+    title: "Energy-efficient design ",
+    desc: "Our focus will be resource efficiency through efficient engineering and renewable integration.",
+    img: "/location/hyderabad/card4.jpg",
+    alt: "Integrated Design Coordination",
+    rev: true,
+  },
+];
 
 const MEP_SERVICES_TILES = [
   {
@@ -254,7 +262,7 @@ export default function HyderabadLocationPage() {
       {/* 3. INDUSTRY TRUSTED LOGOS */}
       <TrustSection />
 
-      {/* 4. WHY WORK WITH US (Temporarily commented out)
+            {/* 4. WHY WORK WITH US */}
       <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px]">
         <Container>
           <div className="text-center max-w-[760px] mx-auto mb-14">
@@ -332,7 +340,6 @@ export default function HyderabadLocationPage() {
           </div>
         </Container>
       </section>
-      */}
 
       {/* 5. OUR MEP SERVICES & INDUSTRIES WE SERVE */}
       <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px] border-t border-[#e3e0d8]">

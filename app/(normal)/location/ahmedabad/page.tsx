@@ -22,32 +22,40 @@ const STATS = [
   { n: "50+", l: "Team Size" },
 ];
 
-// const WHY_WORK_ROWS = [
-//   {
-//     num: "01",
-//     title: "Proven Industry Experience",
-//     desc: "Our extensive project experience enables us to deliver practical and efficient MEP solutions across diverse building types.",
-//     img: "/location/ahmedabad/card1-img.jpg",
-//     alt: "Proven Industry Experience team",
-//     rev: false,
-//   },
-//   {
-//     num: "02",
-//     title: "Integrated Design Coordination",
-//     desc: "We ensure effective coordination between mechanical, electrical, and plumbing systems to avoid conflicts during construction.",
-//     img: "/location/ahmedabad/card2-img.JPG",
-//     alt: "Integrated Design Coordination",
-//     rev: true,
-//   },
-//   {
-//     num: "03",
-//     title: "Energy-Efficient & Sustainable Designs",
-//     desc: "Our designs focus on reducing energy consumption and operational costs while improving building performance.",
-//     img: "/location/ahmedabad/card3-img.jpeg",
-//     alt: "Energy-Efficient & Sustainable Designs",
-//     rev: false,
-//   },
-// ];
+const WHY_WORK_ROWS = [
+  {
+    num: "01",
+    title: "Proven Industry Experience",
+    desc: "Our extensive project experience enables us to deliver practical and efficient MEP solutions across diverse building types.",
+    img: "/location/ahmedabad/card1.jpeg",
+    alt: "Proven Industry Experience team",
+    rev: false,
+  },
+  {
+    num: "02",
+    title: "Integrated Design Coordination",
+    desc: "We ensure effective coordination between mechanical, electrical, and plumbing systems to avoid conflicts during construction.",
+    img: "/location/ahmedabad/card2.jpg",
+    alt: "Integrated Design Coordination",
+    rev: true,
+  },
+  {
+    num: "03",
+    title: "Energy-Efficient & Sustainable Designs",
+    desc: "Our designs focus on reducing energy consumption and operational costs while improving building performance.",
+    img: "/location/ahmedabad/card3.jpg",
+    alt: "Energy-Efficient & Sustainable Designs",
+    rev: false,
+  },
+  {
+    num: "04",
+    title: "Code Compliance & Quality Standards",
+    desc: "All designs comply with NBC, IS codes, and applicable local authority regulations.",
+    img: "/location/ahmedabad/card4.jpg",
+    alt: "Integrated Design Coordination",
+    rev: true,
+  },
+];
 
 const MEP_SERVICES_TILES = [
   {
@@ -262,7 +270,7 @@ export default function AhmedabadLocationPage() {
       {/* 3. INDUSTRY TRUSTED LOGOS */}
       <TrustSection />
 
-      {/* 4. WHY WORK WITH US (Temporarily commented out)
+            {/* 4. WHY WORK WITH US */}
       <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px]">
         <Container>
           <div className="text-center max-w-[760px] mx-auto mb-14">
@@ -334,7 +342,6 @@ export default function AhmedabadLocationPage() {
           </div>
         </Container>
       </section>
-      */}
 
       {/* 5. OUR MEP SERVICES & INDUSTRIES WE SERVE */}
       <section className="bg-[#f7f6f2] py-[70px] max-[760px]:py-[40px] border-t border-[#e3e0d8]">
