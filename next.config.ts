@@ -11,6 +11,8 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      { source: "/ai", destination: "/ai-mep", permanent: true },
+      { source: "/ai-mep-design", destination: "/ai-mep", permanent: true },
       { source: "/services/electrical", destination: "/electrical", permanent: true },
       { source: "/services/plumbing", destination: "/plumbing", permanent: true },
       { source: "/services/fire-fighting", destination: "/fire-fighting", permanent: true },
