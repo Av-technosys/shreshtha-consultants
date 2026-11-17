@@ -66,6 +66,13 @@ const faqs = [
   },
 ];
 
+const teamMembers = [
+  { name: "Rajesh Prajapat", role: "Sr. Design Engineer", image: "/About/team1.png" },
+  { name: "Rohit Saini", role: "Design Engineer", image: "/About/team2.png" },
+  { name: "Waseem Noor", role: "Sr. Design Engineer", image: "/About/team3.png" },
+  { name: "Devendar Singh", role: "Design Engineer", image: "/About/team4.png" },
+];
+
 function Kicker({ children, light = false }: { children: React.ReactNode; light?: boolean }) {
   return (
     <p className={`flex items-center gap-2.5 font-archivo text-xs font-semibold uppercase tracking-[0.2em] before:h-0.5 before:w-[26px] before:bg-[#ed2967] ${light ? "text-white/60" : "text-[#5c6570]"}`}>
@@ -187,7 +194,21 @@ export default function AIPage() {
         <Container>
           <div className="mx-auto mb-9 max-w-[620px] text-center"><div className="flex justify-center"><Kicker>Behind the Drawings</Kicker></div><h2 className="mt-4 font-archivo text-[clamp(26px,2.8vw,34px)] font-bold tracking-[-0.03em]">The engineers who use it every day.</h2></div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-            {[1, 2, 3, 4].map((number) => <div key={number} className="relative aspect-[1/1.05] overflow-hidden rounded-[14px] bg-[#e9e6dd]"><Image src={`/About/team${number}.png`} alt={`Shreshtha Consultants team member ${number}`} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" /></div>)}
+            {teamMembers.map((member) => (
+              <div key={member.name} className="group relative aspect-[1/1.05] overflow-hidden rounded-[14px] bg-[#e9e6dd]">
+                <Image
+                  src={member.image}
+                  alt={`Portrait of ${member.name}`}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.04] motion-reduce:transition-none"
+                />
+                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/85 via-black/30 to-transparent p-4 text-white opacity-100 transition-opacity duration-300 motion-reduce:transition-none sm:p-5 md:opacity-0 md:group-hover:opacity-100">
+                  <h3 className="font-archivo text-base font-bold leading-tight sm:text-lg">{member.name}</h3>
+                  <p className="mt-1 text-xs leading-snug text-white/85 sm:text-sm">{member.role}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
