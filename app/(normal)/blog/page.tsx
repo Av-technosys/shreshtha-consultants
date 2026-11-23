@@ -31,10 +31,10 @@ export default async function BlogPage() {
       <section className="bg-[#f7f7f4] py-[44px] max-[900px]:py-10 max-[520px]:py-8">
         <Container>
           <div className="max-w-[1020px]">
-            <h1 className="font-archivo text-[clamp(38px,4.8vw,58px)] font-normal leading-[1.08] tracking-[-0.025em] max-[520px]:max-w-full">
+            <h1 className="font-archivo text-[38px] md:text-[58px] font-normal leading-[1.08] tracking-[-0.025em] max-[520px]:max-w-full">
               Insights. Inspiration. Innovation.
             </h1>
-            <p className="mt-[18px] max-w-[720px] text-[clamp(17px,2vw,24px)] leading-[1.35] text-[#1a1a1a] max-[520px]:mt-4">
+            <p className="mt-[18px] max-w-[720px] text-[17px] md:text-[24px] leading-[1.35] text-[#1a1a1a] max-[520px]:mt-4">
               Explore stories, trends, and ideas shaping the future.
             </p>
           </div>
@@ -74,20 +74,18 @@ function BlogCard({ post, priority }: { post: AdminBlog; priority: boolean }) {
         />
       </Link>
 
-      <div className="flex flex-1 flex-col px-3 pb-3 pt-5 max-[520px]:px-2.5 max-[520px]:pt-4">
-        <h2 className="font-archivo text-[clamp(18px,1.45vw,20px)] font-bold leading-[1.3] text-[#111]">
-          <Link href={href} className="line-clamp-2 transition-colors hover:text-[#ed2967]">
-            {post.title}
-          </Link>
+      <div className="flex flex-1 flex-col px-3 pb-3 pt-3 max-[520px]:px-2.5 max-[520px]:pt-2.5">
+        <h2 className="sr-only">
+          <Link href={href}>{post.title}</Link>
         </h2>
 
-        <div className="mt-3 flex flex-wrap items-center gap-2 text-[13px] font-medium text-[#777]">
+        <div className="flex flex-wrap items-center gap-2 text-[13px] font-medium text-[#777]">
           <span className="capitalize text-[#202020]">{post.authorName}</span>
           <span className="size-1 rounded-full bg-[#d8d2c8]"></span>
           <time dateTime={post.date}>{formatDate(post.date)}</time>
         </div>
 
-        <div className="mt-auto pt-6 max-[520px]:pt-5">
+        <div className="mt-auto pt-4 max-[520px]:pt-3">
           <Link
             href={href}
             className="inline-flex items-center gap-1.5 text-[13px] font-bold uppercase tracking-wider text-[#ed2967] transition-colors hover:text-[#111]"

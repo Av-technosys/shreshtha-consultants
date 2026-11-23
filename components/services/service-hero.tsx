@@ -42,7 +42,7 @@ export function ServiceHero({
           <div className="font-archivo mb-6 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-neutral-300 before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
             {kicker}
           </div>
-          <h1 className="font-archivo mb-8 text-[clamp(32px,4vw,46px)] font-bold leading-[1.15] tracking-[-0.02em] text-white max-[760px]:text-[clamp(30px,8vw,40px)]">
+          <h1 className="font-archivo mb-8 text-[32px] md:text-[46px] font-bold leading-[1.15] tracking-[-0.02em] text-white">
             {title}
           </h1>
           <div className="mb-10 flex flex-col gap-4 text-[16px] leading-[1.8] text-neutral-400">

@@ -50,7 +50,7 @@ export function ProjectsSection() {
         <div className="mb-14 flex items-end justify-between gap-10 max-[760px]:block">
           <div>
             <Kicker>Portfolio</Kicker>
-            <h2 className="font-archivo mt-[22px] text-[clamp(32px,3.4vw,50px)] font-bold leading-[1.04] tracking-[-0.03em]">
+            <h2 className="font-archivo mt-[22px] text-[32px] md:text-[50px] font-bold leading-[1.04] tracking-[-0.03em]">
               Some of our projects
             </h2>
           </div>

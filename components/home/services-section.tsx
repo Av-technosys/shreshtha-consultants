@@ -21,6 +21,11 @@ const serviceCards = [
       "Plumbing wall elevations",
       "Bill of quantities",
       "Product recommendations",
+      "oil, waste and vent piping",
+      "Internal and external drainage", 
+      "Stormwater management",
+      "Drainage riser diagrams",
+      "Drainage layouts" 
     ],
   },
   {
@@ -99,7 +104,7 @@ export function ServicesSection() {
       <Container>
         <div className="mb-16 max-w-[760px] max-[760px]:mb-10">
           <Kicker>Our Services</Kicker>
-          <h2 className="font-archivo my-[18px] mt-[22px] text-[clamp(32px,3.4vw,50px)] font-bold leading-[1.04] tracking-[-0.03em]">
+          <h2 className="font-archivo my-[18px] mt-[22px] text-[32px] md:text-[50px] font-bold leading-[1.04] tracking-[-0.03em]">
             Shreshtha Consultants — Your Complete Suite of Building Services
           </h2>
           <p className="text-[17px] leading-7 text-[#5c6570]">

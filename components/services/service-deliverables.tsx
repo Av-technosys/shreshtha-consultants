@@ -29,7 +29,7 @@ export function ServiceDeliverables({
           <div className="font-archivo mb-4 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
             {kicker}
           </div>
-          <h2 className="font-archivo mb-6 text-[clamp(30px,3vw,46px)] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
+          <h2 className="font-archivo mb-6 text-[30px] md:text-[46px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
             {title}
           </h2>
           <div className="flex flex-col gap-4 text-[16px] leading-[1.8] text-[#5c6570]">

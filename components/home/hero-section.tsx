@@ -38,7 +38,7 @@ export function HeroSection() {
     <section className="pb-[90px] pt-32 max-[760px]:pb-[60px] max-[760px]:pt-[82px]">
       <Container className="grid grid-cols-[1.15fr_0.85fr] items-center gap-[70px] max-[760px]:grid-cols-1 max-[760px]:gap-[38px]">
         <div>
-          <h1 className="font-archivo mb-6 text-[clamp(40px,4.6vw,68px)] font-bold leading-[1.04] tracking-[-0.04em] max-[760px]:text-[clamp(38px,12vw,52px)]">
+          <h1 className="font-archivo mb-6 text-[38px] md:text-[68px] font-bold leading-[1.04] tracking-[-0.04em]">
             AI-powered Engineering Design that enable{" "}
             <Emphasis>faster execution</Emphasis> and{" "}
             <Emphasis>lower project costs.</Emphasis>

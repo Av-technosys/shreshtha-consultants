@@ -59,7 +59,7 @@ function ProjectsListingHeroContent() {
         <div className="grid grid-cols-2 md:flex md:items-center gap-y-[32px] gap-x-[40px] md:gap-[40px] lg:gap-[80px] mb-[64px] md:mb-[120px]">
           <div className="flex flex-col gap-[4px]">
             <span className="font-archivo text-[28px] md:text-[34px] font-bold leading-[1.2] md:leading-[54.4px] text-[#ED2967]">
-              1050+
+              5000+
             </span>
             <span className="font-archivo text-[11px] md:text-[12.5px] font-medium leading-[1.6] md:leading-[20px] tracking-[1px] md:tracking-[1.75px] text-white/50 uppercase">
               Projects

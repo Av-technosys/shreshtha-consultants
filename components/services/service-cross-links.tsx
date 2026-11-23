@@ -22,7 +22,7 @@ export function ServiceCrossLinks({ kicker, title, links }: ServiceCrossLinksPro
           <div className="font-archivo mb-4 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
             {kicker}
           </div>
-          <h2 className="font-archivo mt-[18px] text-[clamp(26px,3vw,36px)] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
+          <h2 className="font-archivo mt-[18px] text-[26px] md:text-[36px] font-bold leading-[1.1] tracking-[-0.03em] text-[#101418]">
             {title}
           </h2>
         </div>
