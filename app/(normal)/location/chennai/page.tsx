@@ -15,10 +15,10 @@ export const metadata = {
 };
 
 const STATS = [
-  { n: "1,050+", l: "Projects Completed" },
-  { n: "25M+", l: "Sq.Ft Areas Worked" },
+  { n: "5000+", l: "Projects Completed" },
+  { n: "100M+", l: "Sq.Ft Areas Worked" },
   { n: "25+", l: "Years of Experience" },
-  { n: "500+", l: "Clients Served" },
+  { n: "700+", l: "Clients Served" },
   { n: "50+", l: "Team Size" },
 ];
 
@@ -34,7 +34,7 @@ const WHY_WORK_ROWS = [
   {
     num: "02",
     title: "Domain expertise with industry projects",
-    desc: "We have approx. 1050+ completed projects all across India in varied industries requiring interdisciplinary collaboration.",
+    desc: "We have approx. 5000+ completed projects all across India in varied industries requiring interdisciplinary collaboration.",
     img: "/location/chennai/card2-img.JPG",
     alt: "Domain expertise with industry projects",
     rev: true,

@@ -56,7 +56,7 @@ export function TestimonialsSection() {
         <div className="mb-10 flex items-end justify-between gap-10 max-[760px]:block">
           <div>
             <Kicker>Testimonials</Kicker>
-            <h2 className="font-archivo mt-5 text-[clamp(30px,3vw,44px)] font-bold leading-[1.04] tracking-[-0.03em]">
+            <h2 className="font-archivo mt-5 text-[30px] md:text-[44px] font-bold leading-[1.04] tracking-[-0.03em]">
               Real stories, real results
             </h2>
             <p className="mt-2.5 text-[#5c6570]">

@@ -17,7 +17,7 @@ export function ServiceCTA({ kicker, title, buttonText = "Request Proposal" }: S
           <div className="font-archivo mb-4 flex items-center justify-center gap-2.5 text-[11px] font-bold uppercase tracking-[0.25em] text-[#5c6570] before:h-[1px] before:w-[26px] before:bg-[#ed2967]">
             {kicker}
           </div>
-          <h2 className="font-archivo mx-auto max-w-[800px] text-[clamp(28px,3.5vw,46px)] font-bold leading-[1.15] tracking-[-0.03em] text-[#101418]">
+          <h2 className="font-archivo mx-auto max-w-[800px] text-[28px] md:text-[46px] font-bold leading-[1.15] tracking-[-0.03em] text-[#101418]">
             {title}
           </h2>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { Maximize2, Sparkles } from "lucide-react";
+import { Maximize2 } from "lucide-react";
 import { Container } from "@/components/common/container";
 
 
@@ -19,21 +19,18 @@ export function AiSection() {
           <div className="font-archivo flex items-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] text-white/55 before:h-0.5 before:w-[26px] before:bg-[#ed2967]">
             In-house Technology
           </div>
-          <h2 className="font-archivo my-[22px] mb-[34px] text-[clamp(30px,3.2vw,46px)] font-bold leading-[1.06] tracking-[-0.03em]">
+          <h2 className="font-archivo my-[22px] mb-[34px] text-[30px] md:text-[46px] font-bold leading-[1.06] tracking-[-0.03em]">
             AI software built to{" "}
             <em className="not-italic text-[#ed2967]">reduce errors, cut costs,</em>{" "}
             and maximize design efficiency.
           </h2>
-          <div className="grid grid-cols-2 gap-[18px] max-[760px]:grid-cols-1">
-            <div className="rounded-2xl border border-white/15 p-[26px] transition hover:border-[#ed2967] hover:bg-white/[0.04]">
-              <div className="mb-[18px] grid size-[34px] place-items-center rounded-full bg-[#ed2967]">
-                <Sparkles className="size-4 stroke-2" />
-              </div>
-              <b className="font-archivo mb-2 block text-lg">AI Design</b>
-              <span className="text-[13.5px] leading-6 text-white/60">
-                Optimised MEP drawings generated with our in-house AI engine.
-              </span>
-            </div>
+          <div>
+            <button
+              type="button"
+              className="font-archivo group inline-flex items-center justify-center gap-2.5 rounded-full bg-[#ed2967] px-7 py-3.5 text-sm font-bold text-white transition-all duration-300 hover:bg-white hover:text-[#101418]"
+            >
+              Read More <span className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+            </button>
           </div>
         </div>
 

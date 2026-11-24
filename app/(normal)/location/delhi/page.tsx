@@ -15,10 +15,10 @@ export const metadata = {
 };
 
 const STATS = [
-  { n: "1,050+", l: "Projects Completed" },
-  { n: "25M+", l: "Sq.Ft Areas Worked" },
+  { n: "5000+", l: "Projects Completed" },
+  { n: "100M+", l: "Sq.Ft Areas Worked" },
   { n: "25+", l: "Years of Experience" },
-  { n: "500+", l: "Clients Served" },
+  { n: "700+", l: "Clients Served" },
   { n: "50+", l: "Team Size" },
 ];
 

@@ -9,7 +9,7 @@ export function ProposalSection() {
           <div className="font-archivo flex items-center justify-center gap-2.5 text-xs font-bold uppercase tracking-[0.22em] text-[#5c6570] before:h-0.5 before:w-[26px] before:bg-[#ed2967]">
             Why Shreshtha
           </div>
-          <h2 className="font-archivo mx-auto mb-4 mt-[22px] max-w-[900px] text-[clamp(34px,4.4vw,64px)] font-bold leading-[1.04] tracking-[-0.04em]">
+          <h2 className="font-archivo mx-auto mb-4 mt-[22px] max-w-[900px] text-[34px] md:text-[64px] font-bold leading-[1.04] tracking-[-0.04em]">
             Engineering you can <em className="not-italic text-[#ed2967]">Trust,</em>
             <br />
             Efficiency you can <em className="not-italic text-[#ed2967]">Measure.</em>

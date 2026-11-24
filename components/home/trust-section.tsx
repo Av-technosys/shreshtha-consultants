@@ -45,14 +45,10 @@ export function TrustSection() {
       <Container className="mb-11 flex items-end justify-between gap-10 max-[760px]:block">
         <div>
           <Kicker>Industry Trusted</Kicker>
-          <h2 className="font-archivo mt-[18px] text-[clamp(26px,2.6vw,38px)] font-bold leading-[1.05] tracking-[-0.03em]">
-            Industry Trusted
+          <h2 className="font-archivo mt-[18px] text-[26px] md:text-[38px] font-bold leading-[1.05] tracking-[-0.03em]">
+            Trusted By Industry Leaders
           </h2>
         </div>
-        <p className="max-w-[420px] text-[15px] leading-7 text-[#5c6570] max-[760px]:mt-[18px]">
-          Trusted by industry leaders who demand excellence because when
-          precision matters, they choose Shreshtha.
-        </p>
       </Container>
       <LogoMarquee items={first} />
       <div className="h-5" />
